@@ -1,0 +1,8 @@
+{
+  "path": "worker/async_snapshotting.py",
+  "before_sha256": "7e97551036b108eae6e1225f7e216b00b27bf567edb1727ab47667063eec26ae",
+  "after_sha256": "7e39e3d22cdc0d436484e251eda9920dd53da79557f6dc6226da0c47abd53c0a",
+  "change": "await queue.get() rather than treating a one-second idle timeout as an end-of-stream sentinel",
+  "purpose": "keep original snapshot executor active while external native subprocess takes more than one second",
+  "algorithm_changes": false
+}

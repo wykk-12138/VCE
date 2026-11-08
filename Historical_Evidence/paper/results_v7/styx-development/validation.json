@@ -1,0 +1,9 @@
+{
+  "rows": 24,
+  "worker_exits": 12,
+  "unique_completions": 24,
+  "false_successes": 0,
+  "preserved": 24,
+  "split": "development",
+  "source_and_binary_unchanged": true
+}

@@ -1,0 +1,32 @@
+{
+  "cases": 120,
+  "passed": 120,
+  "errors": 0,
+  "seconds": 568.6331167002209,
+  "arms": {
+    "OriginalReplan": {
+      "cases": 30,
+      "unique_current": 18,
+      "historical": 6,
+      "activations": 42
+    },
+    "JournalGuardedScoped": {
+      "cases": 30,
+      "unique_current": 24,
+      "historical": 6,
+      "activations": 30
+    },
+    "ReceiptCoordinatorV15": {
+      "cases": 30,
+      "unique_current": 24,
+      "historical": 6,
+      "activations": 30
+    },
+    "JournalWitnessV15": {
+      "cases": 30,
+      "unique_current": 24,
+      "historical": 6,
+      "activations": 30
+    }
+  }
+}

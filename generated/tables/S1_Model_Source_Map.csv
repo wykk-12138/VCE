@@ -1,0 +1,5 @@
+transition,source
+preview/claim/intent,evolution.rs:evolution_binding/evolution_claim
+enter/finish,base_native_gate.py and native_gate.py lease/head/attempt checks
+seal/evidence validation,native_gate.py:main; witness.rs:witness_probe
+publication,receipt.rs:receipt_commit; journal.rs:journal_execute transaction

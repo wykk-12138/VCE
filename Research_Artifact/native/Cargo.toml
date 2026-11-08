@@ -1,0 +1,47 @@
+[package]
+name = "receiptcoordinator"
+version = "0.6.3"
+edition = "2021"
+license = "PolyForm-Noncommercial-1.0.0"
+
+[lib]
+name = "receiptcoordinator_lib"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "receiptcoordinator"
+path = "src/bin/research-native.rs"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "5"
+hex = "0.4"
+receiptcoordinator-rewrite = { path = "crates/rewrite" }
+regex = "1"
+rusqlite = { version = "0.32", features = ["bundled", "backup"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+sha2 = "0.10"
+similar = "2"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+tempfile = "3"
+url = "2"
+thiserror = "2"
+toml_edit = "0.25"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "process", "time", "io-util", "sync"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+walkdir = "2"
+which = "6"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+httpmock = "0.7"
+pretty_assertions = "1"
+
+
+[profile.release]
+opt-level = 3
+debug-assertions = false

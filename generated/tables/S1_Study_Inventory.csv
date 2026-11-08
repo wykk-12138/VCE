@@ -1,0 +1,6 @@
+study,scored,warmups,source
+Primary b1,816,68,Research_Artifact/paper/evidence/closure-confirmation-v16-final/raw.jsonl
+Primary b2,816,68,Research_Artifact/paper/evidence/audit-confirmation-v17-b2/raw.jsonl
+Primary b3,816,68,Research_Artifact/paper/evidence/audit-confirmation-v17-b3/raw.jsonl
+Domain costs,288,24,Research_Artifact/paper/evidence/audit-domain-v17/raw.jsonl
+Earlier selector,288,36,Research_Artifact/manuscript/figure-data/paper/evidence/dependency-benchmark-v15-opt1/raw.jsonl

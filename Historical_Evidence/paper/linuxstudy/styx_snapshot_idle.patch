@@ -1,0 +1,11 @@
+--- a/worker/async_snapshotting.py
++++ b/worker/async_snapshotting.py
+@@ -182,7 +182,7 @@
+     async def _snapshot_executor_task(self, queue: asyncio.Queue[bytes | None]) -> None:
+         try:
+             while True:
+-                message = await self._queue_get_with_timeout(queue, timeout_s=1)
++                message = await queue.get()
+                 if message is None:
+                     return  # sentinel or timeout (None is sentinel; timeout handled below)
+                 try:

@@ -1,0 +1,256 @@
+{
+  "kind": "manual predicate slice, generated anchor/hash verification",
+  "native_sources": {
+    "claude": {
+      "path": "native/adapters/claude/claude-instruct.py",
+      "sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd"
+    },
+    "codex": {
+      "path": "native/adapters/codex/codex-instruct.py",
+      "sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469"
+    },
+    "grok": {
+      "path": "native/adapters/grok/grok-receiptcoordinator.py",
+      "sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2"
+    }
+  },
+  "implementation_sources": {
+    "native/native_gate.py": "831c1d862b5adabd94c113c1907c0449678dee63eafcc0b4e90bf0a692cd745f",
+    "native/base_native_gate.py": "ff64cfe5420143d34052c05a979096dab159b5e288ab50a8179c115253439776",
+    "native/src/adapter/normalize.rs": "6ad21aa4f0a9a6a464dba61142e8cff8e2583a102227cf4dd35da23fb4b9f9a4",
+    "native/src/witness.rs": "f9e17f4d7d50c1d3b6190eab242009bb9ae51ac662c150d715130aba4d2c10fa",
+    "native/src/receipt.rs": "53fdff8526fa46c5f0e2bff125daf85492ec208a04b6823c6920b4591653f8e6",
+    "native/src/journal.rs": "e2fed4fb72a86ae4c0231e188431a8db254f5d13702eba6a3037b6e3ab4abec7"
+  },
+  "rows": [
+    {
+      "id": "C1",
+      "adapter": "claude",
+      "source": "native/adapters/claude/claude-instruct.py",
+      "source_sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd",
+      "anchors": "resolve_scope:694-716; collect_status:2512-2596",
+      "predicate_branch": "installed: managed import present AND instruction is a regular file",
+      "reads_and_absence": "CLAUDE.md bytes/type; managed rules bytes/type; fixed scope/name",
+      "snapshot_fields": "0/CLAUDE.md; 0/.claude/receiptcoordinator/**",
+      "mutations": "body_missing,body_directory,body_bytes,body_identity,body_timestamp,body_readonly,reference_missing,reference_directory,reference_empty,reference_utf8",
+      "scope_or_exclusion": "runtime=False; project scope excludes user runtime readiness; identity/metadata add conservative invalidation"
+    },
+    {
+      "id": "C2",
+      "adapter": "claude",
+      "source": "native/adapters/claude/claude-instruct.py",
+      "source_sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd",
+      "anchors": "find_journals:1763-1770; load_journal:1773-1778; inspect_recovery_state:1819-1859",
+      "predicate_branch": "journal exists with dictionary content OR malformed/unreadable journal -> recovery/conflict",
+      "reads_and_absence": "all .journal-*.json names, types and bytes in receiptcoordinator directory, including empty membership",
+      "snapshot_fields": "0/.claude/receiptcoordinator/**",
+      "mutations": "journal_object,journal_array,journal_malformed,journal_directory",
+      "scope_or_exclusion": "A committed-looking journal still requires recovery while present"
+    },
+    {
+      "id": "C3",
+      "adapter": "claude",
+      "source": "native/adapters/claude/claude-instruct.py",
+      "source_sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd",
+      "anchors": "_atomic_temp_directories:1781-1796; find_atomic_temp_residue:1799-1816",
+      "predicate_branch": "new project-root reserved-name entry OR failed enumeration -> recovery/conflict",
+      "reads_and_absence": "project root identity; selected names start dot, contain .receiptcoordinator-tmp-, end .tmp; empty set is observed",
+      "snapshot_fields": "0; filtered root membership",
+      "mutations": "root_residue_file,root_residue_directory,near_residue_no_dot,near_residue_suffix,near_residue_marker_case",
+      "scope_or_exclusion": "ordinary names and descendants are not queried by this predicate"
+    },
+    {
+      "id": "C4",
+      "adapter": "claude",
+      "source": "native/adapters/claude/claude-instruct.py",
+      "source_sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd",
+      "anchors": "find_atomic_temp_residue:1799-1816; inspect_recovery_state:1819-1859",
+      "predicate_branch": "reserved-name entry in managed directory OR failed enumeration -> recovery/conflict",
+      "reads_and_absence": "complete managed directory including type, presence, contents and membership",
+      "snapshot_fields": "0/.claude/receiptcoordinator/**",
+      "mutations": "managed_residue",
+      "scope_or_exclusion": "scan errors yield evidence miss; no reuse of a partially observed snapshot"
+    },
+    {
+      "id": "C5",
+      "adapter": "claude",
+      "source": "native/adapters/claude/claude-instruct.py",
+      "source_sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd",
+      "anchors": "scope_lock_path:1138-1139; inspect_recovery_state:1819-1859",
+      "predicate_branch": "lock_present/lock_live are diagnostics, not recovery_required or installed",
+      "reads_and_absence": "lock file is conservatively included; live PID is not an input of normalized acceptance",
+      "snapshot_fields": "0/.claude/receiptcoordinator/.receiptcoordinator.lock",
+      "mutations": "lock_dead,lock_live",
+      "scope_or_exclusion": "OS PID liveness excluded from N because it feeds neither accepted state nor blockers"
+    },
+    {
+      "id": "C6",
+      "adapter": "claude",
+      "source": "native/adapters/claude/claude-instruct.py",
+      "source_sha256": "e5fa812d1cd810389a15734d02d7e9c7527a9d7cfe0dafd36bc4001d17bc19cd",
+      "anchors": "collect_status:2512-2596",
+      "predicate_branch": "non-runtime project query does not inspect settings, source code or root backups",
+      "reads_and_absence": "exclude ordinary files, nested source trees, .claude/settings.json and CLAUDE.md.bak_*",
+      "snapshot_fields": "selector whitelist plus residue-name predicate",
+      "mutations": "ordinary_file,ordinary_nested,project_settings,project_backup,outside_edit",
+      "scope_or_exclusion": "exclusion applies to this pinned project invocation, not Claude user/runtime mode"
+    },
+    {
+      "id": "X1",
+      "adapter": "codex",
+      "source": "native/adapters/codex/codex-instruct.py",
+      "source_sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469",
+      "anchors": "show_status:15503-15704; inspect_directory:3983-4156",
+      "predicate_branch": "config missing, abnormal, undecodable or conflicting TOML -> rejection/inactive",
+      "reads_and_absence": "config bytes/type/fingerprint/reference under selected .codex",
+      "snapshot_fields": "0/**",
+      "mutations": "reference_missing,reference_directory,reference_utf8,reference_empty,reference_wrong",
+      "scope_or_exclusion": "fixed explicit --codex-dir and English output; no directory autodiscovery"
+    },
+    {
+      "id": "X2",
+      "adapter": "codex",
+      "source": "native/adapters/codex/codex-instruct.py",
+      "source_sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469",
+      "anchors": "_load_manifest:8866-8872; _validate_manifest:8713-8863; inspect_uninstall_directory:10555-10719",
+      "predicate_branch": "manifest missing, invalid, abnormal or ownership mismatch -> non-active",
+      "reads_and_absence": "manifest schema; safe basename references; managed file identities/fingerprints",
+      "snapshot_fields": "0/**",
+      "mutations": "manifest_missing,manifest_invalid,manifest_directory,body_missing,body_directory,body_bytes,body_identity,body_timestamp,body_readonly",
+      "scope_or_exclusion": "manifest names are validated before joining to the tool root"
+    },
+    {
+      "id": "X3",
+      "adapter": "codex",
+      "source": "native/adapters/codex/codex-instruct.py",
+      "source_sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469",
+      "anchors": "_hooks_transaction_residue:8963-8976; _deployment_journal_dirs:3778-3794",
+      "predicate_branch": "any matching transaction/cleanup entry -> recovery",
+      "reads_and_absence": "all root entries, including previously absent residue names",
+      "snapshot_fields": "0/**",
+      "mutations": "residue_directory,residue_file",
+      "scope_or_exclusion": "full tree conservatively covers all residue name patterns"
+    },
+    {
+      "id": "X4",
+      "adapter": "codex",
+      "source": "native/adapters/codex/codex-instruct.py",
+      "source_sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469",
+      "anchors": "show_status:15503-15704; inspect_directory:3983-4156; inspect_uninstall_directory:10555-10719",
+      "predicate_branch": "abnormal hook nodes, owned backup/fingerprint conflict -> rejection",
+      "reads_and_absence": "active/disabled hook types and relevant owned backup bytes/metadata",
+      "snapshot_fields": "0/**",
+      "mutations": "owned_hook_changed,owned_hook_missing,owned_hook_directory,backup_changed,backup_missing",
+      "scope_or_exclusion": "status skips parsing live hook content where declared; full tree remains conservative"
+    },
+    {
+      "id": "X5",
+      "adapter": "codex",
+      "source": "native/adapters/codex/codex-instruct.py",
+      "source_sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469",
+      "anchors": "inspect_directory:3983-4156; show_status:15503-15704",
+      "predicate_branch": "legacy file fingerprint/type can produce warnings or status errors",
+      "reads_and_absence": "legacy name, node type and file fingerprint",
+      "snapshot_fields": "0/**",
+      "mutations": "legacy_regular,legacy_directory",
+      "scope_or_exclusion": "warnings are distinguished from actual normalized blockers"
+    },
+    {
+      "id": "X6",
+      "adapter": "codex",
+      "source": "native/adapters/codex/codex-instruct.py",
+      "source_sha256": "033722565b07aa644849cdb35eaf9eda9f9f654adcf7d66bf20a6b72bd545469",
+      "anchors": "show_status:15503-15704",
+      "predicate_branch": "outside files not reached through validated manifest references",
+      "reads_and_absence": "only the selected tool home plus code identities is sealed",
+      "snapshot_fields": "0/**; roots 1-4",
+      "mutations": "outside_edit",
+      "scope_or_exclusion": "independent approved content/reference readback remains mandatory"
+    },
+    {
+      "id": "G1",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "compute_status:2324-2501; _rule_node:2276-2282",
+      "predicate_branch": "root/rules/config abnormal, or missing/inactive compatibility state",
+      "reads_and_absence": "root identity; rule/config types and bytes; compatibility markers/values",
+      "snapshot_fields": "0/**",
+      "mutations": "body_missing,body_directory,body_bytes,reference_missing,reference_directory,reference_utf8,reference_empty,reference_wrong",
+      "scope_or_exclusion": "trusted paths constrain owned references to selected tool home"
+    },
+    {
+      "id": "G2",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "journal_dirs:1336-1343; interrupted_journals:1346-1347; compute_status:2324-2501",
+      "predicate_branch": "any transaction-prefix entry -> recovery, even if not a directory",
+      "reads_and_absence": "complete root membership and node type; empty prefix set",
+      "snapshot_fields": "0/**",
+      "mutations": "residue_directory,residue_file",
+      "scope_or_exclusion": "entry presence is observed before interpreting journal contents"
+    },
+    {
+      "id": "G3",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "load_manifest:2116-2128; normalize_manifest:1929-2113; assess_owned_state:2135-2239",
+      "predicate_branch": "manifest missing/invalid/type/path conflict -> non-active",
+      "reads_and_absence": "manifest bytes and schema; canonical owned paths",
+      "snapshot_fields": "0/**",
+      "mutations": "manifest_missing,manifest_invalid,manifest_directory",
+      "scope_or_exclusion": "no trusted reference escapes the home validation domain"
+    },
+    {
+      "id": "G4",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "assess_owned_state:2135-2239; normalized_file_mode:539-543; fingerprints_match:565-572",
+      "predicate_branch": "rule/config differs from managed after-state -> drift",
+      "reads_and_absence": "owned file content, identity and Windows normalized read-only metadata",
+      "snapshot_fields": "0/**",
+      "mutations": "body_identity,body_timestamp,body_readonly,body_bytes,reference_wrong",
+      "scope_or_exclusion": "Windows normalized modes are determined by read-only state; Unix permission-bit equivalence is not claimed"
+    },
+    {
+      "id": "G5",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "assess_owned_state:2135-2239; compute_status:2324-2501",
+      "predicate_branch": "owned active+disabled, abnormal/missing/drifted hook -> conflict/drift",
+      "reads_and_absence": "hook membership, original/disabled type and content",
+      "snapshot_fields": "0/**",
+      "mutations": "owned_hook_changed,owned_hook_missing,owned_hook_directory,owned_hook_both,owned_hook_restored,hooks_directory_type",
+      "scope_or_exclusion": "restored and disabled states are compared through the original status"
+    },
+    {
+      "id": "G6",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "assess_owned_state:2135-2239",
+      "predicate_branch": "backup missing, abnormal or inconsistent with before-state -> drift",
+      "reads_and_absence": "rule/config/previous-manifest backups and fingerprints",
+      "snapshot_fields": "0/**",
+      "mutations": "backup_changed,backup_missing",
+      "scope_or_exclusion": "the full-tree policy includes all validated backup references"
+    },
+    {
+      "id": "G7",
+      "adapter": "grok",
+      "source": "native/adapters/grok/grok-receiptcoordinator.py",
+      "source_sha256": "c44fc2d1552aa356b129d813407380eec1c5fd8b8308fc78ff1b6148cf23baa2",
+      "anchors": "competing_context_for:2285-2321; compute_status:2324-2501",
+      "predicate_branch": "extra rules/AGENTS/host version are diagnostic output",
+      "reads_and_absence": "extra rules and AGENTS are conservatively captured; fixed host lookup environment",
+      "snapshot_fields": "0/**; fixed environment",
+      "mutations": "extra_rule,agents_md,outside_edit",
+      "scope_or_exclusion": "the measured PATH has no grok launcher; no arbitrary external program is inside this guarantee"
+    }
+  ],
+  "not_claimed": "exhaustive dynamic branch coverage or machine-checked source refinement"
+}

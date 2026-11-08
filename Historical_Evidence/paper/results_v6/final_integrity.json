@@ -1,0 +1,17 @@
+{
+  "final_timing_run": "paper/evidence/published-cold-timing-final-v6",
+  "raw_sha256": "279666528efeb35de7af93021dc3d3dc321c5680be23d690a55018b47bd45ddb",
+  "frozen_runtime_source_matches": [
+    "paper/publishedstudy/run.py",
+    "paper/publishedstudy/activity.py",
+    "paper/publishedstudy/worker.py",
+    "paper/publishedstudy/composed_worker.py",
+    "paper/publishedstudy/histrio/main.go",
+    "paper/publishedstudy/netherite/Program.cs"
+  ],
+  "followup_run": "paper/evidence/published-replan-recovery-v6",
+  "reported_formal_rows": 2484,
+  "actual_hard_exits": 1260,
+  "finished_local_date": "2026-10-12",
+  "final_timing_not_pooled_with_development": true
+}

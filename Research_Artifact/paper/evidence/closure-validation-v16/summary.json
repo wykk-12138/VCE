@@ -1,0 +1,13 @@
+{
+  "binary_sha256": "7c7e0490eb6e63132e4dc86a3eafda28976c0da8511dd7023a23f8b2b20740f2",
+  "inherited": {
+    "full_cases": 260,
+    "full_passed": 260,
+    "ablation_cases": 2,
+    "ablation_false_success": 2,
+    "exceptions": 0,
+    "seconds": 352.33325979998335
+  },
+  "extra_cases": 138,
+  "extra_passed": 138
+}

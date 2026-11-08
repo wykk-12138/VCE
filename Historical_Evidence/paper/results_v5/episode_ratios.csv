@@ -1,0 +1,13 @@
+baseline,tool,scenario,endpoint,pairs,both_complete,projects,ratio,ci_low,ci_high
+OriginalConfirm,claude,after_native,episode_duration_ns,60,60,12,0.9767554591166362,0.951313094159317,0.9893312213901986
+OriginalConfirm,codex,after_native,episode_duration_ns,60,60,12,0.8411912300001019,0.8264123555387297,0.8513048059031671
+OriginalConfirm,grok,after_native,episode_duration_ns,60,0,0,,,
+OriginalReplan,claude,after_native,episode_duration_ns,60,60,12,0.8278910418529037,0.8145291089777353,0.839566733806005
+OriginalReplan,codex,after_native,episode_duration_ns,60,60,12,0.7369373883238424,0.7303934199971525,0.7516084870762748
+OriginalReplan,grok,after_native,episode_duration_ns,60,60,12,0.8115979413331649,0.8035389505769064,0.8261802573012134
+VerifiedCoordinator,claude,after_native,episode_duration_ns,60,60,12,0.8602120547110943,0.8542568902829641,0.8727270376741286
+VerifiedCoordinator,codex,after_native,episode_duration_ns,60,60,12,0.8698512939254989,0.8587904234004979,0.8845771278505855
+VerifiedCoordinator,grok,after_native,episode_duration_ns,60,60,12,0.8731233045338225,0.8500753987583288,0.8857777499253071
+NativeJournal,claude,after_native,episode_duration_ns,60,60,12,0.9903776023004458,0.9786667618339899,1.0055650000368752
+NativeJournal,codex,after_native,episode_duration_ns,60,60,12,0.9809486205544199,0.9753551843242259,1.0058831659478185
+NativeJournal,grok,after_native,episode_duration_ns,60,60,12,0.9968308462501051,0.9900006651836889,1.015519488770508

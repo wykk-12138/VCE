@@ -1,0 +1,39 @@
+WARNING:root:StateflowGraph update for 'native-migration-study': operator 'native_deployment' partition count changed: 1 -> 2. State Migration will trigger with the update.
+WARNING:styx:MIGRATION | START StateflowGraph 'native-migration-study' with nodes:
+  native_deployment: native_deployment (partitions: 1)
+2026-10-12 17:26:51,003.003 WARNING:	MIGRATION | START StateflowGraph 'native-migration-study' with nodes:
+  native_deployment: native_deployment (partitions: 1)
+WARNING:styx:Migration repartitioning done received!
+WARNING:styx:Migration repartitioning is complete: False
+WARNING:styx:Migration repartitioning done received!
+WARNING:styx:Migration repartitioning is complete: True
+WARNING:styx:Sending MigrationRepartitioningDone to all workers (protocol will stop)
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning done received!
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning is complete: False
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning done received!
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning is complete: True
+2026-10-12 17:26:51,318.318 WARNING:	Sending MigrationRepartitioningDone to all workers (protocol will stop)
+WARNING:styx:MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 1})
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 1})
+WARNING:styx:MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 2})
+WARNING:styx:MIGRATION | MigrationInitDone | sync_complete
+2026-10-12 17:26:53,074.074 WARNING:	MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 2})
+2026-10-12 17:26:53,074.074 WARNING:	MIGRATION | MigrationInitDone | sync_complete
+WARNING:styx:Sending MigrationDone to : Worker(worker_id=1, worker_ip='127.0.1.1', worker_port=5000, protocol_port=6000, assigned_operators={('native_deployment', 0): <styx.common.operator.Operator object at 0x7ec66ddc49d0>}, previous_heartbeat=3222.094442176)
+WARNING:styx:Sending MigrationDone to : Worker(worker_id=2, worker_ip='127.0.1.1', worker_port=5001, protocol_port=6001, assigned_operators={('native_deployment', 1): <styx.common.operator.Operator object at 0x7ec66dd95a30>}, previous_heartbeat=3222.179416495)
+2026-10-12 17:26:53,075.075 WARNING:	Sending MigrationDone to : Worker(worker_id=1, worker_ip='127.0.1.1', worker_port=5000, protocol_port=6000, assigned_operators={('native_deployment', 0): <styx.common.operator.Operator object at 0x7ec66ddc49d0>}, previous_heartbeat=3222.094442176)
+2026-10-12 17:26:53,075.075 WARNING:	Sending MigrationDone to : Worker(worker_id=2, worker_ip='127.0.1.1', worker_port=5001, protocol_port=6001, assigned_operators={('native_deployment', 1): <styx.common.operator.Operator object at 0x7ec66dd95a30>}, previous_heartbeat=3222.179416495)
+WARNING:styx:MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 1})
+2026-10-12 17:26:53,101.101 WARNING:	MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 1})
+WARNING:styx:MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 2})
+WARNING:styx:MIGRATION_FINISHED at time: 1791797213117
+WARNING:styx:Restarting the snapshotting mechanism
+2026-10-12 17:26:53,117.117 WARNING:	MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 2})
+2026-10-12 17:26:53,117.117 WARNING:	MIGRATION_FINISHED at time: 1791797213117
+2026-10-12 17:26:53,117.117 WARNING:	Restarting the snapshotting mechanism
+WARNING:styx:Worker: 1 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215166.4277 | ended at: 1791797215172.7031 | took: 6.275390625ms | size: 10 Bytes
+WARNING:styx:Worker: 2 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215165.878 | ended at: 1791797215172.7014 | took: 6.823486328125ms | size: 10 Bytes
+WARNING:styx:Cluster completed snapshot: 8
+2026-10-12 17:26:55,172.172 WARNING:	Worker: 1 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215166.4277 | ended at: 1791797215172.7031 | took: 6.275390625ms | size: 10 Bytes
+2026-10-12 17:26:55,173.173 WARNING:	Worker: 2 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215165.878 | ended at: 1791797215172.7014 | took: 6.823486328125ms | size: 10 Bytes
+2026-10-12 17:26:55,173.173 WARNING:	Cluster completed snapshot: 8

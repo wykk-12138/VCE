@@ -1,0 +1,128 @@
+{
+  "complete": {
+    "same_content": {
+      "states": 882,
+      "transitions": 1473,
+      "violation": null,
+      "bounds": "two plans; one external body edit; one residue flag; atomic observation/publication; finite captured responses"
+    },
+    "different_content": {
+      "states": 898,
+      "transitions": 1441,
+      "violation": null,
+      "bounds": "two plans; one external body edit; one residue flag; atomic observation/publication; finite captured responses"
+    },
+    "attempts": {
+      "states": 22,
+      "transitions": 21,
+      "violation": null,
+      "bounds": "three invocations, two plans, one shared native lease"
+    }
+  },
+  "ablations": {
+    "no_generation": {
+      "states": 305,
+      "transitions": 453,
+      "violation": "superseded ownership",
+      "trace": [
+        "preview(0)",
+        "claim(0)",
+        "intent(0)",
+        "native-complete(0)",
+        "seal(0)",
+        "preview(1)",
+        "claim(1)",
+        "publish-evidence(0)"
+      ]
+    },
+    "no_approval_binding": {
+      "states": 91,
+      "transitions": 134,
+      "violation": "overwrote edit after approval",
+      "trace": [
+        "preview(0)",
+        "claim(0)",
+        "external-edit",
+        "intent(0)",
+        "native-complete(0)"
+      ]
+    },
+    "no_absence_watch": {
+      "states": 206,
+      "transitions": 302,
+      "violation": "unclean publication",
+      "trace": [
+        "preview(0)",
+        "claim(0)",
+        "intent(0)",
+        "native-complete(0)",
+        "seal(0)",
+        "new-recovery-residue",
+        "publish-evidence(0)"
+      ]
+    },
+    "no_attempt_fence": {
+      "states": 5,
+      "transitions": 5,
+      "violation": "stale attempt enters",
+      "trace": [
+        "authorize(0)",
+        "authorize(1)",
+        "enter(0)"
+      ]
+    },
+    "no_lease": {
+      "states": 9,
+      "transitions": 9,
+      "violation": "superseded writer completes",
+      "trace": [
+        "authorize(0)",
+        "enter(0)",
+        "authorize(1)",
+        "finish(0)"
+      ]
+    }
+  },
+  "atomic_publication_cuts": [
+    {
+      "cut": 0,
+      "visible": 0,
+      "coherent": true
+    },
+    {
+      "cut": 1,
+      "visible": 0,
+      "coherent": true
+    },
+    {
+      "cut": 2,
+      "visible": 0,
+      "coherent": true
+    },
+    {
+      "cut": 3,
+      "visible": 0,
+      "coherent": true
+    },
+    {
+      "cut": 4,
+      "visible": 4,
+      "coherent": true
+    }
+  ],
+  "unique_identity": "publication updates one key per plan; checked by state representation, not claimed as an independent theorem",
+  "source_mapping": {
+    "preview/claim/intent": "evolution.rs:evolution_binding/evolution_claim",
+    "enter/finish": "base_native_gate.py and native_gate.py lease/head/attempt checks",
+    "seal/evidence validation": "native_gate.py:main; witness.rs:witness_probe",
+    "publication": "receipt.rs:receipt_commit; journal.rs:journal_execute transaction"
+  },
+  "assumptions": [
+    "truthful native completion/status",
+    "audited dependency closure",
+    "fixed execution environment",
+    "stable validation/publication cut",
+    "atomic SQLite transaction",
+    "process crashes, not power loss"
+  ]
+}

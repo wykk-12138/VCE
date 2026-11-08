@@ -1,0 +1,12 @@
+{
+  "engine": "Styx",
+  "rows": 288,
+  "hard_exits": 144,
+  "unique_completions": 288,
+  "false_successes": 0,
+  "preserved": 288,
+  "split": "confirmation",
+  "runtime_source_and_binary_unchanged": true,
+  "termination_scope": "application worker and its snapshot subprocesses; durable Kafka and S3 services remain alive",
+  "analysis_sha256": "92ebfadb3c0286264687f2a8153b85664c58227e1cfa554392d2660d762dc030"
+}

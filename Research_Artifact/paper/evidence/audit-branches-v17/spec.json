@@ -1,0 +1,103 @@
+{
+  "methods": [
+    "ReceiptCoordinatorV15",
+    "JournalWitnessV15"
+  ],
+  "common": [
+    "intact",
+    "body_missing",
+    "body_directory",
+    "body_bytes",
+    "body_identity",
+    "body_timestamp",
+    "body_readonly",
+    "reference_missing",
+    "reference_directory",
+    "reference_utf8",
+    "reference_empty",
+    "outside_edit"
+  ],
+  "adapter_cases": {
+    "claude": [
+      "journal_object",
+      "journal_array",
+      "journal_malformed",
+      "journal_directory",
+      "root_residue_file",
+      "root_residue_directory",
+      "managed_residue",
+      "ordinary_file",
+      "ordinary_nested",
+      "project_settings",
+      "project_backup",
+      "near_residue_no_dot",
+      "near_residue_suffix",
+      "near_residue_marker_case",
+      "lock_dead",
+      "lock_live"
+    ],
+    "codex": [
+      "manifest_missing",
+      "manifest_invalid",
+      "manifest_directory",
+      "residue_directory",
+      "residue_file",
+      "legacy_directory",
+      "legacy_regular",
+      "backup_changed",
+      "backup_missing",
+      "owned_hook_changed",
+      "owned_hook_missing",
+      "owned_hook_directory",
+      "reference_wrong"
+    ],
+    "grok": [
+      "manifest_missing",
+      "manifest_invalid",
+      "manifest_directory",
+      "residue_directory",
+      "residue_file",
+      "backup_changed",
+      "backup_missing",
+      "owned_hook_changed",
+      "owned_hook_missing",
+      "owned_hook_directory",
+      "owned_hook_both",
+      "owned_hook_restored",
+      "extra_rule",
+      "agents_md",
+      "hooks_directory_type",
+      "reference_wrong"
+    ]
+  },
+  "input": {
+    "repository": "RooCodeInc/Roo-Code",
+    "commit": "b867ec9145750d0ae1ff7f02d35406e9bf2a0b16",
+    "split": "confirmation",
+    "payload": {
+      "path": "AGENTS.md",
+      "bytes": 445,
+      "sha256": "0050c55acd56fd4f1842938bb9e4408ad7cc9330ccb04588330997d270ff2823",
+      "git_blob": "ae09fd9b30d39b7aa610931cad32257820b12601",
+      "kind": "instruction",
+      "raw_url": "https://raw.githubusercontent.com/RooCodeInc/Roo-Code/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+      "local_path": ".research-source/public-corpus-v5/RooCodeInc__Roo-Code/files/AGENTS.md"
+    },
+    "project_files": [
+      {
+        "path": "AGENTS.md",
+        "bytes": 445,
+        "sha256": "0050c55acd56fd4f1842938bb9e4408ad7cc9330ccb04588330997d270ff2823",
+        "git_blob": "ae09fd9b30d39b7aa610931cad32257820b12601",
+        "kind": "instruction",
+        "raw_url": "https://raw.githubusercontent.com/RooCodeInc/Roo-Code/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+        "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+        "local_path": ".research-source/public-corpus-v5/RooCodeInc__Roo-Code/files/AGENTS.md"
+      }
+    ]
+  },
+  "binary_sha256": "7c7e0490eb6e63132e4dc86a3eafda28976c0da8511dd7023a23f8b2b20740f2",
+  "oracle": "Frozen original adapter status, independent of retained evidence; same normalized acceptance and empty blockers.",
+  "claim": "Finite mutation checks corroborate the separately supplied predicate/read-set source audit; not exhaustive Python branch coverage."
+}

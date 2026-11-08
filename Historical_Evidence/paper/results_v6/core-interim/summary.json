@@ -1,0 +1,97 @@
+{
+  "rows": 1080,
+  "errors": 0,
+  "hard_exits": 720,
+  "repositories": 12,
+  "methods": [
+    "ReceiptCoordinator",
+    "NativeJournal",
+    "OriginalReplan",
+    "DBOS",
+    "Histrio"
+  ],
+  "sources": [
+    {
+      "run": "paper/evidence/published-confirm-core-v6",
+      "raw_sha256": "86a4b5f3b7bd1654238aef52e63d2c2d7bd125904946f8449a8d9283793e6d16",
+      "expected_rows": 1080
+    }
+  ],
+  "summary": [
+    {
+      "method": "ReceiptCoordinator",
+      "n": 180,
+      "errors": 0,
+      "api_success": 180,
+      "coherent_success": 180,
+      "unique_coherent_success": 180,
+      "false_current_success": 0,
+      "duplicate_record_cases": 0,
+      "resume_activation_calls": 36,
+      "external_preserved": 180,
+      "historical_results": 0,
+      "hard_exits": 108
+    },
+    {
+      "method": "NativeJournal",
+      "n": 180,
+      "errors": 0,
+      "api_success": 180,
+      "coherent_success": 180,
+      "unique_coherent_success": 180,
+      "false_current_success": 0,
+      "duplicate_record_cases": 0,
+      "resume_activation_calls": 36,
+      "external_preserved": 180,
+      "historical_results": 0,
+      "hard_exits": 108
+    },
+    {
+      "method": "OriginalReplan",
+      "n": 180,
+      "errors": 0,
+      "api_success": 180,
+      "coherent_success": 180,
+      "unique_coherent_success": 72,
+      "false_current_success": 0,
+      "duplicate_record_cases": 108,
+      "resume_activation_calls": 180,
+      "external_preserved": 180,
+      "historical_results": 0,
+      "hard_exits": 108
+    },
+    {
+      "method": "DBOS",
+      "n": 180,
+      "errors": 0,
+      "api_success": 168,
+      "coherent_success": 168,
+      "unique_coherent_success": 132,
+      "false_current_success": 0,
+      "duplicate_record_cases": 36,
+      "resume_activation_calls": 108,
+      "external_preserved": 180,
+      "historical_results": 36,
+      "hard_exits": 108
+    },
+    {
+      "method": "Histrio",
+      "n": 180,
+      "errors": 0,
+      "api_success": 168,
+      "coherent_success": 168,
+      "unique_coherent_success": 132,
+      "false_current_success": 0,
+      "duplicate_record_cases": 36,
+      "resume_activation_calls": 108,
+      "external_preserved": 180,
+      "historical_results": 36,
+      "hard_exits": 108
+    }
+  ],
+  "historical_classification": "A history response requires zero native adapter calls on retry; recomputed from the retained action trace for earlier runner versions.",
+  "independent_recent_author_systems_executed": 3,
+  "journal_linked_author_releases_executed": 2,
+  "completed_2026_journal_extensions": 0,
+  "requirement_five_recent_full_baselines_satisfied": false
+}

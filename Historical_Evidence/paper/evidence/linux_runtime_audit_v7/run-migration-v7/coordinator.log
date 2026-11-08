@@ -1,0 +1,116 @@
+2026-10-12 17:26:34,467.467 WARNING:	Coordinator Booted Successfully
+2026-10-12 17:26:34,492.492 WARNING:	Coordinator Connected to S3
+2026-10-12 17:26:34,492.492 WARNING:	Coordinator Heartbeat Sentinel online
+2026-10-12 17:26:34,492.492 WARNING:	Coordinator Snapshotting online
+2026-10-12 17:26:34,492.492 WARNING:	Coordinator Server listening at 0.0.0.0:8888
+2026-10-12 17:26:35,085.085 WARNING:	Worker registered 127.0.1.1:5000 with id 1
+2026-10-12 17:26:35,661.661 WARNING:	Worker registered 127.0.1.1:5001 with id 2
+2026-10-12 17:26:36,173.173 WARNING:	Topic styx-metadata created with 2 partitions and replication factor of 1
+2026-10-12 17:26:36,173.173 WARNING:	Topic sequencer-wal created with 2 partitions and replication factor of 1
+2026-10-12 17:26:36,173.173 WARNING:	Topic native_deployment created with 2 partitions and replication factor of 1
+2026-10-12 17:26:36,173.173 WARNING:	Topic native_deployment--OUT created with 2 partitions and replication factor of 1
+Topic styx-metadata not found in cluster metadata
+Topic styx-metadata not found in cluster metadata
+Topic styx-metadata not found in cluster metadata
+Topic styx-metadata not found in cluster metadata
+2026-10-12 17:26:39,253.253 WARNING:	Worker: 1 | @Epoch: 1 | Completed snapshot: 1 | started at: 1791797199235.1526 | ended at: 1791797199252.947 | took: 17.79443359375ms | size: 10 Bytes
+2026-10-12 17:26:39,258.258 WARNING:	Worker: 2 | @Epoch: 1 | Completed snapshot: 1 | started at: 1791797199237.337 | ended at: 1791797199258.578 | took: 21.240966796875ms | size: 955 Bytes
+2026-10-12 17:26:39,258.258 WARNING:	Cluster completed snapshot: 1
+2026-10-12 17:26:40,606.606 WARNING:	Worker: 2 | @Epoch: 10 | Completed snapshot: 2 | started at: 1791797200595.4656 | ended at: 1791797200606.1873 | took: 10.7216796875ms | size: 1675 Bytes
+2026-10-12 17:26:40,608.608 WARNING:	Worker: 1 | @Epoch: 10 | Completed snapshot: 2 | started at: 1791797200594.2463 | ended at: 1791797200608.592 | took: 14.345703125ms | size: 1764 Bytes
+2026-10-12 17:26:40,608.608 WARNING:	Cluster completed snapshot: 2
+2026-10-12 17:26:42,595.595 WARNING:	Worker: 2 | @Epoch: 23 | Completed snapshot: 3 | started at: 1791797202585.5605 | ended at: 1791797202595.292 | took: 9.7314453125ms | size: 2044 Bytes
+2026-10-12 17:26:42,595.595 WARNING:	Worker: 1 | @Epoch: 23 | Completed snapshot: 3 | started at: 1791797202584.2974 | ended at: 1791797202595.3154 | took: 11.01806640625ms | size: 1980 Bytes
+2026-10-12 17:26:42,595.595 WARNING:	Cluster completed snapshot: 3
+2026-10-12 17:26:44,584.584 WARNING:	Worker: 2 | @Epoch: 36 | Completed snapshot: 4 | started at: 1791797204571.89 | ended at: 1791797204584.1257 | took: 12.23583984375ms | size: 2153 Bytes
+2026-10-12 17:26:44,585.585 WARNING:	Worker: 1 | @Epoch: 36 | Completed snapshot: 4 | started at: 1791797204573.2922 | ended at: 1791797204585.199 | took: 11.90673828125ms | size: 1920 Bytes
+2026-10-12 17:26:44,585.585 WARNING:	Cluster completed snapshot: 4
+2026-10-12 17:26:46,565.565 WARNING:	Worker: 2 | @Epoch: 49 | Completed snapshot: 5 | started at: 1791797206555.989 | ended at: 1791797206565.3381 | took: 9.34912109375ms | size: 1928 Bytes
+2026-10-12 17:26:46,567.567 WARNING:	Worker: 1 | @Epoch: 49 | Completed snapshot: 5 | started at: 1791797206557.0115 | ended at: 1791797206566.9792 | took: 9.9677734375ms | size: 2042 Bytes
+2026-10-12 17:26:46,567.567 WARNING:	Cluster completed snapshot: 5
+2026-10-12 17:26:48,559.559 WARNING:	Worker: 1 | @Epoch: 62 | Completed snapshot: 6 | started at: 1791797208550.639 | ended at: 1791797208559.3137 | took: 8.6748046875ms | size: 1702 Bytes
+2026-10-12 17:26:48,560.560 WARNING:	Worker: 2 | @Epoch: 62 | Completed snapshot: 6 | started at: 1791797208551.7715 | ended at: 1791797208560.3936 | took: 8.6220703125ms | size: 2192 Bytes
+2026-10-12 17:26:48,560.560 WARNING:	Cluster completed snapshot: 6
+2026-10-12 17:26:50,576.576 WARNING:	Worker: 1 | @Epoch: 74 | Completed snapshot: 7 | started at: 1791797210558.2542 | ended at: 1791797210575.9194 | took: 17.665283203125ms | size: 969 Bytes
+2026-10-12 17:26:50,576.576 WARNING:	Worker: 2 | @Epoch: 74 | Completed snapshot: 7 | started at: 1791797210557.5635 | ended at: 1791797210575.9707 | took: 18.4072265625ms | size: 2243 Bytes
+2026-10-12 17:26:50,576.576 WARNING:	Cluster completed snapshot: 7
+WARNING:root:StateflowGraph update for 'native-migration-study': operator 'native_deployment' partition count changed: 1 -> 2. State Migration will trigger with the update.
+WARNING:styx:MIGRATION | START StateflowGraph 'native-migration-study' with nodes:
+  native_deployment: native_deployment (partitions: 1)
+2026-10-12 17:26:51,003.003 WARNING:	MIGRATION | START StateflowGraph 'native-migration-study' with nodes:
+  native_deployment: native_deployment (partitions: 1)
+WARNING:styx:Migration repartitioning done received!
+WARNING:styx:Migration repartitioning is complete: False
+WARNING:styx:Migration repartitioning done received!
+WARNING:styx:Migration repartitioning is complete: True
+WARNING:styx:Sending MigrationRepartitioningDone to all workers (protocol will stop)
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning done received!
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning is complete: False
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning done received!
+2026-10-12 17:26:51,318.318 WARNING:	Migration repartitioning is complete: True
+2026-10-12 17:26:51,318.318 WARNING:	Sending MigrationRepartitioningDone to all workers (protocol will stop)
+WARNING:styx:MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 1})
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 1})
+WARNING:styx:MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 2})
+WARNING:styx:MIGRATION | MigrationInitDone | sync_complete
+2026-10-12 17:26:53,074.074 WARNING:	MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 2})
+2026-10-12 17:26:53,074.074 WARNING:	MIGRATION | MigrationInitDone | sync_complete
+WARNING:styx:Sending MigrationDone to : Worker(worker_id=1, worker_ip='127.0.1.1', worker_port=5000, protocol_port=6000, assigned_operators={('native_deployment', 0): <styx.common.operator.Operator object at 0x7ec66ddc49d0>}, previous_heartbeat=3222.094442176)
+WARNING:styx:Sending MigrationDone to : Worker(worker_id=2, worker_ip='127.0.1.1', worker_port=5001, protocol_port=6001, assigned_operators={('native_deployment', 1): <styx.common.operator.Operator object at 0x7ec66dd95a30>}, previous_heartbeat=3222.179416495)
+2026-10-12 17:26:53,075.075 WARNING:	Sending MigrationDone to : Worker(worker_id=1, worker_ip='127.0.1.1', worker_port=5000, protocol_port=6000, assigned_operators={('native_deployment', 0): <styx.common.operator.Operator object at 0x7ec66ddc49d0>}, previous_heartbeat=3222.094442176)
+2026-10-12 17:26:53,075.075 WARNING:	Sending MigrationDone to : Worker(worker_id=2, worker_ip='127.0.1.1', worker_port=5001, protocol_port=6001, assigned_operators={('native_deployment', 1): <styx.common.operator.Operator object at 0x7ec66dd95a30>}, previous_heartbeat=3222.179416495)
+WARNING:styx:MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 1})
+2026-10-12 17:26:53,101.101 WARNING:	MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 1})
+WARNING:styx:MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 2})
+WARNING:styx:MIGRATION_FINISHED at time: 1791797213117
+WARNING:styx:Restarting the snapshotting mechanism
+2026-10-12 17:26:53,117.117 WARNING:	MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationRepartitioningDone: 28>: 0, <MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 2})
+2026-10-12 17:26:53,117.117 WARNING:	MIGRATION_FINISHED at time: 1791797213117
+2026-10-12 17:26:53,117.117 WARNING:	Restarting the snapshotting mechanism
+WARNING:styx:Worker: 1 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215166.4277 | ended at: 1791797215172.7031 | took: 6.275390625ms | size: 10 Bytes
+WARNING:styx:Worker: 2 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215165.878 | ended at: 1791797215172.7014 | took: 6.823486328125ms | size: 10 Bytes
+WARNING:styx:Cluster completed snapshot: 8
+2026-10-12 17:26:55,172.172 WARNING:	Worker: 1 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215166.4277 | ended at: 1791797215172.7031 | took: 6.275390625ms | size: 10 Bytes
+2026-10-12 17:26:55,173.173 WARNING:	Worker: 2 | @Epoch: 115 | Completed snapshot: 8 | started at: 1791797215165.878 | ended at: 1791797215172.7014 | took: 6.823486328125ms | size: 10 Bytes
+2026-10-12 17:26:55,173.173 WARNING:	Cluster completed snapshot: 8
+WARNING:root:StateflowGraph update for 'native-migration-study': operator 'native_deployment' partition count changed: 2 -> 1. State Migration will trigger with the update.
+WARNING:styx:MIGRATION | START StateflowGraph 'native-migration-study' with nodes:
+  native_deployment: native_deployment (partitions: 2)
+2026-10-12 17:26:56,855.855 WARNING:	MIGRATION | START StateflowGraph 'native-migration-study' with nodes:
+  native_deployment: native_deployment (partitions: 2)
+WARNING:styx:Migration repartitioning done received!
+WARNING:styx:Migration repartitioning is complete: False
+2026-10-12 17:26:56,857.857 WARNING:	Migration repartitioning done received!
+2026-10-12 17:26:56,857.857 WARNING:	Migration repartitioning is complete: False
+WARNING:styx:Migration repartitioning done received!
+WARNING:styx:Migration repartitioning is complete: True
+WARNING:styx:Sending MigrationRepartitioningDone to all workers (protocol will stop)
+2026-10-12 17:26:56,857.857 WARNING:	Migration repartitioning done received!
+2026-10-12 17:26:56,857.857 WARNING:	Migration repartitioning is complete: True
+2026-10-12 17:26:56,857.857 WARNING:	Sending MigrationRepartitioningDone to all workers (protocol will stop)
+WARNING:styx:MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 1})
+2026-10-12 17:26:58,911.911 WARNING:	MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 1})
+WARNING:styx:MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 2})
+WARNING:styx:MIGRATION | MigrationInitDone | sync_complete
+2026-10-12 17:26:58,912.912 WARNING:	MIGRATION | MigrationInitDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 2})
+2026-10-12 17:26:58,912.912 WARNING:	MIGRATION | MigrationInitDone | sync_complete
+WARNING:styx:Sending MigrationDone to : Worker(worker_id=1, worker_ip='127.0.1.1', worker_port=5000, protocol_port=6000, assigned_operators={('native_deployment', 0): <styx.common.operator.Operator object at 0x7ec66dd8f680>}, previous_heartbeat=3228.103059328)
+WARNING:styx:Sending MigrationDone to : Worker(worker_id=2, worker_ip='127.0.1.1', worker_port=5001, protocol_port=6001, assigned_operators={('native_deployment', 1): <styx.common.operator.Operator object at 0x7ec66dbb6f50>}, previous_heartbeat=3227.688576283)
+2026-10-12 17:26:58,912.912 WARNING:	Sending MigrationDone to : Worker(worker_id=1, worker_ip='127.0.1.1', worker_port=5000, protocol_port=6000, assigned_operators={('native_deployment', 0): <styx.common.operator.Operator object at 0x7ec66dd8f680>}, previous_heartbeat=3228.103059328)
+2026-10-12 17:26:58,912.912 WARNING:	Sending MigrationDone to : Worker(worker_id=2, worker_ip='127.0.1.1', worker_port=5001, protocol_port=6001, assigned_operators={('native_deployment', 1): <styx.common.operator.Operator object at 0x7ec66dbb6f50>}, previous_heartbeat=3227.688576283)
+WARNING:styx:MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 1})
+2026-10-12 17:26:58,938.938 WARNING:	MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 1})
+WARNING:styx:MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 2})
+WARNING:styx:MIGRATION_FINISHED at time: 1791797218940
+WARNING:styx:Restarting the snapshotting mechanism
+2026-10-12 17:26:58,940.940 WARNING:	MIGRATION | MigrationDone | defaultdict(<class 'int'>, {<MessageType.MigrationInitDone: 39>: 0, <MessageType.MigrationDone: 29>: 2})
+2026-10-12 17:26:58,940.940 WARNING:	MIGRATION_FINISHED at time: 1791797218940
+2026-10-12 17:26:58,940.940 WARNING:	Restarting the snapshotting mechanism
+WARNING:styx:Worker: 2 | @Epoch: 186 | Completed snapshot: 9 | started at: 1791797220960.4185 | ended at: 1791797220967.3154 | took: 6.89697265625ms | size: 10 Bytes
+2026-10-12 17:27:00,967.967 WARNING:	Worker: 2 | @Epoch: 186 | Completed snapshot: 9 | started at: 1791797220960.4185 | ended at: 1791797220967.3154 | took: 6.89697265625ms | size: 10 Bytes
+WARNING:styx:Worker: 1 | @Epoch: 186 | Completed snapshot: 9 | started at: 1791797220960.6565 | ended at: 1791797220967.367 | took: 6.71044921875ms | size: 10 Bytes
+WARNING:styx:Cluster completed snapshot: 9
+2026-10-12 17:27:00,967.967 WARNING:	Worker: 1 | @Epoch: 186 | Completed snapshot: 9 | started at: 1791797220960.6565 | ended at: 1791797220967.367 | took: 6.71044921875ms | size: 10 Bytes
+2026-10-12 17:27:00,967.967 WARNING:	Cluster completed snapshot: 9
+/opt/keysmith/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-6n_c7fxa', '/mp-rxwu9pp0', '/mp-kcmse0e0', '/mp-r1d7mazp', '/mp-ez7wt0hv'}
+  warnings.warn(

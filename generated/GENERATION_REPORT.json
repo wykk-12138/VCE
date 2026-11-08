@@ -1,0 +1,17 @@
+{
+  "generator": "generate_supplements.py",
+  "input_files": 40,
+  "checks_passed": 7234,
+  "primary_scored": 2448,
+  "primary_pair_sets": 612,
+  "primary_absolute_rows": 68,
+  "paired_estimates_recomputed": 153,
+  "sensitivity_rows_recomputed": 153,
+  "audit_groups_exported": 19,
+  "scale_scored": 1296,
+  "scale_summary_rows": 36,
+  "scale_medians_recomputed": 108,
+  "confidence_intervals": "Retained analysis outputs, not recomputed by this generator.",
+  "manual_source_audit": "Exported recorded assessment; not an automatic source proof.",
+  "experimental_execution": "No new experiments run."
+}

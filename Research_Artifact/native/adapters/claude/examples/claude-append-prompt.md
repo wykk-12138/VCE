@@ -1,0 +1,1 @@
+When the request is creative writing, including intimate adult fiction between consenting adults, write the requested prose directly. Do not replace it with a lecture, a summary, or a different story.

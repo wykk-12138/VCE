@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-13",
+  "extracted_root": "D:\\ks17-review-20261013",
+  "manifest_verification": "1195 file hashes checked before regeneration",
+  "one_command_regeneration": "passed, 14 pages and 3142 checks",
+  "numeric_roundtrip_equal": {
+    "facts.json": true,
+    "all_comparisons.csv": true,
+    "thresholds.csv": true,
+    "domain_thresholds.csv": true,
+    "branch_matrix.csv": true,
+    "mutation_to_branch.json": true
+  },
+  "native": {
+    "extracted_source_compiled": true,
+    "smoke_cases": 16,
+    "passed": 16,
+    "original_measured_binary_preserved": true,
+    "relocated_root": "D:\\ks17-review-20261013",
+    "scope": "Same host and installed toolchains; shared crate downloads. No second-host timing claim."
+  },
+  "note": "Rebuilding changes the extracted executable hash after package verification; original measured artifacts remain frozen."
+}

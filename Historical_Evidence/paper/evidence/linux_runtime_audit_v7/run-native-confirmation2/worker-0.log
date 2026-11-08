@@ -1,0 +1,60 @@
+2026-10-12 17:07:36,661.661 WARNING:	Worker id received from coordinator: 1
+2026-10-12 17:07:36,662.662 WARNING:	Worker snapshotting process online
+2026-10-12 17:07:36,662.662 WARNING:	Worker heartbeat process online
+2026-10-12 17:07:36,662.662 WARNING:	Starting Worker TCP Service
+2026-10-12 17:07:36,664.664 WARNING:	Starting Protocol TCP Service
+2026-10-12 17:07:38,042.042 WARNING:	Retrieving Snapshot from S3
+2026-10-12 17:07:38,090.090 WARNING:	State attached to operators
+2026-10-12 17:07:38,091.091 WARNING:	[SN_PROC] Received snapshot: 0
+2026-10-12 17:07:38,090.090 WARNING:	Starting Function Execution Protocol
+2026-10-12 17:07:38,091.091 WARNING:	Aria protocol started with operator partitions: [('native_deployment', 0)]
+2026-10-12 17:07:38,091.091 WARNING:	STARTED function scheduler
+2026-10-12 17:07:38,091.091 WARNING:	1 CREATED Kafka consumer for topic partitions: [TopicPartition(topic='native_deployment', partition=0)]
+Topic native_deployment not found in cluster metadata
+Topic native_deployment not found in cluster metadata
+Topic native_deployment not found in cluster metadata
+2026-10-12 17:07:38,398.398 WARNING:	1 STARTED Kafka consumer from offsets (-1): {('native_deployment', 0): -1}
+2026-10-12 17:07:38,398.398 WARNING:	Ingress started
+2026-10-12 17:07:38,400.400 WARNING:	Egress started
+2026-10-12 17:07:41,945.945 WARNING:	ARIA | Snapshot marker received @epoch: 1
+2026-10-12 17:07:41,945.945 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 1
+2026-10-12 17:07:42,801.801 WARNING:	ARIA | Snapshot marker received @epoch: 2
+2026-10-12 17:07:42,801.801 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 2
+2026-10-12 17:07:44,244.244 WARNING:	ARIA | Snapshot marker received @epoch: 6
+2026-10-12 17:07:44,244.244 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 6
+2026-10-12 17:07:46,111.111 WARNING:	ARIA | Snapshot marker received @epoch: 10
+2026-10-12 17:07:46,111.111 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 10
+2026-10-12 17:07:48,540.540 WARNING:	kafka ingress coroutine suts down...
+2026-10-12 17:07:48,541.541 WARNING:	Protocol coroutines stopped
+2026-10-12 17:07:48,541.541 WARNING:	Aria protocol stopped at: {('native_deployment', 0): 7}
+2026-10-12 17:07:48,584.584 WARNING:	[SN_PROC] Received snapshot: 4
+2026-10-12 17:07:48,593.593 WARNING:	Aria protocol started with operator partitions: [('native_deployment', 0)]
+2026-10-12 17:07:48,593.593 WARNING:	Worker: 1 | Recovered snapshot: 4 | took: 52.7852ms
+2026-10-12 17:07:48,593.593 WARNING:	1 CREATED Kafka consumer for topic partitions: [TopicPartition(topic='native_deployment', partition=0)]
+2026-10-12 17:07:48,596.596 WARNING:	1 STARTED Kafka consumer from offsets (-1): {('native_deployment', 0): 7}
+2026-10-12 17:07:48,596.596 WARNING:	Ingress started
+2026-10-12 17:07:48,597.597 WARNING:	Getting messages sent before recovery: {('native_deployment', 0): 7}
+2026-10-12 17:07:48,600.600 WARNING:	Reading from output from: {('native_deployment', 0): 7} + 1 to {TopicPartition(topic='native_deployment--OUT', partition=0): 8}
+2026-10-12 17:07:48,600.600 WARNING:	Got messages sent before recovery
+2026-10-12 17:07:48,602.602 WARNING:	Egress started
+2026-10-12 17:07:48,623.623 WARNING:	Worker: 1 recovered and ready at : 1791796068623.0532
+2026-10-12 17:07:48,623.623 WARNING:	STARTED function scheduler
+2026-10-12 17:07:50,460.460 WARNING:	ARIA | Snapshot marker received @epoch: 15
+2026-10-12 17:07:50,460.460 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 15
+2026-10-12 17:07:52,624.624 WARNING:	kafka ingress coroutine suts down...
+2026-10-12 17:07:52,624.624 WARNING:	Protocol coroutines stopped
+2026-10-12 17:07:52,625.625 WARNING:	Aria protocol stopped at: {('native_deployment', 0): 11}
+2026-10-12 17:07:52,663.663 WARNING:	[SN_PROC] Received snapshot: 5
+2026-10-12 17:07:52,667.667 WARNING:	Aria protocol started with operator partitions: [('native_deployment', 0)]
+2026-10-12 17:07:52,668.668 WARNING:	Worker: 1 | Recovered snapshot: 5 | took: 44.0473ms
+2026-10-12 17:07:52,668.668 WARNING:	1 CREATED Kafka consumer for topic partitions: [TopicPartition(topic='native_deployment', partition=0)]
+2026-10-12 17:07:52,669.669 WARNING:	1 STARTED Kafka consumer from offsets (-1): {('native_deployment', 0): 11}
+2026-10-12 17:07:52,669.669 WARNING:	Ingress started
+2026-10-12 17:07:52,669.669 WARNING:	Getting messages sent before recovery: {('native_deployment', 0): 11}
+2026-10-12 17:07:52,672.672 WARNING:	Reading from output from: {('native_deployment', 0): 11} + 1 to {TopicPartition(topic='native_deployment--OUT', partition=0): 12}
+2026-10-12 17:07:52,672.672 WARNING:	Got messages sent before recovery
+2026-10-12 17:07:52,673.673 WARNING:	Egress started
+2026-10-12 17:07:53,202.202 WARNING:	Worker: 1 recovered and ready at : 1791796073202.9653
+2026-10-12 17:07:53,203.203 WARNING:	STARTED function scheduler
+2026-10-12 17:07:54,111.111 WARNING:	ARIA | Snapshot marker received @epoch: 18
+2026-10-12 17:07:54,111.111 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 18

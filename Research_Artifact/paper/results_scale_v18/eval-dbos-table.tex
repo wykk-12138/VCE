@@ -1,0 +1,11 @@
+\begin{table*}[!t]\centering\small
+\caption{DBOS retry behavior at the external-endpoint and durable-step boundaries}\label{tab:eval-dbos}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.25cm}ccc >{\raggedright\arraybackslash}p{7.3cm}@{}}\toprule
+Failure or edit boundary & J-Q & VCE & J-E & Meaning of the resumed result \\\midrule
+After native completion & 2 & 0 & 0 & Endpoint reconciles current completion; one activation across the episode \\
+After external return & 2 & 0 & 0 & Step retry reenters the endpoint; evidence avoids new native observations \\
+After durable step completion & 0 & 0 & 0 & DBOS returns the stored step result without another endpoint call \\
+External edit after durable step & 0 & 0 & 0 & Historical step response; external state is not revalidated by an uncalled endpoint \\\bottomrule
+\end{tabular}
+\par\smallskip\raggedright\footnotesize Entries are native processes on retry and are identical across three adapters and two inputs per endpoint/scenario. The 120-case matrix also includes normal execution and the re-preview control, retained in S1. A zero count after step completion has a different cause from a validated evidence hit before checkpointing.
+\end{table*}

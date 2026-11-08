@@ -1,0 +1,14 @@
+phase,method,n,correct_or_safe,completed_or_admitted,false_success
+interior,NativeJournal,36,36,0,0
+interior,OriginalReplan,36,36,0,0
+interior,ReceiptCoordinator,36,36,0,0
+history,NativeJournal,30,30,0,0
+history,OriginalConfirm,30,20,0,10
+history,OriginalReplan,30,20,0,10
+history,ReceiptCoordinator,30,30,0,0
+recent_verification,Agent-C,144,144,36,0
+recent_verification,AgentSpec,144,144,36,0
+recent_verification,CAVA,144,144,36,0
+recent_verification,Mnemosyne,144,144,36,0
+recent_verification,Pro2Guard,144,144,36,0
+recent_verification,VersionedObservations,144,144,36,0

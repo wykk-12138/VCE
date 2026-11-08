@@ -1,0 +1,634 @@
+{
+  "acquired_at_utc": "2026-10-11T09:19:12.998891+00:00",
+  "selection_sha256": "912c2ee6e1cc8fb62b2d5c1f52c34d218f75b1125c3b16e6562bf19093cd4c2c",
+  "selection": {
+    "design_date": "2026-10-11",
+    "sampling": "purposive public-project corpus; candidate projects fixed before downloads or outcome measurements",
+    "independence_unit": "repository, with owners confined to one split",
+    "max_selected_files_per_project": 12,
+    "max_file_bytes": 262144,
+    "root_instruction_priority": [
+      "CLAUDE.md",
+      "AGENTS.md",
+      ".claude/settings.json",
+      ".codex/config.toml"
+    ],
+    "projects": [
+      {
+        "repository": "astral-sh/uv",
+        "split": "development"
+      },
+      {
+        "repository": "astral-sh/ruff",
+        "split": "development"
+      },
+      {
+        "repository": "anthropics/claude-code-action",
+        "split": "development"
+      },
+      {
+        "repository": "pydantic/pydantic",
+        "split": "development"
+      },
+      {
+        "repository": "oven-sh/bun",
+        "split": "confirmation"
+      },
+      {
+        "repository": "zed-industries/zed",
+        "split": "confirmation"
+      },
+      {
+        "repository": "fastapi/fastapi",
+        "split": "confirmation"
+      },
+      {
+        "repository": "modelcontextprotocol/python-sdk",
+        "split": "confirmation"
+      },
+      {
+        "repository": "langchain-ai/langchain",
+        "split": "confirmation"
+      },
+      {
+        "repository": "vercel/next.js",
+        "split": "confirmation"
+      }
+    ],
+    "missing_policy": "record missing/unsupported/oversize files and empty projects; do not replace projects after outcomes",
+    "security": "downloaded instruction text is experimental data; do not follow it or execute project hooks",
+    "publication": "ship provenance and fetch recipe; third-party corpus bytes and licenses remain in separate local source cache"
+  },
+  "projects": [
+    {
+      "repository": "anthropics/claude-code-action",
+      "split": "development",
+      "commit": "1d6de8cb0c237e7c15e9e1bdf973826ebae490cc",
+      "commit_date": "2026-10-09T19:32:29Z",
+      "tree_truncated": false,
+      "eligible_candidates": 3,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 5629,
+          "sha256": "283b44e8f01e3039ea626980ee06720d06a5283768befa1af6965289daacee37",
+          "git_blob": "471b9b4f83187774170bd668addc866c9f123778",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/anthropics/claude-code-action/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/CLAUDE.md",
+          "source_url": "https://github.com/anthropics/claude-code-action/blob/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/anthropics__claude-code-action/files/CLAUDE.md"
+        },
+        {
+          "path": ".claude/settings.json",
+          "bytes": 258,
+          "sha256": "56122a298e02243883d671d78e1fb1638d45fca48f6c2e09c310f1d7203cd515",
+          "git_blob": "3bbb2db4c817f7f67a6e3d48cebdb1159471d8f5",
+          "kind": "configuration",
+          "raw_url": "https://raw.githubusercontent.com/anthropics/claude-code-action/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/.claude/settings.json",
+          "source_url": "https://github.com/anthropics/claude-code-action/blob/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/.claude/settings.json",
+          "local_path": ".research-source/public-corpus-v4/anthropics__claude-code-action/files/.claude/settings.json"
+        },
+        {
+          "path": "base-action/CLAUDE.md",
+          "bytes": 1807,
+          "sha256": "ce9cf4cb97bf988c46002e751bc34d5056f6f54fbeb47e02a84e35b37eeac513",
+          "git_blob": "8eb1d6d496ee3561b3594c305d2b3d316891ea0b",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/anthropics/claude-code-action/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/base-action/CLAUDE.md",
+          "source_url": "https://github.com/anthropics/claude-code-action/blob/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/base-action/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/anthropics__claude-code-action/files/base-action/CLAUDE.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "cebdde8a8fb9ee59e5eaaed19578bf8085aa7047562259c31f38f225c26f6812",
+          "source_url": "https://raw.githubusercontent.com/anthropics/claude-code-action/1d6de8cb0c237e7c15e9e1bdf973826ebae490cc/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "astral-sh/ruff",
+      "split": "development",
+      "commit": "a5aee680b11d2190fbb6a72008047ae281dd2d18",
+      "commit_date": "2026-10-10T12:26:15Z",
+      "tree_truncated": false,
+      "eligible_candidates": 3,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/astral-sh/ruff/a5aee680b11d2190fbb6a72008047ae281dd2d18/CLAUDE.md",
+          "source_url": "https://github.com/astral-sh/ruff/blob/a5aee680b11d2190fbb6a72008047ae281dd2d18/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/astral-sh__ruff/files/CLAUDE.md"
+        },
+        {
+          "path": "AGENTS.md",
+          "bytes": 20391,
+          "sha256": "0cf7da04c4b893758506a65d9615b1ad4f88d126d0bbaada324d7a2f783b82e4",
+          "git_blob": "9cc68603129df38ed4d7d4ac832650e18ab8b64f",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/astral-sh/ruff/a5aee680b11d2190fbb6a72008047ae281dd2d18/AGENTS.md",
+          "source_url": "https://github.com/astral-sh/ruff/blob/a5aee680b11d2190fbb6a72008047ae281dd2d18/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/astral-sh__ruff/files/AGENTS.md"
+        },
+        {
+          "path": ".claude/settings.json",
+          "bytes": 453,
+          "sha256": "159de3d6a88f20c9783feaa14a7fbcaae8bc0e17d9f8ad8e91ec46c50d93711b",
+          "git_blob": "10c3c918eae98e7b1e3460459509fcb9cca65554",
+          "kind": "configuration",
+          "raw_url": "https://raw.githubusercontent.com/astral-sh/ruff/a5aee680b11d2190fbb6a72008047ae281dd2d18/.claude/settings.json",
+          "source_url": "https://github.com/astral-sh/ruff/blob/a5aee680b11d2190fbb6a72008047ae281dd2d18/.claude/settings.json",
+          "local_path": ".research-source/public-corpus-v4/astral-sh__ruff/files/.claude/settings.json"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18",
+          "source_url": "https://raw.githubusercontent.com/astral-sh/ruff/a5aee680b11d2190fbb6a72008047ae281dd2d18/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "astral-sh/uv",
+      "split": "development",
+      "commit": "26de6fbe6ecbb0b8fe093c038259da157ed98021",
+      "commit_date": "2026-10-10T22:23:38Z",
+      "tree_truncated": false,
+      "eligible_candidates": 1,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 3505,
+          "sha256": "924a95138283340f865194fb35c470926d1d445674b81e9dbb1672bf3384fddf",
+          "git_blob": "ca031d6aa5243851885e5ca548fddb1c0ce69945",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/astral-sh/uv/26de6fbe6ecbb0b8fe093c038259da157ed98021/AGENTS.md",
+          "source_url": "https://github.com/astral-sh/uv/blob/26de6fbe6ecbb0b8fe093c038259da157ed98021/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/astral-sh__uv/files/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE-APACHE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "source_url": "https://raw.githubusercontent.com/astral-sh/uv/26de6fbe6ecbb0b8fe093c038259da157ed98021/LICENSE-APACHE"
+        },
+        {
+          "path": "LICENSE-MIT",
+          "sha256": "860e3d7a86b84e6a7012c7a635fc64df475cebc6cce34dfeb73a5982ec58176c",
+          "source_url": "https://raw.githubusercontent.com/astral-sh/uv/26de6fbe6ecbb0b8fe093c038259da157ed98021/LICENSE-MIT"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "fastapi/fastapi",
+      "split": "confirmation",
+      "commit": "f5c6e9b4f9cadc1bf0f9a1fd672e621206b63007",
+      "commit_date": "2026-10-08T12:25:54Z",
+      "tree_truncated": false,
+      "eligible_candidates": 0,
+      "files": [],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+          "source_url": "https://raw.githubusercontent.com/fastapi/fastapi/f5c6e9b4f9cadc1bf0f9a1fd672e621206b63007/LICENSE"
+        }
+      ],
+      "status": "no_selected_input"
+    },
+    {
+      "repository": "langchain-ai/langchain",
+      "split": "confirmation",
+      "commit": "b060a7466482ed5dac5fa1ef12e3ad21cccce385",
+      "commit_date": "2026-10-09T18:13:00Z",
+      "tree_truncated": false,
+      "eligible_candidates": 1,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 20580,
+          "sha256": "2d6d7ad9785af3e817ef80babe50a77d3b440c869644ebadebbbddc9589c694c",
+          "git_blob": "62d587bb27235932b04f5fe725a1b1d78f8da2f4",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/langchain-ai/langchain/b060a7466482ed5dac5fa1ef12e3ad21cccce385/AGENTS.md",
+          "source_url": "https://github.com/langchain-ai/langchain/blob/b060a7466482ed5dac5fa1ef12e3ad21cccce385/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/langchain-ai__langchain/files/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478",
+          "source_url": "https://raw.githubusercontent.com/langchain-ai/langchain/b060a7466482ed5dac5fa1ef12e3ad21cccce385/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "split": "confirmation",
+      "commit": "91941ed4d3985d59def99e090baa3f880c626cc8",
+      "commit_date": "2026-10-05T13:22:35Z",
+      "tree_truncated": false,
+      "eligible_candidates": 2,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/91941ed4d3985d59def99e090baa3f880c626cc8/CLAUDE.md",
+          "source_url": "https://github.com/modelcontextprotocol/python-sdk/blob/91941ed4d3985d59def99e090baa3f880c626cc8/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/modelcontextprotocol__python-sdk/files/CLAUDE.md"
+        },
+        {
+          "path": "AGENTS.md",
+          "bytes": 8714,
+          "sha256": "26457e8cd68b68060bfd83640b236905f620440b7b073b4bad7120c2e8baca86",
+          "git_blob": "c7bf0ba44fcc8e0aea96f8dea5cd180e5c0846a5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/91941ed4d3985d59def99e090baa3f880c626cc8/AGENTS.md",
+          "source_url": "https://github.com/modelcontextprotocol/python-sdk/blob/91941ed4d3985d59def99e090baa3f880c626cc8/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/modelcontextprotocol__python-sdk/files/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+          "source_url": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/91941ed4d3985d59def99e090baa3f880c626cc8/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "oven-sh/bun",
+      "split": "confirmation",
+      "commit": "6c1eb067e3c3943d2035bc165b241539c0b673b6",
+      "commit_date": "2026-10-10T20:53:12Z",
+      "tree_truncated": false,
+      "eligible_candidates": 17,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 17614,
+          "sha256": "23aaeec4bec93c30299b59936a9472d5520cac870eabb0d942c41b019c06d204",
+          "git_blob": "789ec881ff35f50e2f29834a88f06500075685c3",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/CLAUDE.md"
+        },
+        {
+          "path": ".claude/settings.json",
+          "bytes": 509,
+          "sha256": "db947d5110f4304cd94ca86f04e69161adb6a9ce1c86676af481ae902ae84805",
+          "git_blob": "563850ddf6728ee6ced5e59019193dc4a8284e4a",
+          "kind": "configuration",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/.claude/settings.json",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/.claude/settings.json",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/.claude/settings.json"
+        },
+        {
+          "path": "src/CLAUDE.md",
+          "bytes": 21474,
+          "sha256": "a6bb12293801ff002e8fe3cf9b061fc699d5370ebacbcbe0515e88b3cc50d8a4",
+          "git_blob": "cd658ef71907d8d1ae56b3282dea36f417bab961",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/src/CLAUDE.md"
+        },
+        {
+          "path": "test/CLAUDE.md",
+          "bytes": 7553,
+          "sha256": "bd9fbfbc8c69bfb12e1fd567ff5fdc6d4c8824a2ca554dd5733f68cc7c18319a",
+          "git_blob": "cc72a234887c7738c9a4a818eb9063ecfcda9aae",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/test/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/test/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/test/CLAUDE.md"
+        },
+        {
+          "path": ".github/workflows/CLAUDE.md",
+          "bytes": 13846,
+          "sha256": "546f38dee5e1efd8f7d1aa0cb0e2746aa821bf44d48bd636d993afad3e0ad77c",
+          "git_blob": "795124cd04b8e6a1a1d966ceba4a29b837ae4b5a",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/.github/workflows/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/.github/workflows/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/.github/workflows/CLAUDE.md"
+        },
+        {
+          "path": "scripts/build/CLAUDE.md",
+          "bytes": 44735,
+          "sha256": "82ff63ec260ab641109a6e352a742ff55da7eb766b301207d9c0c561099f8747",
+          "git_blob": "fcfcbfaede6ab24e2bfbdfbe1b367316db43c6bb",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/scripts/build/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/scripts/build/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/scripts/build/CLAUDE.md"
+        },
+        {
+          "path": "scripts/verify-baseline-static/CLAUDE.md",
+          "bytes": 13892,
+          "sha256": "653227b77c291d1ec9d8894320669434733ad08e772cd0815ca44e5b9a1b074a",
+          "git_blob": "bb911b65fd15b386e1ad72828a3da906a183b8ae",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/scripts/verify-baseline-static/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/scripts/verify-baseline-static/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/scripts/verify-baseline-static/CLAUDE.md"
+        },
+        {
+          "path": "src/js/CLAUDE.md",
+          "bytes": 2606,
+          "sha256": "396b545d5afa7a73b6a613caaef196c596c8d473e245fa0806cc7c1432b432d5",
+          "git_blob": "e4f321251b95a1c60b6530bd854498547347f6e7",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/js/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/js/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/src/js/CLAUDE.md"
+        },
+        {
+          "path": "scripts/build/ci-images/CLAUDE.md",
+          "bytes": 14800,
+          "sha256": "07326d0aad4b2ef20be05cb96265baae44d76c7eb73a262a52686e81c99927a0",
+          "git_blob": "6ebbbaefa39acb0d09a7f32610f7653063689455",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/scripts/build/ci-images/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/scripts/build/ci-images/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/scripts/build/ci-images/CLAUDE.md"
+        },
+        {
+          "path": "test/internal/source-lints/CLAUDE.md",
+          "bytes": 66,
+          "sha256": "07262bdcc8c298fc99e25bf6ebf3ff6a0ae0abc6bcccd856c2d7bed0516d114f",
+          "git_blob": "1fd32432fcb8950c6d61f765b4b987bb33102e65",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/test/internal/source-lints/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/test/internal/source-lints/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/test/internal/source-lints/CLAUDE.md"
+        },
+        {
+          "path": "src/jsc/bindings/v8/AGENTS.md",
+          "bytes": 10195,
+          "sha256": "20b5ef9b02f0fafe06c91c1c693f116dff5a81369633b1fd0b072e9aa739a206",
+          "git_blob": "e41b8866cf528b1ab1756c0075b943fcee9f3bc6",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/jsc/bindings/v8/AGENTS.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/jsc/bindings/v8/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/src/jsc/bindings/v8/AGENTS.md"
+        },
+        {
+          "path": "src/jsc/bindings/v8/CLAUDE.md",
+          "bytes": 10195,
+          "sha256": "20b5ef9b02f0fafe06c91c1c693f116dff5a81369633b1fd0b072e9aa739a206",
+          "git_blob": "e41b8866cf528b1ab1756c0075b943fcee9f3bc6",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/jsc/bindings/v8/CLAUDE.md",
+          "source_url": "https://github.com/oven-sh/bun/blob/6c1eb067e3c3943d2035bc165b241539c0b673b6/src/jsc/bindings/v8/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/oven-sh__bun/files/src/jsc/bindings/v8/CLAUDE.md"
+        }
+      ],
+      "excluded": [
+        {
+          "path": "AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "src/AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "test/AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "src/js/AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "test/js/node/test/parallel/CLAUDE.md",
+          "reason": "over frozen per-project selection cap"
+        }
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "056696884250b0d682365260cf1487a6501b1665a343ec60e23a1e647043c572",
+          "source_url": "https://raw.githubusercontent.com/oven-sh/bun/6c1eb067e3c3943d2035bc165b241539c0b673b6/LICENSE.md"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "pydantic/pydantic",
+      "split": "development",
+      "commit": "0edb9347fad19f29452037d8fc47331cd2c0a096",
+      "commit_date": "2026-10-11T00:53:57Z",
+      "tree_truncated": false,
+      "eligible_candidates": 0,
+      "files": [],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+          "source_url": "https://raw.githubusercontent.com/pydantic/pydantic/0edb9347fad19f29452037d8fc47331cd2c0a096/LICENSE"
+        }
+      ],
+      "status": "no_selected_input"
+    },
+    {
+      "repository": "vercel/next.js",
+      "split": "confirmation",
+      "commit": "d8c1c1b0002db8ccb63b58095f338e8bf423fa99",
+      "commit_date": "2026-10-10T23:24:31Z",
+      "tree_truncated": false,
+      "eligible_candidates": 11,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 28678,
+          "sha256": "718351e2e576d9c8aa1491fadbf5165134ad155953229814826534cd77c7e7cf",
+          "git_blob": "eea9f6a6837dda59a8890b3df83fe415f0c6932f",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/AGENTS.md"
+        },
+        {
+          "path": ".github/AGENTS.md",
+          "bytes": 2925,
+          "sha256": "2249a2aa51b311a478c9fb3281499f83e8583c98618879833b2ce27ca5ff14ad",
+          "git_blob": "e1820dae6774255ce7d78667a1ed7cf8b26a0bdb",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/.github/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/.github/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/.github/AGENTS.md"
+        },
+        {
+          "path": "evals/AGENTS.md",
+          "bytes": 130,
+          "sha256": "44194eecea50376da5f6b56bd976a1a68af1abd5bfa9eeeebcf42c680a680625",
+          "git_blob": "5114722ca62da2518e37701a71aa870af0059c39",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/evals/AGENTS.md"
+        },
+        {
+          "path": "test/AGENTS.md",
+          "bytes": 386,
+          "sha256": "c0c559aa17d86e0e87150e974e0f19d81db332c55bc88436f4dbeff76e9d3fe2",
+          "git_blob": "bda01dd30f9fc8c2eb2129a75c611cbbb3ff6a5d",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/test/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/test/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/test/AGENTS.md"
+        },
+        {
+          "path": "turbopack/AGENTS.md",
+          "bytes": 653,
+          "sha256": "5ff824653e36611a602ac9414256df06ae9f00ff8b9954da0e02def6d1256ea8",
+          "git_blob": "7dfbf9c77499453a1656fdb86c71024abe201db6",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/turbopack/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/turbopack/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/turbopack/AGENTS.md"
+        },
+        {
+          "path": "apps/bundle-analyzer/AGENTS.md",
+          "bytes": 1159,
+          "sha256": "2fb5e1db87154154ca3e261ab05fea48956d5e7bf64bf3a8db9527cc325ca488",
+          "git_blob": "fb93f5c2eaa6c2543f98ada4d11a564179773fde",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/apps/bundle-analyzer/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/apps/bundle-analyzer/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/apps/bundle-analyzer/AGENTS.md"
+        },
+        {
+          "path": "packages/next/AGENTS.md",
+          "bytes": 312,
+          "sha256": "7cf4bc58686d02388189b8cf6125db96ba3f9469b6f7e538d73d588638873728",
+          "git_blob": "f6fea081584e2b3f5182b832c7676ab71ffd9e94",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/packages/next/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/packages/next/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/packages/next/AGENTS.md"
+        },
+        {
+          "path": "evals/next-upgrade/apps/member-dashboard/next-13/AGENTS.md",
+          "bytes": 148,
+          "sha256": "6c1405b1257dc0ff3e2efe2e4d12d257fdaabecc1de1be0d8c4211842ce8eb36",
+          "git_blob": "98a78a61b7422337a01161afa1f5d93b598a39b1",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-13/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-13/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/evals/next-upgrade/apps/member-dashboard/next-13/AGENTS.md"
+        },
+        {
+          "path": "evals/next-upgrade/apps/member-dashboard/next-13/CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-13/CLAUDE.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-13/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/evals/next-upgrade/apps/member-dashboard/next-13/CLAUDE.md"
+        },
+        {
+          "path": "evals/next-upgrade/apps/member-dashboard/next-15/AGENTS.md",
+          "bytes": 148,
+          "sha256": "6c1405b1257dc0ff3e2efe2e4d12d257fdaabecc1de1be0d8c4211842ce8eb36",
+          "git_blob": "98a78a61b7422337a01161afa1f5d93b598a39b1",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-15/AGENTS.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-15/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/evals/next-upgrade/apps/member-dashboard/next-15/AGENTS.md"
+        },
+        {
+          "path": "evals/next-upgrade/apps/member-dashboard/next-15/CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-15/CLAUDE.md",
+          "source_url": "https://github.com/vercel/next.js/blob/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/evals/next-upgrade/apps/member-dashboard/next-15/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v4/vercel__next.js/files/evals/next-upgrade/apps/member-dashboard/next-15/CLAUDE.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "license.md",
+          "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224",
+          "source_url": "https://raw.githubusercontent.com/vercel/next.js/d8c1c1b0002db8ccb63b58095f338e8bf423fa99/license.md"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "zed-industries/zed",
+      "split": "confirmation",
+      "commit": "93d745668805029476e6d7fbb19652116fed51de",
+      "commit_date": "2026-10-10T22:13:37Z",
+      "tree_truncated": false,
+      "eligible_candidates": 3,
+      "files": [
+        {
+          "path": "docs/AGENTS.md",
+          "bytes": 11735,
+          "sha256": "a2ac2cdf23465ad10cc5e5baee8fb534f8acb90002afad3633c5d6d5fff85bd5",
+          "git_blob": "ad35212a6d6bd0b2bfe9dec66db9a3b65cf5316c",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/zed-industries/zed/93d745668805029476e6d7fbb19652116fed51de/docs/AGENTS.md",
+          "source_url": "https://github.com/zed-industries/zed/blob/93d745668805029476e6d7fbb19652116fed51de/docs/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v4/zed-industries__zed/files/docs/AGENTS.md"
+        }
+      ],
+      "excluded": [
+        {
+          "path": "CLAUDE.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        }
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE-APACHE",
+          "sha256": "752daf2fb234ca4a1fa372c073fe127f44b7b90fd2529ae44273a64f9d53da7a",
+          "source_url": "https://raw.githubusercontent.com/zed-industries/zed/93d745668805029476e6d7fbb19652116fed51de/LICENSE-APACHE"
+        },
+        {
+          "path": "LICENSE-GPL",
+          "sha256": "0aa0322ea494da441088e4d9144c6720bf99d9e2e1eefcd29d1f58b19b5c4246",
+          "source_url": "https://raw.githubusercontent.com/zed-industries/zed/93d745668805029476e6d7fbb19652116fed51de/LICENSE-GPL"
+        }
+      ],
+      "status": "acquired"
+    }
+  ],
+  "confirmation_contents_used_for_tuning": false,
+  "boundary": "Actual public bytes; deployment mutations and faults are separately declared synthetic interventions."
+}

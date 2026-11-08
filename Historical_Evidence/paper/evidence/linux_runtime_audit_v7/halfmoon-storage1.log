@@ -1,0 +1,101 @@
+I1012 09:19:47.156423 Main     thread.cpp:126] Register main thread: tid=1
+I1012 09:19:47.157316 Main     server_base.cpp:169] ServerBase: Start 1 IO workers
+I1012 09:19:47.157303 ZK/EL    thread.cpp:62] Start thread: ZK/EL (tid=7)
+I1012 09:19:47.157460 Main     buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 1
+I1012 09:19:47.157491 Main     buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 2
+I1012 09:19:47.157616 IO-0/EL  thread.cpp:62] Start thread: IO-0/EL (tid=8)
+I1012 09:19:47.157671 Main     db.cpp:46] LogDB: Open RocksDB at path /research/storage/1
+I1012 09:19:47.157681 IO-0/EL  io_worker.cpp:199] IO-0: Event loop starts
+I1012 09:19:47.173938 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 3
+I1012 09:19:47.173958 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x100003, total of type 0x100003 is 1
+I1012 09:19:47.174056 BG       thread.cpp:62] Start thread: BG (tid=28)
+I1012 09:19:47.174228 Main     server_base.cpp:197] ServerBase: Listen on 127.0.0.1:21878 for message connections
+I1012 09:19:47.176134 Srv/EL   thread.cpp:62] Start thread: Srv/EL (tid=29)
+I1012 09:19:47.176200 Srv/EL   server_base.cpp:123] ServerBase: Event loop starts
+I1012 09:19:47.177647 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_1 with address 127.0.0.1:26248
+I1012 09:19:47.177878 ZK/EL    node_watcher.cpp:74] Seen new node storage_1 with address 127.0.0.1:21878
+I1012 09:19:47.433776 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_2 with address 127.0.0.1:27034
+I1012 09:19:47.693890 ZK/EL    node_watcher.cpp:74] Seen new node storage_2 with address 127.0.0.1:29168
+I1012 09:19:47.914269 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_3 with address 127.0.0.1:29000
+I1012 09:19:48.234014 ZK/EL    node_watcher.cpp:74] Seen new node storage_3 with address 127.0.0.1:26464
+I1012 09:19:48.585423 ZK/EL    node_watcher.cpp:74] Seen new node engine_1 with address 127.0.0.1:22626
+I1012 09:19:48.999155 ZK/EL    node_watcher.cpp:74] Seen new node gateway with address 127.0.0.1:26014
+I1012 09:19:52.008430 ZK/EL    view.cpp:29] View 0 has 1 physical logs
+I1012 09:19:52.008459 ZK/EL    storage.cpp:293] Storage[1-N]: New view 0 created
+I1012 09:19:52.008480 ZK/EL    db.cpp:57] LogDB: Install log space 0x00000001
+I1012 09:20:23.056067 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 1
+I1012 09:20:23.056080 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 1
+I1012 09:20:23.056130 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 2
+I1012 09:20:23.056133 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 2
+I1012 09:20:23.056148 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 3
+I1012 09:20:23.056151 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 3
+I1012 09:20:23.056157 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 4
+I1012 09:20:23.056158 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 4
+I1012 09:20:23.056164 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 5
+I1012 09:20:23.056165 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 5
+I1012 09:20:23.056223 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 6
+I1012 09:20:23.056227 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 6
+I1012 09:20:23.056254 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 7
+I1012 09:20:23.056266 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 7
+I1012 09:20:23.056279 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 8
+I1012 09:20:23.056281 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x20001, total of type 0x20001 is 8
+I1012 09:20:23.056921 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x50001, total of type 0x50001 is 1
+W1012 09:20:23.056932 IO-0/EL  egress_hub.cpp:224] SequencerEgressHub[1]: No ready connections
+I1012 09:20:23.056993 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 4
+I1012 09:20:23.057004 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 1
+I1012 09:20:23.057011 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 5
+I1012 09:20:23.057012 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 2
+I1012 09:20:23.057016 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 6
+I1012 09:20:23.057025 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 3
+I1012 09:20:23.057028 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 7
+I1012 09:20:23.057032 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 4
+I1012 09:20:23.057050 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 8
+I1012 09:20:23.057055 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 5
+I1012 09:20:23.057058 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 9
+I1012 09:20:23.057059 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 6
+I1012 09:20:23.057061 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 10
+I1012 09:20:23.057063 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 7
+I1012 09:20:23.057065 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 11
+I1012 09:20:23.057066 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 8
+I1012 09:20:23.057118 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 29 is ready
+I1012 09:20:23.057122 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 30 is ready
+I1012 09:20:23.057123 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 31 is ready
+I1012 09:20:23.057124 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 32 is ready
+I1012 09:20:23.057125 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 33 is ready
+I1012 09:20:23.057126 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 34 is ready
+I1012 09:20:23.057127 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 35 is ready
+I1012 09:20:23.057127 IO-0/EL  egress_hub.cpp:167] SequencerEgressHub[1]: Socket 36 is ready
+I1012 09:20:23.078861 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 9
+I1012 09:20:23.078875 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 1
+I1012 09:20:23.079014 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x30001, total of type 0x30001 is 1
+I1012 09:20:23.079027 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 10
+I1012 09:20:23.079029 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 2
+W1012 09:20:23.079030 IO-0/EL  egress_hub.cpp:224] EngineEgressHub[1]: No ready connections
+I1012 09:20:23.079173 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 12
+I1012 09:20:23.079190 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 13
+I1012 09:20:23.079197 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 14
+I1012 09:20:23.079202 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 15
+I1012 09:20:23.079207 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 16
+I1012 09:20:23.079212 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 17
+I1012 09:20:23.079216 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 18
+I1012 09:20:23.079222 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 19
+I1012 09:20:23.079238 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 11
+I1012 09:20:23.079242 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 3
+I1012 09:20:23.079268 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 45 is ready
+I1012 09:20:23.079289 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 46 is ready
+I1012 09:20:23.079297 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 47 is ready
+I1012 09:20:23.079299 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 48 is ready
+I1012 09:20:23.079300 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 49 is ready
+I1012 09:20:23.079301 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 50 is ready
+I1012 09:20:23.079302 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 51 is ready
+I1012 09:20:23.079302 IO-0/EL  egress_hub.cpp:167] EngineEgressHub[1]: Socket 52 is ready
+I1012 09:20:23.079309 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 12
+I1012 09:20:23.079311 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 4
+I1012 09:20:23.079374 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 13
+I1012 09:20:23.079385 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 5
+I1012 09:20:23.079442 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 14
+I1012 09:20:23.079481 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 6
+I1012 09:20:23.079564 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 15
+I1012 09:20:23.079573 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 7
+I1012 09:20:23.079617 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 16
+I1012 09:20:23.079624 IO-0/EL  io_worker.cpp:122] IO-0: New connection of type 0x40001, total of type 0x40001 is 8

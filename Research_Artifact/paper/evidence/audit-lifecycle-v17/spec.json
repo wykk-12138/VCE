@@ -1,0 +1,108 @@
+{
+  "methods": [
+    "JournalGuardedScoped",
+    "ReceiptCoordinatorV15",
+    "JournalWitnessV15"
+  ],
+  "tools": [
+    "claude",
+    "codex",
+    "grok"
+  ],
+  "cuts": [
+    "before",
+    "during",
+    "after"
+  ],
+  "inputs": [
+    {
+      "repository": "RooCodeInc/Roo-Code",
+      "commit": "b867ec9145750d0ae1ff7f02d35406e9bf2a0b16",
+      "split": "confirmation",
+      "payload": {
+        "path": "AGENTS.md",
+        "bytes": 445,
+        "sha256": "0050c55acd56fd4f1842938bb9e4408ad7cc9330ccb04588330997d270ff2823",
+        "git_blob": "ae09fd9b30d39b7aa610931cad32257820b12601",
+        "kind": "instruction",
+        "raw_url": "https://raw.githubusercontent.com/RooCodeInc/Roo-Code/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+        "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+        "local_path": ".research-source/public-corpus-v5/RooCodeInc__Roo-Code/files/AGENTS.md"
+      },
+      "project_files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 445,
+          "sha256": "0050c55acd56fd4f1842938bb9e4408ad7cc9330ccb04588330997d270ff2823",
+          "git_blob": "ae09fd9b30d39b7aa610931cad32257820b12601",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/RooCodeInc/Roo-Code/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+          "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/RooCodeInc__Roo-Code/files/AGENTS.md"
+        }
+      ]
+    },
+    {
+      "repository": "block/goose",
+      "commit": "3bd852002903e016ff30947e973f76e2fcfcf90f",
+      "split": "confirmation",
+      "payload": {
+        "path": "CLAUDE.md",
+        "bytes": 11,
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+        "kind": "instruction",
+        "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/CLAUDE.md",
+        "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/CLAUDE.md",
+        "local_path": ".research-source/public-corpus-v5/block__goose/files/CLAUDE.md"
+      },
+      "project_files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/CLAUDE.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/CLAUDE.md"
+        },
+        {
+          "path": "AGENTS.md",
+          "bytes": 6212,
+          "sha256": "6965989f2660a167b719422d0d2f64c8f5df5a6d254b0c321964105313b6f0e0",
+          "git_blob": "53f778eb54e4b46979da150d81974dbe6ab3959c",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/AGENTS.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/AGENTS.md"
+        },
+        {
+          "path": "documentation/AGENTS.md",
+          "bytes": 1406,
+          "sha256": "1c0adde39ed346f40ca5132f63721c448e489171a6d10076e72a55b938ebdcba",
+          "git_blob": "086f153bc2d254af995eed8abb3429d92edb4c04",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/AGENTS.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/documentation/AGENTS.md"
+        },
+        {
+          "path": "documentation/CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/CLAUDE.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/documentation/CLAUDE.md"
+        }
+      ]
+    }
+  ],
+  "binary_sha256": "7c7e0490eb6e63132e4dc86a3eafda28976c0da8511dd7023a23f8b2b20740f2",
+  "hook_sha256": "0cd4161246bad7b9e6effc85599ed8ad2a5fcb51bee80a60a5fc5093d17b1346",
+  "during": "Pause after the first actual atomic replacement returns in original activation. Gate is then killed via TerminateProcess and process handle waited before retry.",
+  "timing": "Validity experiment only; test hook excluded from all timing runs.",
+  "external_grok_launcher_present": false
+}

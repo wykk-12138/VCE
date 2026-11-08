@@ -1,0 +1,9 @@
+{
+  "cases": 162,
+  "passed": 162,
+  "hits": 26,
+  "native_rejections": 104,
+  "false_evidence_acceptance": 0,
+  "false_completion": 0,
+  "excluded_hits": 20
+}

@@ -1,0 +1,15 @@
+I1012 09:19:46.511741 Main     thread.cpp:126] Register main thread: tid=1
+I1012 09:19:46.511796 Main     controller.cpp:23] Random seed is 0x00005b25
+I1012 09:19:46.512110 ZK/EL    thread.cpp:62] Start thread: ZK/EL (tid=7)
+I1012 09:19:46.888272 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_1 with address 127.0.0.1:26248
+I1012 09:19:47.177511 ZK/EL    node_watcher.cpp:74] Seen new node storage_1 with address 127.0.0.1:21878
+I1012 09:19:47.434398 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_2 with address 127.0.0.1:27034
+I1012 09:19:47.693567 ZK/EL    node_watcher.cpp:74] Seen new node storage_2 with address 127.0.0.1:29168
+I1012 09:19:47.914488 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_3 with address 127.0.0.1:29000
+I1012 09:19:48.234567 ZK/EL    node_watcher.cpp:74] Seen new node storage_3 with address 127.0.0.1:26464
+I1012 09:19:48.585403 ZK/EL    node_watcher.cpp:74] Seen new node engine_1 with address 127.0.0.1:22626
+I1012 09:19:48.998282 ZK/EL    node_watcher.cpp:74] Seen new node gateway with address 127.0.0.1:26014
+I1012 09:19:52.004525 ZK/EL    controller.cpp:261] Controller: Number of physical logs: 1
+I1012 09:19:52.004555 ZK/EL    controller.cpp:279] Controller: Create initial view with 3 sequencers, 1 engines, and 3 storages
+I1012 09:19:52.004586 ZK/EL    view.cpp:29] View 0 has 1 physical logs
+I1012 09:19:52.006706 ZK/EL    controller.cpp:71] Controller: View 0 is published as /faas/view/new0000000000

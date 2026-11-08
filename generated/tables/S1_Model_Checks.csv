@@ -1,0 +1,4 @@
+model,states,transitions,recorded_violation,bounds
+same_content,882,1473,none,two plans; one external body edit; one residue flag; atomic observation/publication; finite captured responses
+different_content,898,1441,none,two plans; one external body edit; one residue flag; atomic observation/publication; finite captured responses
+attempts,22,21,none,"three invocations, two plans, one shared native lease"

@@ -1,0 +1,1506 @@
+{
+  "checks": [
+    {
+      "check": "Methods figure paper/figures/f01_gap-provenance.json",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f01_gap.pdf",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f01_gap.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f01_gap.svg",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f02_overview-preview.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f02_overview.pdf",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f02_overview.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f02_overview.svg",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f03_validity-preview.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f03_validity.pdf",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f03_validity.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f03_validity.svg",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f03_witness.pdf",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f03_witness.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f04_commit.pdf",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f04_commit.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f04_ownership-preview.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f04_ownership.pdf",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f04_ownership.png",
+      "pass": true
+    },
+    {
+      "check": "Methods figure paper/figures/f04_ownership.svg",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/00-abstract.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/01-introduction.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/02-related.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/03-model.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/04-design.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/05-theory.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/07-conclusion.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/08-biographies.tex",
+      "pass": true
+    },
+    {
+      "check": "Outside chapter scope paper/sections/bibliography.tex",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/results_v14/facts.json",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/results_v15/facts.json",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/results_v17/domain_thresholds.csv",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/results_v17/facts.json",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/results_v17/timing-rows.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/results_v7/composition.csv",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/audit-branches-v17/raw.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/audit-lifecycle-v17/raw.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/closure-dbos-v16/raw.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/closure-validation-v16/extra.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/dependency-benchmark-v15-opt1/raw.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/dependency-benchmark-v15-opt1/summary.json",
+      "pass": true
+    },
+    {
+      "check": "Frozen source paper/figure-data/paper/evidence/closure-validation-v16/inherited/raw.jsonl",
+      "pass": true
+    },
+    {
+      "check": "Main document unchanged",
+      "pass": true
+    },
+    {
+      "check": "b1 complete cells",
+      "pass": true
+    },
+    {
+      "check": "b1 every oracle passes",
+      "pass": true
+    },
+    {
+      "check": "b1 retained raw hash",
+      "pass": true
+    },
+    {
+      "check": "b1 predetermined warmup only",
+      "pass": true
+    },
+    {
+      "check": "b2 complete cells",
+      "pass": true
+    },
+    {
+      "check": "b2 every oracle passes",
+      "pass": true
+    },
+    {
+      "check": "b2 retained raw hash",
+      "pass": true
+    },
+    {
+      "check": "b2 predetermined warmup only",
+      "pass": true
+    },
+    {
+      "check": "b3 complete cells",
+      "pass": true
+    },
+    {
+      "check": "b3 every oracle passes",
+      "pass": true
+    },
+    {
+      "check": "b3 retained raw hash",
+      "pass": true
+    },
+    {
+      "check": "b3 predetermined warmup only",
+      "pass": true
+    },
+    {
+      "check": "All new scored observations",
+      "pass": true
+    },
+    {
+      "check": "No duplicate measured cells",
+      "pass": true
+    },
+    {
+      "check": "Full scale grid",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/1024/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/64/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/64/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/1024/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/512/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/512/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/0/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/0/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/0/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/0/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/2048/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/512/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/512/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/64/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/64/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/256/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "flat/256/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/2048/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV14 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/256/JournalGuardedScoped native process distinction",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15/wall_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15/wall_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15/evidence_kib median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15/evidence_kib CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15/validation_ms median",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15/validation_ms CI ordering",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15 exclusive decomposition",
+      "pass": true
+    },
+    {
+      "check": "nested/256/ReceiptCoordinatorV15 native process distinction",
+      "pass": true
+    },
+    {
+      "check": "abstract plan order",
+      "pass": true
+    },
+    {
+      "check": "abstract app-source sync",
+      "pass": true
+    },
+    {
+      "check": "introduction plan order",
+      "pass": true
+    },
+    {
+      "check": "introduction app-source sync",
+      "pass": true
+    },
+    {
+      "check": "related plan order",
+      "pass": true
+    },
+    {
+      "check": "related app-source sync",
+      "pass": true
+    },
+    {
+      "check": "model plan order",
+      "pass": true
+    },
+    {
+      "check": "model app-source sync",
+      "pass": true
+    },
+    {
+      "check": "design plan order",
+      "pass": true
+    },
+    {
+      "check": "design app-source sync",
+      "pass": true
+    },
+    {
+      "check": "theory plan order",
+      "pass": true
+    },
+    {
+      "check": "theory app-source sync",
+      "pass": true
+    },
+    {
+      "check": "evaluation plan order",
+      "pass": true
+    },
+    {
+      "check": "evaluation app-source sync",
+      "pass": true
+    },
+    {
+      "check": "No unresolved evaluation candidates",
+      "pass": true
+    },
+    {
+      "check": "conclusion plan order",
+      "pass": true
+    },
+    {
+      "check": "conclusion app-source sync",
+      "pass": true
+    },
+    {
+      "check": "Evaluation estimator and episode equations unchanged",
+      "pass": true
+    },
+    {
+      "check": "31 stable evaluation paragraph identities",
+      "pass": true
+    },
+    {
+      "check": "F01 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F02 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F03 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F04 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F05 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F06 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F07 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "F08 pdf exists",
+      "pass": true
+    },
+    {
+      "check": "All original profile observations preserved",
+      "pass": true
+    }
+  ],
+  "passed": 374,
+  "failed": 0,
+  "new_scored": 1296,
+  "new_warmups": 108,
+  "new_smoke_excluded": 12,
+  "historical_main_scored": 2448
+}

@@ -1,0 +1,12 @@
+{
+  "engine": "Halfmoon",
+  "rows": 288,
+  "hard_exits": 144,
+  "unique_completions": 288,
+  "false_successes": 0,
+  "preserved": 288,
+  "split": "confirmation",
+  "runtime_source_and_binary_unchanged": true,
+  "termination_scope": "Windows native endpoint process exits 86; author function wrapper uses its EXIT response and the client retries the same instance ID",
+  "analysis_sha256": "92ebfadb3c0286264687f2a8153b85664c58227e1cfa554392d2660d762dc030"
+}

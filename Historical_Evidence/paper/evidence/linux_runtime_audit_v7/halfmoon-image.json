@@ -1,0 +1,55 @@
+[
+    {
+        "Id": "sha256:71e4a4786611ec3245c375d9c4b226a00477b4e225272adf8e64b1bfd994caa2",
+        "RepoTags": [
+            "shengqipku/halfmoon:sosp-ae"
+        ],
+        "RepoDigests": [
+            "shengqipku/halfmoon@sha256:71e4a4786611ec3245c375d9c4b226a00477b4e225272adf8e64b1bfd994caa2"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2023-07-28T04:44:53.822715379-05:00",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "WorkingDir": "/boki",
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "20.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 77987125,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:f5bb4f853c84f6579d86f72de5f1d43fc8866443d9a027e2106e3755acefd61c",
+                "sha256:88555afef010969810aef466b3a7433607022808c3d8a5330857e3f484ffd124",
+                "sha256:0c799d319570d083a32532f7aeab2fb6dcb4c27a6463a29a016fcf038295370c",
+                "sha256:6c412694b719343fb79413a3e7f94a9e48ce6b3dd83041675b47df89ff62e146",
+                "sha256:9248599f298a69a238b95e1d90c8e83881b5cf6acf8646613344914767259c68",
+                "sha256:10683c5fbdaff0f484a142d46cfa560efd1800ebbd39a7c2df64eb0b8ec2720e",
+                "sha256:c86237a8ed6b91fa0577adc3eb31c6359d8d4af985db2ae447e9bb370b0205e3",
+                "sha256:c161f8be83f6d6ff34b86c27771f48c2185fdcb05e74c3c915c32e410d833312",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-12T08:49:47.417840807Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:71e4a4786611ec3245c375d9c4b226a00477b4e225272adf8e64b1bfd994caa2",
+            "size": 1737,
+            "annotations": {
+                "io.containerd.image.name": "docker.io/shengqipku/halfmoon:sosp-ae",
+                "org.opencontainers.image.ref.name": "sosp-ae"
+            }
+        }
+    }
+]

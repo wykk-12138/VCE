@@ -1,0 +1,5 @@
+engine,endpoint,cases,unique_completions,hard_exits,native_activations,duplicate_records
+Styx,NativeJournal,144,144,72,144,0
+Styx,ReceiptCoordinator,144,144,72,144,0
+Halfmoon,NativeJournal,144,144,72,144,0
+Halfmoon,ReceiptCoordinator,144,144,72,144,0

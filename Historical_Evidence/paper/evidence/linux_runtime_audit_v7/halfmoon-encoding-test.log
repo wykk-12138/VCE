@@ -1,0 +1,5 @@
+=== RUN   TestCallerResultRoundTrip
+--- PASS: TestCallerResultRoundTrip (0.00s)
+PASS
+2026/10/12 17:33:59 [INFO] LoggingMode not set, defaulting to WRITELOG
+2026/10/12 17:33:59 [INFO] log mode: WRITELOG

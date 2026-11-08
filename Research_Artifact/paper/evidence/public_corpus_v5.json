@@ -1,0 +1,923 @@
+{
+  "acquired_at_utc": "2026-10-11T12:58:41.159492+00:00",
+  "selection_sha256": "332349099c24a8a31459df35b709a12fd674e8813a77abf872cb7acf69593a66",
+  "selection": {
+    "design_date": "2026-10-11",
+    "sampling": "new purposive repositories fixed before acquisition and outcome inspection; all prior v4 inputs are development only",
+    "max_selected_files_per_project": 20,
+    "max_file_bytes": 262144,
+    "root_instruction_priority": [
+      ".codex/config.toml",
+      ".claude/settings.json",
+      "CLAUDE.md",
+      "AGENTS.md"
+    ],
+    "projects": [
+      {
+        "repository": "microsoft/vscode",
+        "split": "confirmation"
+      },
+      {
+        "repository": "rust-lang/rust",
+        "split": "confirmation"
+      },
+      {
+        "repository": "denoland/deno",
+        "split": "confirmation"
+      },
+      {
+        "repository": "hashicorp/terraform",
+        "split": "confirmation"
+      },
+      {
+        "repository": "kubernetes/kubernetes",
+        "split": "confirmation"
+      },
+      {
+        "repository": "pytorch/pytorch",
+        "split": "confirmation"
+      },
+      {
+        "repository": "huggingface/transformers",
+        "split": "confirmation"
+      },
+      {
+        "repository": "numpy/numpy",
+        "split": "confirmation"
+      },
+      {
+        "repository": "google-gemini/gemini-cli",
+        "split": "confirmation"
+      },
+      {
+        "repository": "sst/opencode",
+        "split": "confirmation"
+      },
+      {
+        "repository": "block/goose",
+        "split": "confirmation"
+      },
+      {
+        "repository": "continuedev/continue",
+        "split": "confirmation"
+      },
+      {
+        "repository": "cline/cline",
+        "split": "confirmation"
+      },
+      {
+        "repository": "RooCodeInc/Roo-Code",
+        "split": "confirmation"
+      },
+      {
+        "repository": "openai/codex",
+        "split": "confirmation"
+      },
+      {
+        "repository": "docker/compose",
+        "split": "confirmation"
+      }
+    ],
+    "missing_policy": "retain empty, inaccessible and truncated repositories; never replace based on outcomes",
+    "payload_rule": "first two instruction files in frozen order; existing selected files preserved as project context",
+    "security": "downloaded documents are inert research data; no project instructions, hooks or builds executed"
+  },
+  "projects": [
+    {
+      "repository": "RooCodeInc/Roo-Code",
+      "split": "confirmation",
+      "commit": "b867ec9145750d0ae1ff7f02d35406e9bf2a0b16",
+      "commit_date": "2026-05-15T18:04:45Z",
+      "tree_truncated": false,
+      "eligible_candidates": 1,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 445,
+          "sha256": "0050c55acd56fd4f1842938bb9e4408ad7cc9330ccb04588330997d270ff2823",
+          "git_blob": "ae09fd9b30d39b7aa610931cad32257820b12601",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/RooCodeInc/Roo-Code/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+          "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/RooCodeInc__Roo-Code/files/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "d907e7f3f1396695c474d1376c40909921ffb1fc608d2504992809a6da1742f9",
+          "source_url": "https://raw.githubusercontent.com/RooCodeInc/Roo-Code/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "block/goose",
+      "split": "confirmation",
+      "commit": "3bd852002903e016ff30947e973f76e2fcfcf90f",
+      "commit_date": "2026-10-09T21:01:04Z",
+      "tree_truncated": false,
+      "eligible_candidates": 4,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/CLAUDE.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/CLAUDE.md"
+        },
+        {
+          "path": "AGENTS.md",
+          "bytes": 6212,
+          "sha256": "6965989f2660a167b719422d0d2f64c8f5df5a6d254b0c321964105313b6f0e0",
+          "git_blob": "53f778eb54e4b46979da150d81974dbe6ab3959c",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/AGENTS.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/AGENTS.md"
+        },
+        {
+          "path": "documentation/AGENTS.md",
+          "bytes": 1406,
+          "sha256": "1c0adde39ed346f40ca5132f63721c448e489171a6d10076e72a55b938ebdcba",
+          "git_blob": "086f153bc2d254af995eed8abb3429d92edb4c04",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/AGENTS.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/documentation/AGENTS.md"
+        },
+        {
+          "path": "documentation/CLAUDE.md",
+          "bytes": 11,
+          "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+          "git_blob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/CLAUDE.md",
+          "source_url": "https://github.com/block/goose/blob/3bd852002903e016ff30947e973f76e2fcfcf90f/documentation/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/block__goose/files/documentation/CLAUDE.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "44459b86c2e96fdbfd8a6b5c33d30d4b04b5293fcb2ec96fe4dcc4e0f90b8962",
+          "source_url": "https://raw.githubusercontent.com/block/goose/3bd852002903e016ff30947e973f76e2fcfcf90f/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "cline/cline",
+      "split": "confirmation",
+      "commit": "c3a40572765b76873c597247941118c1778d02c8",
+      "commit_date": "2026-10-10T18:09:10Z",
+      "tree_truncated": false,
+      "eligible_candidates": 4,
+      "files": [
+        {
+          "path": ".claude/settings.json",
+          "bytes": 195,
+          "sha256": "2202e168fd654684b2b4c7d235aa21382b4aee7f25a783d408f6887c91f6098e",
+          "git_blob": "2e612c9c62acfa472910dfc48a3a59eec7a5ca83",
+          "kind": "configuration",
+          "raw_url": "https://raw.githubusercontent.com/cline/cline/c3a40572765b76873c597247941118c1778d02c8/.claude/settings.json",
+          "source_url": "https://github.com/cline/cline/blob/c3a40572765b76873c597247941118c1778d02c8/.claude/settings.json",
+          "local_path": ".research-source/public-corpus-v5/cline__cline/files/.claude/settings.json"
+        },
+        {
+          "path": "AGENTS.md",
+          "bytes": 5449,
+          "sha256": "7f6daa4f58c28d4df1698522af27ceb09cc1c5f76ffad2ea25032b9689667fe1",
+          "git_blob": "49cfa3b8e76bc27eb653cafc0adb8632b6289f1d",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/cline/cline/c3a40572765b76873c597247941118c1778d02c8/AGENTS.md",
+          "source_url": "https://github.com/cline/cline/blob/c3a40572765b76873c597247941118c1778d02c8/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/cline__cline/files/AGENTS.md"
+        },
+        {
+          "path": "sdk/AGENTS.md",
+          "bytes": 5404,
+          "sha256": "6541caac744dd54df72ca111d427dbecdd373a46c34ee1431f8af6c71a39da2f",
+          "git_blob": "f910c028775e5b98e4a20b11ba3cfe5509ca3eaa",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/cline/cline/c3a40572765b76873c597247941118c1778d02c8/sdk/AGENTS.md",
+          "source_url": "https://github.com/cline/cline/blob/c3a40572765b76873c597247941118c1778d02c8/sdk/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/cline__cline/files/sdk/AGENTS.md"
+        },
+        {
+          "path": "sdk/packages/llms/AGENTS.md",
+          "bytes": 1725,
+          "sha256": "ad60eac360450b712380416c71b0a9e59c835782175f2052bdb95631cae3a1c0",
+          "git_blob": "1a370d69173c56ca32dbbd4ce8f0b68ad183e70c",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/cline/cline/c3a40572765b76873c597247941118c1778d02c8/sdk/packages/llms/AGENTS.md",
+          "source_url": "https://github.com/cline/cline/blob/c3a40572765b76873c597247941118c1778d02c8/sdk/packages/llms/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/cline__cline/files/sdk/packages/llms/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "f704446a5f1271608805598b557e4288cf8580477ea038c9c3d8b361f693f6b8",
+          "source_url": "https://raw.githubusercontent.com/cline/cline/c3a40572765b76873c597247941118c1778d02c8/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "continuedev/continue",
+      "split": "confirmation",
+      "commit": "5522c6f44ca0ac3528b37244818fbfa39b5af470",
+      "commit_date": "2026-07-21T04:00:09Z",
+      "tree_truncated": false,
+      "eligible_candidates": 1,
+      "files": [
+        {
+          "path": "extensions/cli/AGENTS.md",
+          "bytes": 4302,
+          "sha256": "90d9ab48aacc593c7d4c207dffd255b07da4b1ec9717a4566c60fed36b55347c",
+          "git_blob": "a64377ee96177bcfe467af7695037c7241fcf095",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/extensions/cli/AGENTS.md",
+          "source_url": "https://github.com/continuedev/continue/blob/5522c6f44ca0ac3528b37244818fbfa39b5af470/extensions/cli/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/continuedev__continue/files/extensions/cli/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "b14a17598cb08c4c7c82c070731126304e0a75d001ed59fb9ea3955a0b561802",
+          "source_url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "denoland/deno",
+      "split": "confirmation",
+      "commit": "a18ce33715e30cd2b0d99c7e322ef11a65490e4d",
+      "commit_date": "2026-10-06T18:51:00Z",
+      "tree_truncated": false,
+      "eligible_candidates": 1,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 11866,
+          "sha256": "69015aad5ec6666900043d15d0d5a82bd961327821bd891659c14d6b0113f22f",
+          "git_blob": "0276c23c589c0399f8ed51d9128e34f9a1d1ce56",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/denoland/deno/a18ce33715e30cd2b0d99c7e322ef11a65490e4d/CLAUDE.md",
+          "source_url": "https://github.com/denoland/deno/blob/a18ce33715e30cd2b0d99c7e322ef11a65490e4d/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/denoland__deno/files/CLAUDE.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "f62497fffecc0852960c8d3e6934b9db86d16396e9b604072e923892cae3a588",
+          "source_url": "https://raw.githubusercontent.com/denoland/deno/a18ce33715e30cd2b0d99c7e322ef11a65490e4d/LICENSE.md"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "docker/compose",
+      "split": "confirmation",
+      "commit": "e11dce59fca0ec83e76f9dae291c2f1b16b02765",
+      "commit_date": "2026-10-09T14:41:51Z",
+      "tree_truncated": false,
+      "eligible_candidates": 2,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 3091,
+          "sha256": "2c3364f66a30ea054f3ec3610fa4be37a98e5fc3dbd9654b44f26805c75a236e",
+          "git_blob": "48a6b6882e9624337a7b1e8ff2813e7ef2306b23",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/docker/compose/e11dce59fca0ec83e76f9dae291c2f1b16b02765/AGENTS.md",
+          "source_url": "https://github.com/docker/compose/blob/e11dce59fca0ec83e76f9dae291c2f1b16b02765/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/docker__compose/files/AGENTS.md"
+        }
+      ],
+      "excluded": [
+        {
+          "path": "CLAUDE.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        }
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "source_url": "https://raw.githubusercontent.com/docker/compose/e11dce59fca0ec83e76f9dae291c2f1b16b02765/LICENSE"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "b7dca0a6b01fa7365e4892877a6321179ee343d72ee87a96cfc222141b99a1e6",
+          "source_url": "https://raw.githubusercontent.com/docker/compose/e11dce59fca0ec83e76f9dae291c2f1b16b02765/NOTICE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "google-gemini/gemini-cli",
+      "split": "confirmation",
+      "commit": "9b6e0265d16bbd29ca51e33c9e0c01dc4cec5e83",
+      "commit_date": "2026-10-09T21:57:32Z",
+      "tree_truncated": false,
+      "eligible_candidates": 0,
+      "files": [],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "source_url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/9b6e0265d16bbd29ca51e33c9e0c01dc4cec5e83/LICENSE"
+        }
+      ],
+      "status": "no_selected_input"
+    },
+    {
+      "repository": "hashicorp/terraform",
+      "split": "confirmation",
+      "commit": "d8e73fcbd9bb9d7c7ab38242eaccef5bfe88e270",
+      "commit_date": "2026-10-09T15:16:29Z",
+      "tree_truncated": false,
+      "eligible_candidates": 0,
+      "files": [],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "dc4cb9f6140970b69110d82e8f25545135965ae50f6761ddfd6cd7cf9452bfa9",
+          "source_url": "https://raw.githubusercontent.com/hashicorp/terraform/d8e73fcbd9bb9d7c7ab38242eaccef5bfe88e270/LICENSE"
+        }
+      ],
+      "status": "no_selected_input"
+    },
+    {
+      "repository": "huggingface/transformers",
+      "split": "confirmation",
+      "commit": "536ecc007387a50e77603bb5d92100e9b07514cc",
+      "commit_date": "2026-10-09T17:01:40Z",
+      "tree_truncated": false,
+      "eligible_candidates": 3,
+      "files": [
+        {
+          "path": ".ai/AGENTS.md",
+          "bytes": 3287,
+          "sha256": "3b8068581af0440562f2d4f1604ecace45ccde8ab0a817e71b3d49d87462ff77",
+          "git_blob": "93ba3c6c04840d98cb876e67b1c7fe5692a8d61d",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/huggingface/transformers/536ecc007387a50e77603bb5d92100e9b07514cc/.ai/AGENTS.md",
+          "source_url": "https://github.com/huggingface/transformers/blob/536ecc007387a50e77603bb5d92100e9b07514cc/.ai/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/huggingface__transformers/files/.ai/AGENTS.md"
+        }
+      ],
+      "excluded": [
+        {
+          "path": "CLAUDE.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        }
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+          "source_url": "https://raw.githubusercontent.com/huggingface/transformers/536ecc007387a50e77603bb5d92100e9b07514cc/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "kubernetes/kubernetes",
+      "split": "confirmation",
+      "commit": "137705d1d2709dbe645e26a5541827eec8c174f7",
+      "commit_date": "2026-10-11T08:45:16Z",
+      "tree_truncated": false,
+      "eligible_candidates": 2,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 1584,
+          "sha256": "ca28500a4f6f358090c58b2d3ed06c2eaf41ca4f441cddb23cec84e71362096a",
+          "git_blob": "46a9402558f6dd02faa6a8d44e0e15c1e0c16caf",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/kubernetes/kubernetes/137705d1d2709dbe645e26a5541827eec8c174f7/AGENTS.md",
+          "source_url": "https://github.com/kubernetes/kubernetes/blob/137705d1d2709dbe645e26a5541827eec8c174f7/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/kubernetes__kubernetes/files/AGENTS.md"
+        },
+        {
+          "path": "vendor/go.opentelemetry.io/otel/AGENTS.md",
+          "bytes": 7134,
+          "sha256": "10f57052605ac4e805a15043bb3c480fee44ed6fb04ba4f3b6dad8e71848167b",
+          "git_blob": "02db715284987995f70696efd88e3e8617f258ce",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/kubernetes/kubernetes/137705d1d2709dbe645e26a5541827eec8c174f7/vendor/go.opentelemetry.io/otel/AGENTS.md",
+          "source_url": "https://github.com/kubernetes/kubernetes/blob/137705d1d2709dbe645e26a5541827eec8c174f7/vendor/go.opentelemetry.io/otel/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/kubernetes__kubernetes/files/vendor/go.opentelemetry.io/otel/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source_url": "https://raw.githubusercontent.com/kubernetes/kubernetes/137705d1d2709dbe645e26a5541827eec8c174f7/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "microsoft/vscode",
+      "split": "confirmation",
+      "commit": "eef761e9628e777317a554114f0202a070e98f0b",
+      "commit_date": "2026-10-11T04:00:10Z",
+      "tree_truncated": false,
+      "eligible_candidates": 8,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 271,
+          "sha256": "aa9b8989ec534e850e743e89bd345eaf9d88c522e86e98239e2ddcda435db45f",
+          "git_blob": "d6abb76ab8384fb7b391b551b159002657c218c1",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/AGENTS.md"
+        },
+        {
+          "path": "src/vs/platform/agentHost/AGENTS.md",
+          "bytes": 107756,
+          "sha256": "596557f615c503e96e2ebbe97e73ff115964b75137af95cd0df86b1d5715de07",
+          "git_blob": "429693d7cb1c6f6f515d636454948d53a92af38a",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/src/vs/platform/agentHost/AGENTS.md"
+        },
+        {
+          "path": "src/vs/workbench/contrib/imageCarousel/AGENTS.md",
+          "bytes": 4630,
+          "sha256": "8ada3765620a334dfd9b94f47df7bae5aaecf4175374c4b0e0d4e4ddd644507d",
+          "git_blob": "4cf1b28f21585618a8409d739bd43e896527416c",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/src/vs/workbench/contrib/imageCarousel/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/src/vs/workbench/contrib/imageCarousel/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/src/vs/workbench/contrib/imageCarousel/AGENTS.md"
+        },
+        {
+          "path": "extensions/copilot/src/extension/chatSessions/copilotcli/AGENTS.md",
+          "bytes": 21631,
+          "sha256": "57c376b9e0cafd6ec4b313ab87fb1400e809245f02b95bac1b5923a7ed9ba052",
+          "git_blob": "3ef7a0760cdf37a7c485f507f825f1d74743620f",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/extensions/copilot/src/extension/chatSessions/copilotcli/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/extensions/copilot/src/extension/chatSessions/copilotcli/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/extensions/copilot/src/extension/chatSessions/copilotcli/AGENTS.md"
+        },
+        {
+          "path": "extensions/copilot/src/platform/authentication/common/AGENTS.md",
+          "bytes": 7431,
+          "sha256": "881abfc8468cede52798b36c5b893b591705abbad494241247a1d53896924d4c",
+          "git_blob": "190b92b666d74eedee021366fc4bc4b7a3bce2ef",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/extensions/copilot/src/platform/authentication/common/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/extensions/copilot/src/platform/authentication/common/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/extensions/copilot/src/platform/authentication/common/AGENTS.md"
+        },
+        {
+          "path": "src/vs/platform/agentHost/common/state/AGENTS.md",
+          "bytes": 4249,
+          "sha256": "7a4571ae8c06f0b0fc4a09736330e4a18d842be8b9ee6c733d7c3ea11c6c1559",
+          "git_blob": "47ad30abde52eee597f15bf40487caaedf681be6",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/common/state/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/common/state/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/src/vs/platform/agentHost/common/state/AGENTS.md"
+        },
+        {
+          "path": "src/vs/platform/agentHost/test/node/AGENTS.md",
+          "bytes": 232,
+          "sha256": "f56f7e34b6e5fdd42768963038a68893b3458f75ebf75e06e8fc8c3cf5b8399e",
+          "git_blob": "4ee8827208609b679afd39efb5c75a4b0848f582",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/test/node/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/test/node/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/src/vs/platform/agentHost/test/node/AGENTS.md"
+        },
+        {
+          "path": "src/vs/platform/agentHost/node/copilot/prompts/AGENTS.md",
+          "bytes": 16382,
+          "sha256": "a4fd0fcaf97ca8ae6e11ea3fd06436b646b2be2adde1f18056e9ce54f7898976",
+          "git_blob": "680841fc8b36e17e386ea25d115afd1edc9e677a",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/node/copilot/prompts/AGENTS.md",
+          "source_url": "https://github.com/microsoft/vscode/blob/eef761e9628e777317a554114f0202a070e98f0b/src/vs/platform/agentHost/node/copilot/prompts/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/microsoft__vscode/files/src/vs/platform/agentHost/node/copilot/prompts/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9480271317925265e806a9a196aaa33410a962fa9d4d1e248a4a5187bc8c9df9",
+          "source_url": "https://raw.githubusercontent.com/microsoft/vscode/eef761e9628e777317a554114f0202a070e98f0b/LICENSE.txt"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "numpy/numpy",
+      "split": "confirmation",
+      "commit": "70fa99843c75ae12434805bb4b1b07b94598c5c9",
+      "commit_date": "2026-10-09T22:50:20Z",
+      "tree_truncated": false,
+      "eligible_candidates": 0,
+      "files": [],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491",
+          "source_url": "https://raw.githubusercontent.com/numpy/numpy/70fa99843c75ae12434805bb4b1b07b94598c5c9/LICENSE.txt"
+        }
+      ],
+      "status": "no_selected_input"
+    },
+    {
+      "repository": "openai/codex",
+      "split": "confirmation",
+      "commit": "a07c8ebd57feedc4cf5dfe854c8e9101de54186b",
+      "commit_date": "2026-10-11T12:38:29Z",
+      "tree_truncated": false,
+      "eligible_candidates": 2,
+      "files": [
+        {
+          "path": "codex-rs/exec-server/src/sandbox_integrity/AGENTS.md",
+          "bytes": 2721,
+          "sha256": "41567a2b6d0997dd48d7bc18d8870c59f0c091e8fcd6a38b2cecd0767e04e2f1",
+          "git_blob": "adf9af66e2722618586ef77b828465be0f5b8918",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/openai/codex/a07c8ebd57feedc4cf5dfe854c8e9101de54186b/codex-rs/exec-server/src/sandbox_integrity/AGENTS.md",
+          "source_url": "https://github.com/openai/codex/blob/a07c8ebd57feedc4cf5dfe854c8e9101de54186b/codex-rs/exec-server/src/sandbox_integrity/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/openai__codex/files/codex-rs/exec-server/src/sandbox_integrity/AGENTS.md"
+        },
+        {
+          "path": "codex-rs/tui/src/bottom_pane/AGENTS.md",
+          "bytes": 564,
+          "sha256": "d6e6791a55c1536f5e3ffe85ed33b28e3f7bae5f59145007ecb9ef8638730a51",
+          "git_blob": "b07fa2eca8d566939def6860774eb3237f6fdc1a",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/openai/codex/a07c8ebd57feedc4cf5dfe854c8e9101de54186b/codex-rs/tui/src/bottom_pane/AGENTS.md",
+          "source_url": "https://github.com/openai/codex/blob/a07c8ebd57feedc4cf5dfe854c8e9101de54186b/codex-rs/tui/src/bottom_pane/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/openai__codex/files/codex-rs/tui/src/bottom_pane/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+          "source_url": "https://raw.githubusercontent.com/openai/codex/a07c8ebd57feedc4cf5dfe854c8e9101de54186b/LICENSE"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "9d71575ecfd9a843fc1677b0efb08053c6ba9fd686a0de1a6f5382fd3c220915",
+          "source_url": "https://raw.githubusercontent.com/openai/codex/a07c8ebd57feedc4cf5dfe854c8e9101de54186b/NOTICE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "pytorch/pytorch",
+      "split": "confirmation",
+      "commit": "d4ac43115f945ece88f6e2350366b8b65c29a4b3",
+      "commit_date": "2026-10-11T12:13:20Z",
+      "tree_truncated": false,
+      "eligible_candidates": 5,
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "bytes": 16037,
+          "sha256": "a5f8e436e04d4f1ad7de14e3cc7ef3810460ff3a785a8383964a4547f1539915",
+          "git_blob": "3515958311534096178caf18173faee47b3a532b",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/pytorch/pytorch/d4ac43115f945ece88f6e2350366b8b65c29a4b3/CLAUDE.md",
+          "source_url": "https://github.com/pytorch/pytorch/blob/d4ac43115f945ece88f6e2350366b8b65c29a4b3/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/pytorch__pytorch/files/CLAUDE.md"
+        },
+        {
+          "path": "torch/_dynamo/CLAUDE.md",
+          "bytes": 12496,
+          "sha256": "ec83961c3340cb792af2fbe02c3755327dce56b5091ee9f6e35f1d05b83a0579",
+          "git_blob": "c06f5000ab669a82ce304d62a95e31c939d110b7",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/pytorch/pytorch/d4ac43115f945ece88f6e2350366b8b65c29a4b3/torch/_dynamo/CLAUDE.md",
+          "source_url": "https://github.com/pytorch/pytorch/blob/d4ac43115f945ece88f6e2350366b8b65c29a4b3/torch/_dynamo/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/pytorch__pytorch/files/torch/_dynamo/CLAUDE.md"
+        },
+        {
+          "path": "torch/distributed/CLAUDE.md",
+          "bytes": 1129,
+          "sha256": "3ed8bec641402f4b08dbf1094a3d7251e1a1d04beefe9fdb94959491d85fef29",
+          "git_blob": "c575446b7c4575d644ad53110aa2d1325ac0df5b",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/pytorch/pytorch/d4ac43115f945ece88f6e2350366b8b65c29a4b3/torch/distributed/CLAUDE.md",
+          "source_url": "https://github.com/pytorch/pytorch/blob/d4ac43115f945ece88f6e2350366b8b65c29a4b3/torch/distributed/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/pytorch__pytorch/files/torch/distributed/CLAUDE.md"
+        }
+      ],
+      "excluded": [
+        {
+          "path": "AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        },
+        {
+          "path": "torch/distributed/AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        }
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43",
+          "source_url": "https://raw.githubusercontent.com/pytorch/pytorch/d4ac43115f945ece88f6e2350366b8b65c29a4b3/LICENSE"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "c2cc7bf0caec7652c2b460a8a470bea1677f241e4ab8e431df34cf17f5a9fec0",
+          "source_url": "https://raw.githubusercontent.com/pytorch/pytorch/d4ac43115f945ece88f6e2350366b8b65c29a4b3/NOTICE"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "rust-lang/rust",
+      "split": "confirmation",
+      "commit": "7211ea594cbf137ef6118b1752b959dea7cb9088",
+      "commit_date": "2026-10-11T03:16:03Z",
+      "tree_truncated": true,
+      "eligible_candidates": 3,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 13435,
+          "sha256": "0609fe631e54ea9eaf43f4e3bb2dc9a967308b7755418db288f1ffef81cfc753",
+          "git_blob": "ce36bada00558382adec44b3bbec402c5e96de45",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/rust-lang/rust/7211ea594cbf137ef6118b1752b959dea7cb9088/AGENTS.md",
+          "source_url": "https://github.com/rust-lang/rust/blob/7211ea594cbf137ef6118b1752b959dea7cb9088/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/rust-lang__rust/files/AGENTS.md"
+        },
+        {
+          "path": "src/tools/rust-analyzer/CLAUDE.md",
+          "bytes": 3503,
+          "sha256": "b4ee9a7c36bf387ed9295627d6c5bb38efbac6015dd058599cbbc5f6843cb8e9",
+          "git_blob": "4e536234ba1009155c8b6e6bd7a139a0ae4824cf",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/rust-lang/rust/7211ea594cbf137ef6118b1752b959dea7cb9088/src/tools/rust-analyzer/CLAUDE.md",
+          "source_url": "https://github.com/rust-lang/rust/blob/7211ea594cbf137ef6118b1752b959dea7cb9088/src/tools/rust-analyzer/CLAUDE.md",
+          "local_path": ".research-source/public-corpus-v5/rust-lang__rust/files/src/tools/rust-analyzer/CLAUDE.md"
+        }
+      ],
+      "excluded": [
+        {
+          "path": "src/tools/rust-analyzer/AGENTS.md",
+          "reason": "symlink blob; not followed as a downloaded instruction"
+        }
+      ],
+      "licenses": [
+        {
+          "path": "LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "source_url": "https://raw.githubusercontent.com/rust-lang/rust/7211ea594cbf137ef6118b1752b959dea7cb9088/LICENSE-APACHE"
+        },
+        {
+          "path": "LICENSE-MIT",
+          "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1",
+          "source_url": "https://raw.githubusercontent.com/rust-lang/rust/7211ea594cbf137ef6118b1752b959dea7cb9088/LICENSE-MIT"
+        },
+        {
+          "path": "license-metadata.json",
+          "sha256": "17885c98a94faa9b4d695c379636852c24fa4445ed3c86214405e9fc269a8622",
+          "source_url": "https://raw.githubusercontent.com/rust-lang/rust/7211ea594cbf137ef6118b1752b959dea7cb9088/license-metadata.json"
+        }
+      ],
+      "status": "acquired"
+    },
+    {
+      "repository": "sst/opencode",
+      "split": "confirmation",
+      "commit": "d21b0790a6c146815f28fea604e41e922f009590",
+      "commit_date": "2026-10-11T09:27:08Z",
+      "tree_truncated": false,
+      "eligible_candidates": 18,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 15230,
+          "sha256": "d4048f323695513fdd82425e4fdc7a8e25841035d2e29b8ef787d4df156fc317",
+          "git_blob": "622abd801b488bd906af2fa7695e35edaee48684",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/AGENTS.md"
+        },
+        {
+          "path": "packages/ai/AGENTS.md",
+          "bytes": 33847,
+          "sha256": "30ed806a52bc8e264e17791443ee17940e6694059d339adc02f989252cd3b957",
+          "git_blob": "3547ca0921169cb11abf64aad37b9f3486e9777c",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/ai/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/ai/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/ai/AGENTS.md"
+        },
+        {
+          "path": "packages/app/AGENTS.md",
+          "bytes": 7215,
+          "sha256": "2c33b498a309bc71c884450829148146c7930e1bbcf66773f350901fd68729d5",
+          "git_blob": "e475f7ee90b09f7d164b50b9b438cb7c9f8c1d92",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/app/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/app/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/app/AGENTS.md"
+        },
+        {
+          "path": "packages/cli/AGENTS.md",
+          "bytes": 257,
+          "sha256": "1478f980af2210f9039c7b78da49f5cb8c17399a124c1e7431ae5b539ba45a26",
+          "git_blob": "a39796a59a196d382fffbbe2d58c714c1bee02ad",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/cli/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/cli/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/cli/AGENTS.md"
+        },
+        {
+          "path": "packages/codemode/AGENTS.md",
+          "bytes": 3912,
+          "sha256": "14664d453180c00f7adef4d2763744e7286a18dbccc56ff4e208460d39206e2a",
+          "git_blob": "5fbfecb96a281dde03d9addf241d907699685752",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/codemode/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/codemode/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/codemode/AGENTS.md"
+        },
+        {
+          "path": "packages/desktop/AGENTS.md",
+          "bytes": 4170,
+          "sha256": "d21bba065fbf4c07ae38d6f70600585d5ea18927c95d5a68e37052c37927da21",
+          "git_blob": "057fd3f673d4abb199241173d9954ad6b0a78e2a",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/desktop/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/desktop/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/desktop/AGENTS.md"
+        },
+        {
+          "path": "packages/gui-extensions/AGENTS.md",
+          "bytes": 19231,
+          "sha256": "a0f0404884747d594523c3606483f29d15348a8634c7795cd65b4819f5acd16e",
+          "git_blob": "9bc7257b6603425c8f9aa1b55a498282c509494a",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/gui-extensions/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/gui-extensions/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/gui-extensions/AGENTS.md"
+        },
+        {
+          "path": "packages/plugin/AGENTS.md",
+          "bytes": 388,
+          "sha256": "b1f29aa8c7319f2b9aef3de53dc5da24ad38ec33f9db3dc94bfe48a72710eff2",
+          "git_blob": "65623af766d5444fcdad272252d83173587511c0",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/plugin/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/plugin/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/plugin/AGENTS.md"
+        },
+        {
+          "path": "packages/schema/AGENTS.md",
+          "bytes": 7147,
+          "sha256": "ffbc108a320b15b8f549b52f9e532e0390190ca09aa90a44258bad41aadd319b",
+          "git_blob": "3b4c6a818af9b26e05703dad90f04c132d73e364",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/schema/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/schema/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/schema/AGENTS.md"
+        },
+        {
+          "path": "packages/session-ui/AGENTS.md",
+          "bytes": 2393,
+          "sha256": "13e2b92e3a3eaf060d5159e92c90895aee7e33500fedba7ecb7397a87977b8d4",
+          "git_blob": "98a8baece80e86330f8298b1e2f8a0415cd035d4",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/session-ui/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/session-ui/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/session-ui/AGENTS.md"
+        },
+        {
+          "path": "packages/stats/AGENTS.md",
+          "bytes": 73,
+          "sha256": "2e6198f6466746c241ac543cb884110f69cca228e403fde2abae71d78c59c99b",
+          "git_blob": "409271cf09a5098ec75a0dbd8f48ea620a6df030",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/stats/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/stats/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/stats/AGENTS.md"
+        },
+        {
+          "path": "packages/tui/AGENTS.md",
+          "bytes": 791,
+          "sha256": "fe81908a66e51cceb8168e505ebc8c28ad8037e43e6efbe94cc7282660739d7b",
+          "git_blob": "6a0beac90af376e74a0aca59d76bd567acac46a1",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/tui/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/tui/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/tui/AGENTS.md"
+        },
+        {
+          "path": "packages/ui/AGENTS.md",
+          "bytes": 3471,
+          "sha256": "582201a875a0aee287ff241b0c7d67bf6f7acbc91c0038cf70ac0a162a9cfc8c",
+          "git_blob": "80c5071b95e562bb84c898b57703c84f21d41daa",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/ui/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/ui/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/ui/AGENTS.md"
+        },
+        {
+          "path": "services/www/AGENTS.md",
+          "bytes": 1033,
+          "sha256": "3063df710ed5425329ebbe5651cedfaf975d4b505ff0553be6affa706ff6476e",
+          "git_blob": "6e2f764f005bd1d615a3ca0aaedebc04540e8aee",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/services/www/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/services/www/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/services/www/AGENTS.md"
+        },
+        {
+          "path": "packages/app/e2e/AGENTS.md",
+          "bytes": 2675,
+          "sha256": "7af545cf8f3a230a2e0aa93dcbbbed7d82133ad28384fc5072bb2560428a9e38",
+          "git_blob": "e5070f9a204c05e701c8cf4e792b4e79b28eb311",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/app/e2e/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/app/e2e/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/app/e2e/AGENTS.md"
+        },
+        {
+          "path": "packages/app/e2e/performance/AGENTS.md",
+          "bytes": 813,
+          "sha256": "f3139eb2927c5b6758955772ea1dd42ba9d5403b785f6e09b2c5cc858e73e0f1",
+          "git_blob": "e69c91a98fc168717cfc5663f0dfdf5a01723153",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/app/e2e/performance/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/app/e2e/performance/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/app/e2e/performance/AGENTS.md"
+        },
+        {
+          "path": "packages/core/src/tool/AGENTS.md",
+          "bytes": 5213,
+          "sha256": "6439f0c763ba25a5f1dc499507a6e9673d6d7b187830efade932c2042a7124dd",
+          "git_blob": "4af998f8cb66c01ff3234e2ffede42ad305b0554",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/packages/core/src/tool/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/packages/core/src/tool/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/packages/core/src/tool/AGENTS.md"
+        },
+        {
+          "path": "services/www/src/docs/AGENTS.md",
+          "bytes": 1966,
+          "sha256": "828c3ae020a75becc91453f54c20d5fd914ba8178fa58faf34656791f09c3516",
+          "git_blob": "81aa066811d613da7d47f6cc2cd36f7a7ee99ced",
+          "kind": "instruction",
+          "raw_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/services/www/src/docs/AGENTS.md",
+          "source_url": "https://github.com/sst/opencode/blob/d21b0790a6c146815f28fea604e41e922f009590/services/www/src/docs/AGENTS.md",
+          "local_path": ".research-source/public-corpus-v5/sst__opencode/files/services/www/src/docs/AGENTS.md"
+        }
+      ],
+      "excluded": [],
+      "licenses": [
+        {
+          "path": "LICENSE",
+          "sha256": "625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b",
+          "source_url": "https://raw.githubusercontent.com/sst/opencode/d21b0790a6c146815f28fea604e41e922f009590/LICENSE"
+        }
+      ],
+      "status": "acquired"
+    }
+  ],
+  "prior_v4_inputs": "development only; confirmation v5 content not used for implementation tuning",
+  "interventions": "synthetic, not historical user incidents"
+}

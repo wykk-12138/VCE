@@ -1,0 +1,11 @@
+\begin{table*}[!t]\centering\small
+\caption{Design obligations and the histories that expose their necessity}\label{tab:eval-guards}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}p{4.7cm}@{}}\toprule
+Guard & Decisive history & Error exposed when removed & Full-design check and evidence \\\midrule
+Logical ownership & Plan $Q$ supersedes $P$, then $P$ retries & Superseded plan publishes ownership & Reject $P$ and retain $Q$; model counterexample and real same/different-content histories \\
+Attempt nonce & Delayed invocation resumes after same-plan retry & Stale attempt enters the adapter & Reject obsolete pending invocation; model counterexample and delayed-child tests \\
+Retained lease & Old invocation has already entered before replacement & Superseded writer completes & Successor waits for protected work; model counterexample and real PID/lease histories \\
+Approval binding & Target changes after preview and before intent & Changed state becomes the approved baseline & Refuse conflicting edit; model counterexample and real preview/intent histories \\
+Residue membership & New recovery residue appears while saved files match & False current completion & Invalidate evidence; model counterexample and two real residue-watch ablations \\\bottomrule
+\end{tabular}
+\end{table*}

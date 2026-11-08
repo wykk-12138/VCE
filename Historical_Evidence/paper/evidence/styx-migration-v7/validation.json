@@ -1,0 +1,8 @@
+{
+  "rows": 144,
+  "same_results": 144,
+  "additional_endpoint_calls": 0,
+  "scope": "2 to 1 to 2 operator partitions; already completed native outcomes; no concurrent failure or throughput claim",
+  "source_run": "styx-confirmation2-v7",
+  "source_sha256": "0f533b88a4c9daed78aa52ae3da695e0ecf19b82d74da8f136fe3d536ce24290"
+}

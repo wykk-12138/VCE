@@ -1,0 +1,2257 @@
+{
+  "observations": 884,
+  "scored": 816,
+  "passed": 884,
+  "seconds": 1202.967733300291,
+  "comparisons": {
+    "grok/completed_retry/cold/0": {
+      "arms": {
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 49.4924,
+          "mean_episode_ms": 577.054575,
+          "median_episode_ms": 573.103,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7919.916666666667
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 299.5992,
+          "mean_episode_ms": 937.7242583333334,
+          "median_episode_ms": 936.4094,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 50.0108,
+          "mean_episode_ms": 579.715075,
+          "median_episode_ms": 579.99275,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7919.916666666667
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 298.41405,
+          "mean_episode_ms": 809.5693333333334,
+          "median_episode_ms": 806.06395,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.006981571124549,
+            "ci95": [
+              0.9893567353318296,
+              1.0302543064649439
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.004666215697477,
+            "ci95": [
+              0.9934189985021629,
+              1.0147359114486165
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.004020919275476,
+            "ci95": [
+              0.9915548213612149,
+              1.0150548912600392
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.16788184617817992,
+            "ci95": [
+              0.1646991411287941,
+              0.17115849521084156
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.618212906459413,
+            "ci95": [
+              0.6134287675804561,
+              0.6230705289047059
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.531272812826186,
+            "ci95": [
+              0.5253974799420936,
+              0.53696013063438
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.16645687615022195,
+            "ci95": [
+              0.16267843878658766,
+              0.1700638169418137
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.716215641243765,
+            "ci95": [
+              0.7074633486115481,
+              0.7237527563124994
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6407659316692155,
+            "ci95": [
+              0.6292956058975451,
+              0.6499922743293034
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/recovery/warm/0": {
+      "arms": {
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 37.1244,
+          "mean_episode_ms": 586.1357333333334,
+          "median_episode_ms": 583.03965,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7645.583333333333
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 291.5904,
+          "mean_episode_ms": 818.6001833333333,
+          "median_episode_ms": 813.8107,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 297.54075,
+          "mean_episode_ms": 821.6488333333334,
+          "median_episode_ms": 811.30465,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 37.68235,
+          "mean_episode_ms": 583.432325,
+          "median_episode_ms": 580.547,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7645.583333333333
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.12658481222572956,
+            "ci95": [
+              0.12347951660038403,
+              0.12958563317838492
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7158489305491472,
+            "ci95": [
+              0.7028124484076265,
+              0.7304057944063873
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6363107081195313,
+            "ci95": [
+              0.6233511175147826,
+              0.6520126235646512
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.1257258540581843,
+            "ci95": [
+              0.12256438039023972,
+              0.12886611937228576
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7131531653393629,
+            "ci95": [
+              0.7053679611837433,
+              0.7219350583330284
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6335210945049589,
+            "ci95": [
+              0.6247033341997817,
+              0.645185830007229
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9971921141869022,
+            "ci95": [
+              0.9778541747807874,
+              1.0175784480700347
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0043485928583888,
+            "ci95": [
+              0.9856956238031052,
+              1.0240928693662785
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.01634327359571,
+            "ci95": [
+              0.9971688778082586,
+              1.0406365620245046
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/fallback/cold/0": {
+      "arms": {
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 310.5296,
+          "mean_episode_ms": 836.3447,
+          "median_episode_ms": 832.78885,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 317.97845,
+          "mean_episode_ms": 864.70505,
+          "median_episode_ms": 857.38405,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 320.0144,
+          "mean_episode_ms": 876.5297833333334,
+          "median_episode_ms": 872.13515,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 313.3161,
+          "mean_episode_ms": 836.7211166666666,
+          "median_episode_ms": 826.643,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 1.0281656484646458,
+            "ci95": [
+              1.0181466906764254,
+              1.038822947225352
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0339489385743654,
+            "ci95": [
+              1.0260056033348284,
+              1.0425023594520706
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0478566534632776,
+            "ci95": [
+              1.0407590310493555,
+              1.0550175463192475
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9972370610971554,
+            "ci95": [
+              0.9880897700045659,
+              1.0060515048549068
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9868555018926112,
+            "ci95": [
+              0.9761999018903745,
+              0.9968621235130982
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.9850199559919959,
+            "ci95": [
+              0.9712990252432976,
+              0.9975495742038156
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 1.0277283670395383,
+            "ci95": [
+              1.019999331754194,
+              1.0364258648148887
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0336225622597974,
+            "ci95": [
+              1.0263636282100872,
+              1.040837070895915
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0457394054556257,
+            "ci95": [
+              1.038819965399712,
+              1.0524700729688985
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "grok/recovery/cold/0": {
+      "arms": {
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 54.56455,
+          "mean_episode_ms": 581.554725,
+          "median_episode_ms": 579.7554,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7919.916666666667
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 295.6408,
+          "mean_episode_ms": 798.5633916666666,
+          "median_episode_ms": 794.2993,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 54.08105,
+          "mean_episode_ms": 582.4043166666667,
+          "median_episode_ms": 581.67455,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7919.916666666667
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 296.4169,
+          "mean_episode_ms": 808.3094333333333,
+          "median_episode_ms": 791.66985,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.18323915841965518,
+            "ci95": [
+              0.17927554118306932,
+              0.18705786850394027
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7281986244245663,
+            "ci95": [
+              0.7225113421750565,
+              0.7341895829606364
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6547437448123198,
+            "ci95": [
+              0.6486315793567633,
+              0.661239386562751
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.007841599255119,
+            "ci95": [
+              0.9889267676675779,
+              1.0287503612444093
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9984073671281851,
+            "ci95": [
+              0.984955452336258,
+              1.0107760862998134
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.996768992741358,
+            "ci95": [
+              0.9823066486537806,
+              1.0094263432555715
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.1788324607544388,
+            "ci95": [
+              0.17009087609312404,
+              0.18542122664779812
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7200728049777159,
+            "ci95": [
+              0.7052640532916634,
+              0.7327025446010169
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6444985133471961,
+            "ci95": [
+              0.62775257978463,
+              0.6578580599935387
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/recovery/cold/0": {
+      "arms": {
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 53.7013,
+          "mean_episode_ms": 600.5864,
+          "median_episode_ms": 590.5803,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7645.583333333333
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 307.37825,
+          "mean_episode_ms": 837.912225,
+          "median_episode_ms": 824.5406,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 308.7849,
+          "mean_episode_ms": 829.724775,
+          "median_episode_ms": 826.87175,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 55.91225,
+          "mean_episode_ms": 602.1494083333333,
+          "median_episode_ms": 601.7412,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7645.583333333333
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.17424095328825492,
+            "ci95": [
+              0.1712012977066018,
+              0.1774495503954593
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7167238907931933,
+            "ci95": [
+              0.7044300063049902,
+              0.7292443662025379
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6326900764848974,
+            "ci95": [
+              0.6128630656462878,
+              0.6498954362660333
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.17345027339845834,
+            "ci95": [
+              0.16972697618484728,
+              0.17675832453909984
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7234825220179766,
+            "ci95": [
+              0.708171895025366,
+              0.7419720941539151
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.639280868070292,
+            "ci95": [
+              0.6281363228761827,
+              0.650682908774968
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9407774922263048,
+            "ci95": [
+              0.9111754995735581,
+              0.9704720065568649
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9968329434167239,
+            "ci95": [
+              0.978779093182698,
+              1.019276859009222
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.9867532647486857,
+            "ci95": [
+              0.9714440756496273,
+              1.0032729353127565
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "codex/completed_retry/cold/0": {
+      "arms": {
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 52.56625,
+          "mean_episode_ms": 1562.5559083333333,
+          "median_episode_ms": 1550.47055,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 6119.083333333333
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 885.87545,
+          "mean_episode_ms": 2405.4336916666666,
+          "median_episode_ms": 2388.8558,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 50.4496,
+          "mean_episode_ms": 1570.6290083333333,
+          "median_episode_ms": 1558.75445,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 6119.083333333333
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 887.44425,
+          "mean_episode_ms": 2819.575675,
+          "median_episode_ms": 2808.0287,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9769723836019388,
+            "ci95": [
+              0.9449088567200914,
+              1.0113341017665736
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0052010517636816,
+            "ci95": [
+              0.9919761567464478,
+              1.0176363636736074
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0089301197634493,
+            "ci95": [
+              0.9909796822529087,
+              1.0242229329898807
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.056847769238981084,
+            "ci95": [
+              0.05501682743054314,
+              0.05867804742274069
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.653001809604754,
+            "ci95": [
+              0.6480855942973563,
+              0.6581407441522835
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.5707239884281878,
+            "ci95": [
+              0.5656519559347583,
+              0.5758504713702921
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.05701176040862951,
+            "ci95": [
+              0.055625158512219115,
+              0.058341639237587874
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.557063356657737,
+            "ci95": [
+              0.5519109550094626,
+              0.562496892206259
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.46839989993072023,
+            "ci95": [
+              0.4634267605378155,
+              0.4738197154339998
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "codex/recovery/cold/0": {
+      "arms": {
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 56.88305,
+          "mean_episode_ms": 1584.5642916666668,
+          "median_episode_ms": 1559.5871,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 6119.083333333333
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 887.04235,
+          "mean_episode_ms": 2385.52805,
+          "median_episode_ms": 2375.8982,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 55.08095,
+          "mean_episode_ms": 1558.881875,
+          "median_episode_ms": 1561.56695,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 6119.083333333333
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 883.8619,
+          "mean_episode_ms": 2378.224725,
+          "median_episode_ms": 2368.76125,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.06805731304417252,
+            "ci95": [
+              0.06164591236744302,
+              0.080873781483839
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.6638393500437371,
+            "ci95": [
+              0.6523701947330226,
+              0.6801371034321049
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.579303884765814,
+            "ci95": [
+              0.5662008091509986,
+              0.600314118410408
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.1047204668623303,
+            "ci95": [
+              1.0000893020700876,
+              1.3154748419650872
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0157937559366168,
+            "ci95": [
+              0.9959124075164356,
+              1.0465295641488133
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0222027034604304,
+            "ci95": [
+              0.9948268926534439,
+              1.0670080098259251
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.06838543232519168,
+            "ci95": [
+              0.06207663112287417,
+              0.08188741530842156
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.6658819027689875,
+            "ci95": [
+              0.6514509536316808,
+              0.6866198621622164
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.582727617365953,
+            "ci95": [
+              0.5663783944687374,
+              0.6083139556329938
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "grok/fallback/cold/0": {
+      "arms": {
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 299.36735,
+          "mean_episode_ms": 804.9241833333334,
+          "median_episode_ms": 808.17555,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 310.39765,
+          "mean_episode_ms": 854.1760916666666,
+          "median_episode_ms": 828.16155,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 308.75605,
+          "mean_episode_ms": 845.528975,
+          "median_episode_ms": 834.4733,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 296.88345,
+          "mean_episode_ms": 809.8879666666667,
+          "median_episode_ms": 793.21805,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 1.0161700096645776,
+            "ci95": [
+              0.9826634408961114,
+              1.0453585212867782
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0495472149236773,
+            "ci95": [
+              1.020085425391193,
+              1.0872192721213179
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0462089558193495,
+            "ci95": [
+              1.0231330119610225,
+              1.0657274593013408
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9961644496598427,
+            "ci95": [
+              0.9852923278841055,
+              1.0073981840830004
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9918022451072644,
+            "ci95": [
+              0.9703598600041743,
+              1.0082597368439088
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.9736453200943901,
+            "ci95": [
+              0.9205443877701273,
+              1.0061628904430575
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 1.0387417903148324,
+            "ci95": [
+              1.0246805932395253,
+              1.0520701616748829
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0448784861785236,
+            "ci95": [
+              0.9919343006590429,
+              1.0931131625764519
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0640266344923002,
+            "ci95": [
+              1.0544337859971158,
+              1.0741224382760048
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "codex/normal/cold/0": {
+      "arms": {
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 1459.62365,
+          "mean_episode_ms": 1974.46485,
+          "median_episode_ms": 1927.64995,
+          "native_commands": [
+            [
+              "version",
+              "activate",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 1035.33905,
+          "mean_episode_ms": 1570.1787916666667,
+          "median_episode_ms": 1506.20755,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 6119.916666666667
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 1023.3622,
+          "mean_episode_ms": 1496.878825,
+          "median_episode_ms": 1492.025,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 1049.6715,
+          "mean_episode_ms": 1532.8100333333332,
+          "median_episode_ms": 1531.8513,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 6119.916666666667
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.7052837361457291,
+            "ci95": [
+              0.6895504338714031,
+              0.7169331182942823
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7773485867492945,
+            "ci95": [
+              0.7567243936327787,
+              0.7911527771917208
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.7052837361457291,
+            "ci95": [
+              0.6891307855688028,
+              0.7170406085877173
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9940101929856376,
+            "ci95": [
+              0.963147037357779,
+              1.0150183735783038
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9823213848953414,
+            "ci95": [
+              0.9247817903887108,
+              1.015581876352667
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.9940101929856376,
+            "ci95": [
+              0.96237996160754,
+              1.0148598268770226
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 1.0233142294880024,
+            "ci95": [
+              1.0129259823492205,
+              1.0347271685328572
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0238857613608414,
+            "ci95": [
+              1.0131266821000253,
+              1.0374390619501432
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0233142294880024,
+            "ci95": [
+              1.0131247440119877,
+              1.0346965837615845
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "codex/fallback/cold/0": {
+      "arms": {
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 890.9665,
+          "mean_episode_ms": 2403.7693083333334,
+          "median_episode_ms": 2373.4319,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 889.63135,
+          "mean_episode_ms": 2395.03155,
+          "median_episode_ms": 2373.39095,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 908.2183,
+          "mean_episode_ms": 2419.1498583333337,
+          "median_episode_ms": 2396.97485,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 901.2791,
+          "mean_episode_ms": 2434.1421833333334,
+          "median_episode_ms": 2429.22075,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 1.0109759033179404,
+            "ci95": [
+              0.9979796931892742,
+              1.026030345197399
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.012491539139469,
+            "ci95": [
+              1.0039706961794777,
+              1.021472814536743
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.013482741744903,
+            "ci95": [
+              1.0028940950658116,
+              1.0248048722615752
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 1.0099584881727848,
+            "ci95": [
+              0.992439475193973,
+              1.0250347353367
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0162631548624375,
+            "ci95": [
+              1.0044423944369365,
+              1.027377855377259
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0180030655631829,
+            "ci95": [
+              1.0058195080306898,
+              1.0298260707104048
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9933607223414439,
+            "ci95": [
+              0.9736115503418187,
+              1.0101293692856497
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0061515289049117,
+            "ci95": [
+              0.9927168794949478,
+              1.0184470830043815
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0040689494965038,
+            "ci95": [
+              0.9902008406277718,
+              1.0162333741833693
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "grok/normal/cold/0": {
+      "arms": {
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 328.5793,
+          "mean_episode_ms": 504.4794333333333,
+          "median_episode_ms": 501.24825,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 468.24675,
+          "mean_episode_ms": 640.8652416666666,
+          "median_episode_ms": 636.02235,
+          "native_commands": [
+            [
+              "version",
+              "activate",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 354.00175,
+          "mean_episode_ms": 524.8390083333334,
+          "median_episode_ms": 525.47775,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 7920.833333333333
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 359.2315,
+          "mean_episode_ms": 530.08475,
+          "median_episode_ms": 527.78725,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 7920.833333333333
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 1.079484842341109,
+            "ci95": [
+              1.0634857704330487,
+              1.0953259886265478
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0509069259518122,
+            "ci95": [
+              1.0377621138814879,
+              1.0628187689169435
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.079484842341109,
+            "ci95": [
+              1.0634008063111202,
+              1.0949113284420682
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.761802647132847,
+            "ci95": [
+              0.7497692486482033,
+              0.7724451181824664
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.8271859344522285,
+            "ci95": [
+              0.8194586979867723,
+              0.8345144201490784
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.761802647132847,
+            "ci95": [
+              0.7497972641577515,
+              0.7726497971838572
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.0112148729106294,
+            "ci95": [
+              0.9960922518883368,
+              1.026171908523642
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0100929864065002,
+            "ci95": [
+              0.9984787027919165,
+              1.02233721047305
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0112148729106294,
+            "ci95": [
+              0.9957867121623301,
+              1.0258375612418411
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/completed_retry/cold/0": {
+      "arms": {
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 311.0539,
+          "mean_episode_ms": 970.6700583333334,
+          "median_episode_ms": 967.60355,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 50.60945,
+          "mean_episode_ms": 603.7675083333334,
+          "median_episode_ms": 597.50515,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 307.20015,
+          "mean_episode_ms": 834.1160666666666,
+          "median_episode_ms": 832.24685,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 51.3589,
+          "mean_episode_ms": 598.0093166666667,
+          "median_episode_ms": 599.6828,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.16433869471293092,
+            "ci95": [
+              0.15923678013962686,
+              0.16896088211417054
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.6218954649555055,
+            "ci95": [
+              0.6123083118618753,
+              0.6316617446012092
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.531054842386827,
+            "ci95": [
+              0.5214692022794805,
+              0.5407936317030433
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.16452995785534533,
+            "ci95": [
+              0.16014213654232107,
+              0.16884234146692578
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7237399266238093,
+            "ci95": [
+              0.7114651853309485,
+              0.7344965044699004
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6436667553532793,
+            "ci95": [
+              0.6321036585708766,
+              0.6542937794121959
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.992122771373478,
+            "ci95": [
+              0.9701120873630944,
+              1.0146819175820443
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.009460219757887,
+            "ci95": [
+              0.9944996326590227,
+              1.0233312002576824
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0102707313642825,
+            "ci95": [
+              0.9947028993303947,
+              1.0258934091522245
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/recovery/cold/2048": {
+      "arms": {
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 312.80695,
+          "mean_episode_ms": 850.5805583333333,
+          "median_episode_ms": 846.2148,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 55.148,
+          "mean_episode_ms": 609.5122,
+          "median_episode_ms": 607.03185,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 55.12795,
+          "mean_episode_ms": 608.47555,
+          "median_episode_ms": 610.2364,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 310.02215,
+          "mean_episode_ms": 843.622375,
+          "median_episode_ms": 844.95175,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.1759005360070633,
+            "ci95": [
+              0.16844823635310086,
+              0.18383580155949197
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7154871960944402,
+            "ci95": [
+              0.7053748350224684,
+              0.7247387776554256
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.63272597784555,
+            "ci95": [
+              0.6206703723686523,
+              0.6440991321155399
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.020894991789047,
+            "ci95": [
+              0.9899682660816626,
+              1.0542635123988624
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9985664010481323,
+            "ci95": [
+              0.9826968186340787,
+              1.0124286356147054
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0000890749983027,
+            "ci95": [
+              0.9890019955004897,
+              1.0108188363145703
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.17929675508173118,
+            "ci95": [
+              0.17291742384684408,
+              0.1871283793516124
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.721225169787056,
+            "ci95": [
+              0.7140762574397176,
+              0.7286592770958019
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6380606497110776,
+            "ci95": [
+              0.627794965966284,
+              0.6485713341744274
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/unrelated_edit/cold/0": {
+      "arms": {
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 310.50045,
+          "mean_episode_ms": 835.137525,
+          "median_episode_ms": 831.66005,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 54.9113,
+          "mean_episode_ms": 598.2661833333334,
+          "median_episode_ms": 594.0092,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 311.13345,
+          "mean_episode_ms": 833.6378583333334,
+          "median_episode_ms": 834.0182,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 54.71695,
+          "mean_episode_ms": 595.466025,
+          "median_episode_ms": 590.75415,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.17787974390149408,
+            "ci95": [
+              0.17447442789664386,
+              0.18161091485249628
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7129608504910763,
+            "ci95": [
+              0.7073068364408241,
+              0.719725244293999
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6346140353659524,
+            "ci95": [
+              0.6283167065480908,
+              0.6414100636739821
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.017013204941935,
+            "ci95": [
+              0.9938602815047617,
+              1.047599710235612
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9953687715498736,
+            "ci95": [
+              0.9872040271390702,
+              1.0033507738298373
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.9972463693238335,
+            "ci95": [
+              0.9844153526968382,
+              1.008496014400907
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.17757825547898448,
+            "ci95": [
+              0.1737582958159899,
+              0.18191775031708254
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7141731601513913,
+            "ci95": [
+              0.7064761145500014,
+              0.7215832210577224
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6355491571951045,
+            "ci95": [
+              0.6274554961390355,
+              0.6433955505831097
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "grok/recovery/warm/0": {
+      "arms": {
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 281.2065,
+          "mean_episode_ms": 793.5356583333333,
+          "median_episode_ms": 788.93475,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 38.0946,
+          "mean_episode_ms": 559.9980833333334,
+          "median_episode_ms": 560.2622,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7920.833333333333
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 38.42785,
+          "mean_episode_ms": 567.0052666666667,
+          "median_episode_ms": 556.91315,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 7920.833333333333
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 282.9685,
+          "mean_episode_ms": 789.4743916666666,
+          "median_episode_ms": 776.92665,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.13144187986816444,
+            "ci95": [
+              0.12552781844978503,
+              0.13734772556670904
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7059765321391845,
+            "ci95": [
+              0.6914253715757485,
+              0.7191035154527675
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6290418742219238,
+            "ci95": [
+              0.6150542542494767,
+              0.6409146312371837
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9862963600292175,
+            "ci95": [
+              0.9446330664520516,
+              1.0370094502999112
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.9879314122873255,
+            "ci95": [
+              0.9718435981622812,
+              1.0039072013365171
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.9905169062508283,
+            "ci95": [
+              0.9708196888829841,
+              1.0091875439322067
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.12774713902818668,
+            "ci95": [
+              0.12120239587218182,
+              0.1337806287797665
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.7095826429140227,
+            "ci95": [
+              0.6947362527765554,
+              0.7213305537447462
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.6278330738787723,
+            "ci95": [
+              0.6124207070908493,
+              0.6396497039650788
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "codex/recovery/warm/0": {
+      "arms": {
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 37.4197,
+          "mean_episode_ms": 1550.62705,
+          "median_episode_ms": 1545.0956,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 6119.916666666667
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 869.9465,
+          "mean_episode_ms": 2369.5591166666663,
+          "median_episode_ms": 2368.15225,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 38.4994,
+          "mean_episode_ms": 1549.0688416666667,
+          "median_episode_ms": 1552.44885,
+          "native_commands": [
+            []
+          ],
+          "mean_evidence_bytes": 6119.916666666667
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 872.3105,
+          "mean_episode_ms": 2356.9137333333333,
+          "median_episode_ms": 2363.26035,
+          "native_commands": [
+            [
+              "version",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.042891884327444854,
+            "ci95": [
+              0.04140080226272308,
+              0.04427658937498078
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.6543832869256659,
+            "ci95": [
+              0.6489918490290305,
+              0.6606979852622855
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.5644437737408725,
+            "ci95": [
+              0.5592081535114891,
+              0.5697568107263787
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 0.9645656469963689,
+            "ci95": [
+              0.9223510520472019,
+              1.0145894187398958
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0009800521461885,
+            "ci95": [
+              0.9924882649551446,
+              1.0090894258932788
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.991941772471261,
+            "ci95": [
+              0.9821851673910723,
+              1.000067634023462
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 0.042730331407447,
+            "ci95": [
+              0.04117891576873897,
+              0.044125718260763155
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.6578356353790796,
+            "ci95": [
+              0.653256491302089,
+              0.6627595118335394
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.5663846500707371,
+            "ci95": [
+              0.5620874523837016,
+              0.5706079299535642
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    },
+    "claude/normal/cold/0": {
+      "arms": {
+        "ReceiptCoordinatorV15": {
+          "n": 12,
+          "median_ms": 374.1503,
+          "mean_episode_ms": 557.7876833333333,
+          "median_episode_ms": 559.9399,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        },
+        "JournalGuardedScoped": {
+          "n": 12,
+          "median_ms": 337.8237,
+          "mean_episode_ms": 527.1849333333333,
+          "median_episode_ms": 523.5962,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        },
+        "JournalWitnessV15": {
+          "n": 12,
+          "median_ms": 366.84605,
+          "mean_episode_ms": 552.0677916666666,
+          "median_episode_ms": 553.40285,
+          "native_commands": [
+            [
+              "version",
+              "activate"
+            ]
+          ],
+          "mean_evidence_bytes": 7646.666666666667
+        },
+        "JournalPostStatus": {
+          "n": 12,
+          "median_ms": 480.0957,
+          "mean_episode_ms": 664.528225,
+          "median_episode_ms": 663.118,
+          "native_commands": [
+            [
+              "version",
+              "activate",
+              "status"
+            ]
+          ],
+          "mean_evidence_bytes": 0
+        }
+      },
+      "paired": {
+        "JournalGuardedScoped": {
+          "wall_ns": {
+            "ratio": 1.0871516791815,
+            "ci95": [
+              1.0614140845500355,
+              1.1188141795195796
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0581355587515535,
+            "ci95": [
+              1.0387740643502033,
+              1.080635527132684
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.0871516791815,
+            "ci95": [
+              1.0602837137895338,
+              1.1199599801433546
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalWitnessV15": {
+          "wall_ns": {
+            "ratio": 1.015095603964157,
+            "ci95": [
+              0.9911110278923692,
+              1.0445704407884882
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 1.0104961964745807,
+            "ci95": [
+              0.9952940563149993,
+              1.0288651205419745
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 1.015095603964157,
+            "ci95": [
+              0.9917014476636921,
+              1.0444415431684433
+            ],
+            "pairs": 12
+          }
+        },
+        "JournalPostStatus": {
+          "wall_ns": {
+            "ratio": 0.7769363066629852,
+            "ci95": [
+              0.7589147714824799,
+              0.7998995648078446
+            ],
+            "pairs": 12
+          },
+          "episode_ns": {
+            "ratio": 0.839405891226759,
+            "ci95": [
+              0.8237838709824199,
+              0.8583470134973384
+            ],
+            "pairs": 12
+          },
+          "confirmation_episode_ns": {
+            "ratio": 0.7769363066629852,
+            "ci95": [
+              0.7589872205653017,
+              0.7989135131730746
+            ],
+            "pairs": 12
+          }
+        }
+      }
+    }
+  }
+}

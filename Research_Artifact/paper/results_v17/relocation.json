@@ -1,0 +1,8 @@
+{
+  "extracted_source_compiled": true,
+  "smoke_cases": 16,
+  "passed": 16,
+  "original_measured_binary_preserved": true,
+  "relocated_root": "D:\\ks17-review-20261013",
+  "scope": "Same host and installed toolchains; shared crate downloads. No second-host timing claim."
+}

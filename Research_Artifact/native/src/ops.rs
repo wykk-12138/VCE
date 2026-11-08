@@ -1,0 +1,1000 @@
+use std::path::PathBuf;
+
+use serde_json::json;
+
+use crate::adapter::{
+    check_adapter_version, run_adapter_with, AdapterCommand, AdapterOptions, Envelope,
+};
+use crate::db::{markdown::content_sha, Store};
+use crate::diff::{change_summary, unified_diff};
+use crate::error::{Error, Result};
+use crate::lock::HomeLock;
+use crate::models::{
+    now_rfc3339, sha256_hex, validate_scope, Activation, CreatePromptInput, DiffResult, Operation,
+    OperationKind, OperationResult, OperationStatus, PlanActivateInput, PlanDeactivateInput,
+    PromptDetail, PromptVersion, RebuildReport, Scope, ToolKind, ToolStatus, UpdatePromptInput,
+};
+use crate::paths::atomic_write;
+
+// Adapter inputs are raw prompt text. Library Markdown has Switch front matter
+// and must never be passed directly to a target Agent. A deterministic path
+// keeps Grok's preview token stable, while Drop removes the transient file.
+struct AdapterPromptFile(PathBuf);
+
+impl Drop for AdapterPromptFile {
+    fn drop(&mut self) {
+        let _ = std::fs::remove_file(&self.0);
+    }
+}
+
+fn write_adapter_prompt(prompt: &PromptDetail) -> Result<AdapterPromptFile> {
+    if content_sha(&prompt.content) != prompt.sha256 {
+        return Err(Error::user_cancel(
+            "prompt changed since last save; save and preview again",
+        ));
+    }
+    let file = prompt.path.with_extension("adapter.txt");
+    atomic_write(&file, &prompt.content)?;
+    Ok(AdapterPromptFile(file))
+}
+
+pub fn create_prompt(store: &Store, input: CreatePromptInput) -> Result<PromptDetail> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    if input.title.trim().is_empty() {
+        return Err(Error::invalid("title is required"));
+    }
+    let id = uuid::Uuid::new_v4().to_string();
+    store.insert_prompt(
+        &id,
+        input.tool,
+        input.title.trim(),
+        &input.content,
+        &input.tags,
+        false,
+    )
+}
+
+/// A prompt an extension pack wrote has no readable text in the app, so what would show or
+/// carry that text (edit, copy, diff, restoring a version) is refused for it.
+fn refuse_hidden(store: &Store, id: &str) -> Result<()> {
+    if crate::extensions::is_hidden_prompt(store, id) {
+        return Err(Error::invalid(
+            "prompt text from an extension pack is not shown or edited in the app",
+        ));
+    }
+    Ok(())
+}
+
+pub fn update_prompt(store: &Store, input: UpdatePromptInput) -> Result<PromptDetail> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    refuse_hidden(store, &input.id)?;
+    store.update_prompt(
+        &input.id,
+        input.title.as_deref(),
+        input.content.as_deref(),
+        input.tags.as_deref(),
+    )
+}
+
+pub fn delete_prompt(store: &Store, id: &str) -> Result<()> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    store.soft_delete_prompt(id)
+}
+
+pub fn copy_prompt(store: &Store, id: &str, target_tool: ToolKind) -> Result<PromptDetail> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    refuse_hidden(store, id)?;
+    let source = store.get_prompt(id)?;
+    if source.deleted_at.is_some() {
+        return Err(Error::invalid("cannot copy a deleted prompt"));
+    }
+    let new_id = uuid::Uuid::new_v4().to_string();
+    store.insert_prompt(
+        &new_id,
+        target_tool,
+        &source.title,
+        &source.content,
+        &source.tags,
+        false,
+    )
+}
+
+pub fn restore_prompt_version(store: &Store, id: &str, version: i64) -> Result<PromptDetail> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    refuse_hidden(store, id)?;
+    store.restore_version(id, version)
+}
+
+pub fn rebuild_index(store: &Store) -> Result<RebuildReport> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    store.rebuild_from_markdown()
+}
+
+pub fn prompt_history(store: &Store, id: &str) -> Result<Vec<PromptVersion>> {
+    store.list_versions(id)
+}
+
+pub fn prompt_diff(
+    store: &Store,
+    id: &str,
+    from_version: i64,
+    to_version: i64,
+) -> Result<DiffResult> {
+    refuse_hidden(store, id)?;
+    let from = store
+        .get_version(id, from_version)?
+        .ok_or_else(|| Error::invalid(format!("version {from_version} not found")))?;
+    let to = store
+        .get_version(id, to_version)?
+        .ok_or_else(|| Error::invalid(format!("version {to_version} not found")))?;
+    Ok(DiffResult {
+        unified: unified_diff(
+            &from.content,
+            &to.content,
+            &format!("v{from_version}"),
+            &format!("v{to_version}"),
+        ),
+        summary: change_summary(&from.content, &to.content),
+    })
+}
+
+/// Codex refuses to deploy without a `config.toml`, but a cleanup takes the file away (a copy
+/// without its login is kept in the snapshot). An empty file is a valid config, and the
+/// adapter's uninstall puts it back exactly, so a missing one is recreated for the deploy.
+fn ensure_codex_config(tool: ToolKind, opts: &AdapterOptions) {
+    if tool != ToolKind::Codex {
+        return;
+    }
+    let Some(home) = opts.home.clone().or_else(dirs::home_dir) else {
+        return;
+    };
+    let dir = home.join(".codex");
+    // No `.codex` folder means Codex is not installed; that is reported as it is.
+    if !dir.is_dir() {
+        return;
+    }
+    let path = dir.join("config.toml");
+    if std::fs::symlink_metadata(&path).is_ok() {
+        return;
+    }
+    let _ = std::fs::OpenOptions::new()
+        .write(true)
+        .create_new(true)
+        .open(&path);
+}
+
+pub async fn plan_activate(
+    store: &Store,
+    input: PlanActivateInput,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    let prompt = store.get_prompt(&input.prompt_id)?;
+    if prompt.deleted_at.is_some() {
+        return Err(Error::invalid("cannot activate a deleted prompt"));
+    }
+    validate_scope(prompt.tool, input.scope, input.project_dir.as_deref())?;
+    let name = cli_name(&prompt);
+    ensure_codex_config(prompt.tool, opts);
+    let adapter_file = write_adapter_prompt(&prompt)?;
+    let command = AdapterCommand::PlanActivate {
+        file: adapter_file.0.clone(),
+        scope: input.scope,
+        project_dir: input.project_dir.clone(),
+        name: Some(name.clone()),
+        runtime: input.runtime,
+        append_file: input.append_file.clone(),
+        max_tokens: input.max_tokens,
+    };
+    let envelope = run_adapter_with(prompt.tool, command, opts).await?;
+    let request = json!({
+        "promptId": prompt.id,
+        "tool": prompt.tool,
+        "scope": input.scope,
+        "projectDir": input.project_dir,
+        "name": name,
+        "file": prompt.path,
+        "fileSha256": prompt.sha256,
+        "promptVersion": prompt.version,
+        "runtime": input.runtime,
+        "appendFile": input.append_file,
+        "maxTokens": input.max_tokens,
+    });
+    let operation = store_preview(
+        store,
+        prompt.tool,
+        OperationKind::PlanActivate,
+        Some(&prompt.id),
+        input.scope,
+        input.project_dir.as_ref(),
+        request,
+        &envelope,
+    )?;
+    Ok(OperationResult {
+        operation_id: operation.id,
+        envelope,
+    })
+}
+
+pub async fn confirm_activate(
+    store: &Store,
+    operation_id: &str,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    let plan = require_preview(store, operation_id, OperationKind::PlanActivate)?;
+    let request: serde_json::Value = serde_json::from_str(&plan.request_json)?;
+    let prompt_id = request
+        .get("promptId")
+        .and_then(|value| value.as_str())
+        .ok_or_else(|| Error::user_cancel("activate without confirmed plan"))?;
+    let prompt = store.get_prompt(prompt_id)?;
+    if prompt.deleted_at.is_some() {
+        return Err(Error::user_cancel(
+            "prompt deleted since preview; preview again",
+        ));
+    }
+    let planned_sha = request
+        .get("fileSha256")
+        .and_then(|value| value.as_str())
+        .unwrap_or_default();
+    if planned_sha != prompt.sha256
+        || request
+            .get("promptVersion")
+            .and_then(|value| value.as_i64())
+            .is_some_and(|version| version != prompt.version)
+    {
+        return Err(Error::user_cancel(
+            "prompt changed since preview; run plan-activate again",
+        ));
+    }
+    let mut preview_token = None;
+    if let Some(plan_env) = plan.envelope_json.as_deref() {
+        if let Ok(preview) = serde_json::from_str::<Envelope>(plan_env) {
+            if !preview.ok || !preview.blockers.is_empty() {
+                return Err(Error::command_failed(
+                    preview
+                        .error
+                        .unwrap_or_else(|| "preview reported blockers".into()),
+                ));
+            }
+            if plan.tool == ToolKind::Grok {
+                preview_token = preview.confirmation_token.clone();
+                if preview_token.is_none() {
+                    return Err(Error::command_failed(
+                        "grok preview did not include a confirmation token",
+                    ));
+                }
+            }
+        }
+    }
+    if let Err(error) = check_adapter_version(plan.tool, opts).await {
+        store.update_operation(
+            operation_id,
+            OperationStatus::Failed,
+            None,
+            Some(&error.to_string()),
+        )?;
+        return Err(error);
+    }
+    let scope = plan.scope.unwrap_or(Scope::User);
+    let project_dir = plan.project_dir.as_ref().map(PathBuf::from);
+    let name = request
+        .get("name")
+        .and_then(|value| value.as_str())
+        .map(str::to_string)
+        .unwrap_or_else(|| cli_name(&prompt));
+    ensure_codex_config(prompt.tool, opts);
+    let adapter_file = write_adapter_prompt(&prompt)?;
+    let command = AdapterCommand::Activate {
+        file: adapter_file.0.clone(),
+        scope,
+        project_dir: project_dir.clone(),
+        name: Some(name),
+        runtime: request
+            .get("runtime")
+            .and_then(|value| value.as_bool())
+            .unwrap_or(false),
+        append_file: request.get("appendFile").and_then(|value| {
+            value
+                .as_str()
+                .filter(|path| !path.is_empty())
+                .map(PathBuf::from)
+        }),
+        max_tokens: request
+            .get("maxTokens")
+            .and_then(|value| value.as_u64())
+            .filter(|tokens| *tokens > 0),
+        expected_preview_token: preview_token,
+    };
+    crate::research_fault::checkpoint("before_native");
+    let envelope = run_adapter_with(plan.tool, command, opts).await?;
+    crate::research_fault::checkpoint("after_native");
+    let execute_id = persist_execute(store, &plan, OperationKind::Activate, &envelope, request)?;
+    crate::research_fault::checkpoint("after_execute_record");
+    if envelope.ok {
+        record_activation(
+            store,
+            &prompt,
+            scope,
+            project_dir.as_ref(),
+            &execute_id,
+            &envelope,
+        )?;
+        crate::research_fault::checkpoint("after_activation_record");
+        store.update_operation(operation_id, OperationStatus::Succeeded, None, None)?;
+        crate::research_fault::checkpoint("after_plan_commit");
+    } else {
+        store.update_operation(
+            operation_id,
+            OperationStatus::Failed,
+            None,
+            envelope.error.as_deref(),
+        )?;
+    }
+    Ok(OperationResult {
+        operation_id: execute_id,
+        envelope,
+    })
+}
+
+pub async fn plan_deactivate(
+    store: &Store,
+    input: PlanDeactivateInput,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    validate_scope(input.tool, input.scope, input.project_dir.as_deref())?;
+    let name = match input.prompt_id.as_deref() {
+        Some(id) => store.get_prompt(id).ok().map(|prompt| cli_name(&prompt)),
+        None => Some(input.tool.default_name().to_string()),
+    };
+    let status = run_adapter_with(
+        input.tool,
+        AdapterCommand::Status {
+            scope: input.scope,
+            project_dir: input.project_dir.clone(),
+            name: name.clone(),
+        },
+        opts,
+    )
+    .await?;
+    let salvage = input.salvage_config && input.tool == ToolKind::Grok;
+    // Grok keeps nothing of a deployment once its manifest and rule are gone (a cleanup of a
+    // drifted deployment leaves it so), and its uninstall refuses without them. Only Switch's
+    // own record still says active: turning off then just puts that record right.
+    let record_only = input.tool == ToolKind::Grok && nothing_deployed(&status);
+    // A drifted Grok deployment whose only problem is a lost config backup can still be
+    // removed when the person asks for it; the adapter checks that and refuses otherwise.
+    let drifted = !salvage && (status.status == ToolStatus::Drift || status.recovery_required);
+    let mut salvage_available = false;
+    if drifted && input.tool == ToolKind::Grok {
+        let probe = run_adapter_with(
+            input.tool,
+            AdapterCommand::PlanDeactivate {
+                scope: input.scope,
+                project_dir: input.project_dir.clone(),
+                name: name.clone(),
+                salvage_config: true,
+            },
+            opts,
+        )
+        .await?;
+        salvage_available = probe.ok && probe.config_salvage && probe.blockers.is_empty();
+    }
+    let mut envelope = if drifted {
+        let mut blocked = status;
+        blocked.command = OperationKind::PlanDeactivate.as_str().to_string();
+        blocked.ok = false;
+        blocked.preview = true;
+        blocked.recovery_required = true;
+        blocked.status = if blocked.status == ToolStatus::Drift {
+            ToolStatus::Drift
+        } else {
+            ToolStatus::RecoveryRequired
+        };
+        blocked
+            .blockers
+            .push("unmanaged edits detected; deactivate refused, recover instead".into());
+        blocked.error = Some("drift; recovery required".into());
+        blocked
+    } else if record_only {
+        let mut nothing = status;
+        nothing.command = OperationKind::PlanDeactivate.as_str().to_string();
+        nothing.preview = true;
+        nothing.ok = true;
+        nothing
+    } else {
+        run_adapter_with(
+            input.tool,
+            AdapterCommand::PlanDeactivate {
+                scope: input.scope,
+                project_dir: input.project_dir.clone(),
+                name: name.clone(),
+                salvage_config: salvage,
+            },
+            opts,
+        )
+        .await?
+    };
+    if drifted {
+        envelope.recovery_required = true;
+        envelope.salvage_available = salvage_available;
+    }
+    let request = json!({
+        "promptId": input.prompt_id,
+        "tool": input.tool,
+        "scope": input.scope,
+        "projectDir": input.project_dir,
+        "name": name,
+        "drift": drifted,
+        "salvageConfig": salvage,
+        "recordOnly": record_only,
+    });
+    let operation = store_preview(
+        store,
+        input.tool,
+        OperationKind::PlanDeactivate,
+        input.prompt_id.as_deref(),
+        input.scope,
+        input.project_dir.as_ref(),
+        request,
+        &envelope,
+    )?;
+    Ok(OperationResult {
+        operation_id: operation.id,
+        envelope,
+    })
+}
+
+pub async fn confirm_deactivate(
+    store: &Store,
+    operation_id: &str,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    let plan = require_preview(store, operation_id, OperationKind::PlanDeactivate)?;
+    let request: serde_json::Value = serde_json::from_str(&plan.request_json)?;
+    if request.get("drift").and_then(|value| value.as_bool()) == Some(true) {
+        store.update_operation(
+            operation_id,
+            OperationStatus::Cancelled,
+            None,
+            Some("drift; recovery required"),
+        )?;
+        return Err(Error::recovery_required(
+            "deactivate refused because unmanaged edits were detected",
+        ));
+    }
+    let record_only = request.get("recordOnly").and_then(|value| value.as_bool()) == Some(true);
+    let mut preview_token = None;
+    if let Some(plan_env) = plan.envelope_json.as_deref() {
+        if let Ok(preview) = serde_json::from_str::<Envelope>(plan_env) {
+            if preview.recovery_required || preview.status == ToolStatus::Drift {
+                return Err(Error::recovery_required(
+                    "deactivate refused because unmanaged edits were detected",
+                ));
+            }
+            if !preview.ok || !preview.blockers.is_empty() {
+                return Err(Error::command_failed(
+                    preview
+                        .error
+                        .unwrap_or_else(|| "preview reported blockers".into()),
+                ));
+            }
+            if plan.tool == ToolKind::Grok && !record_only {
+                preview_token = preview.confirmation_token.clone();
+                if preview_token.is_none() {
+                    return Err(Error::command_failed(
+                        "grok preview did not include a confirmation token",
+                    ));
+                }
+            }
+        }
+    }
+    let scope = plan.scope.unwrap_or(Scope::User);
+    let project_dir = plan.project_dir.as_ref().map(PathBuf::from);
+    let name = request
+        .get("name")
+        .and_then(|value| value.as_str())
+        .map(str::to_string);
+    let envelope = if record_only {
+        // Read again, under the lock: only when there is still nothing to remove is the
+        // record all that changes.
+        let mut now = run_adapter_with(
+            plan.tool,
+            AdapterCommand::Status {
+                scope,
+                project_dir: project_dir.clone(),
+                name,
+            },
+            opts,
+        )
+        .await?;
+        now.command = OperationKind::Deactivate.as_str().to_string();
+        now.preview = false;
+        if !nothing_deployed(&now) {
+            store.update_operation(
+                operation_id,
+                OperationStatus::Cancelled,
+                None,
+                Some("deployment changed since the preview"),
+            )?;
+            return Err(Error::user_cancel(
+                "plan already used: things changed since the preview",
+            ));
+        }
+        now
+    } else {
+        run_adapter_with(
+            plan.tool,
+            AdapterCommand::Deactivate {
+                scope,
+                project_dir: project_dir.clone(),
+                name,
+                expected_preview_token: preview_token,
+                salvage_config: request
+                    .get("salvageConfig")
+                    .and_then(|value| value.as_bool())
+                    .unwrap_or(false),
+            },
+            opts,
+        )
+        .await?
+    };
+    let execute_id = persist_execute(store, &plan, OperationKind::Deactivate, &envelope, request)?;
+    if envelope.ok {
+        if let Some(mut existing) = store.find_activation(
+            plan.tool,
+            scope,
+            project_dir.as_ref().and_then(|p| p.to_str()),
+        )? {
+            existing.status = ToolStatus::Inactive;
+            existing.operation_id = Some(execute_id.clone());
+            existing.updated_at = now_rfc3339();
+            store.upsert_activation(&existing)?;
+        }
+        store.upsert_tool_state(
+            plan.tool,
+            scope,
+            project_dir.as_ref().and_then(|p| p.to_str()),
+            ToolStatus::Inactive,
+            envelope.current_fingerprint.as_deref(),
+            Some(&execute_id),
+        )?;
+        store.update_operation(operation_id, OperationStatus::Succeeded, None, None)?;
+    } else {
+        store.update_operation(
+            operation_id,
+            OperationStatus::Failed,
+            None,
+            envelope.error.as_deref(),
+        )?;
+    }
+    Ok(OperationResult {
+        operation_id: execute_id,
+        envelope,
+    })
+}
+
+pub async fn plan_recover(
+    store: &Store,
+    tool: ToolKind,
+    scope: Scope,
+    project_dir: Option<PathBuf>,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    if !tool.recover_supported() {
+        let mut envelope = Envelope::new(tool, "recover");
+        envelope.ok = false;
+        envelope.available = tool.available_on_this_os();
+        envelope.status = ToolStatus::Unavailable;
+        envelope.unavailable_reason = Some("recover is not supported for ZCode".into());
+        envelope.error = Some("recover is not supported for ZCode".into());
+        let operation = store_preview(
+            store,
+            tool,
+            OperationKind::Recover,
+            None,
+            scope,
+            project_dir.as_ref(),
+            json!({"tool": tool, "scope": scope}),
+            &envelope,
+        )?;
+        return Ok(OperationResult {
+            operation_id: operation.id,
+            envelope,
+        });
+    }
+    validate_scope(tool, scope, project_dir.as_deref())?;
+    let preview = run_adapter_with(
+        tool,
+        AdapterCommand::Recover {
+            scope,
+            project_dir: project_dir.clone(),
+            execute: false,
+            expected_preview_token: None,
+        },
+        opts,
+    )
+    .await?;
+    let preview_op = store_preview(
+        store,
+        tool,
+        OperationKind::Recover,
+        None,
+        scope,
+        project_dir.as_ref(),
+        json!({"tool": tool, "scope": scope, "projectDir": project_dir}),
+        &preview,
+    )?;
+    if !preview.ok {
+        return Ok(OperationResult {
+            operation_id: preview_op.id,
+            envelope: preview,
+        });
+    }
+    Ok(OperationResult {
+        operation_id: preview_op.id,
+        envelope: preview,
+    })
+}
+
+pub async fn confirm_recover(
+    store: &Store,
+    operation_id: &str,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    let plan = require_preview(store, operation_id, OperationKind::Recover)?;
+    let mut preview_token = None;
+    if let Some(plan_env) = plan.envelope_json.as_deref() {
+        if let Ok(preview) = serde_json::from_str::<Envelope>(plan_env) {
+            if !preview.ok || !preview.blockers.is_empty() {
+                return Err(Error::command_failed(
+                    preview
+                        .error
+                        .unwrap_or_else(|| "recovery preview reported blockers".into()),
+                ));
+            }
+            if plan.tool == ToolKind::Grok {
+                preview_token = preview.confirmation_token.clone();
+                if preview_token.is_none() {
+                    return Err(Error::command_failed(
+                        "grok preview did not include a confirmation token",
+                    ));
+                }
+            }
+        }
+    }
+    let request: serde_json::Value = serde_json::from_str(&plan.request_json)?;
+    let scope = plan.scope.unwrap_or(Scope::User);
+    let project_dir = plan.project_dir.as_ref().map(PathBuf::from);
+    let envelope = run_adapter_with(
+        plan.tool,
+        AdapterCommand::Recover {
+            scope,
+            project_dir: project_dir.clone(),
+            execute: true,
+            expected_preview_token: preview_token,
+        },
+        opts,
+    )
+    .await?;
+    let execute_id = persist_execute(store, &plan, OperationKind::Recover, &envelope, request)?;
+    store.upsert_tool_state(
+        plan.tool,
+        scope,
+        project_dir.as_ref().and_then(|p| p.to_str()),
+        envelope.status,
+        envelope.current_fingerprint.as_deref(),
+        Some(&execute_id),
+    )?;
+    Ok(OperationResult {
+        operation_id: execute_id,
+        envelope,
+    })
+}
+
+/// Grok only: the adapter's own repair for a config file whose ReceiptCoordinator-managed lines were
+/// moved or rewritten since the last deploy. It backs the config up and puts its managed
+/// block back, keeps everything else, and fails closed when the values no longer line up.
+pub async fn plan_reconcile(
+    store: &Store,
+    tool: ToolKind,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    if tool != ToolKind::Grok {
+        return Err(Error::invalid("reconcile is a Grok command"));
+    }
+    let _lock = HomeLock::acquire(store.paths())?;
+    let preview = run_adapter_with(
+        tool,
+        AdapterCommand::Reconcile {
+            execute: false,
+            expected_preview_token: None,
+        },
+        opts,
+    )
+    .await?;
+    let operation = store_preview(
+        store,
+        tool,
+        OperationKind::Reconcile,
+        None,
+        Scope::User,
+        None,
+        json!({"tool": tool, "scope": Scope::User}),
+        &preview,
+    )?;
+    Ok(OperationResult {
+        operation_id: operation.id,
+        envelope: preview,
+    })
+}
+
+pub async fn confirm_reconcile(
+    store: &Store,
+    operation_id: &str,
+    opts: &AdapterOptions,
+) -> Result<OperationResult> {
+    let _lock = HomeLock::acquire(store.paths())?;
+    let plan = require_preview(store, operation_id, OperationKind::Reconcile)?;
+    let preview: Envelope = plan
+        .envelope_json
+        .as_deref()
+        .and_then(|text| serde_json::from_str(text).ok())
+        .ok_or_else(|| Error::command_failed("the reconcile preview is missing"))?;
+    if !preview.ok || !preview.blockers.is_empty() {
+        return Err(Error::command_failed(
+            preview
+                .error
+                .unwrap_or_else(|| "reconcile preview reported blockers".into()),
+        ));
+    }
+    let token = preview.confirmation_token.clone().ok_or_else(|| {
+        Error::command_failed("grok preview did not include a confirmation token")
+    })?;
+    check_adapter_version(plan.tool, opts).await?;
+    let request: serde_json::Value = serde_json::from_str(&plan.request_json)?;
+    let envelope = run_adapter_with(
+        plan.tool,
+        AdapterCommand::Reconcile {
+            execute: true,
+            expected_preview_token: Some(token),
+        },
+        opts,
+    )
+    .await?;
+    let execute_id = persist_execute(store, &plan, OperationKind::Reconcile, &envelope, request)?;
+    store.update_operation(
+        operation_id,
+        if envelope.ok {
+            OperationStatus::Succeeded
+        } else {
+            OperationStatus::Failed
+        },
+        None,
+        envelope.error.as_deref(),
+    )?;
+    Ok(OperationResult {
+        operation_id: execute_id,
+        envelope,
+    })
+}
+
+pub async fn tool_status(
+    store: &Store,
+    tool: ToolKind,
+    scope: Scope,
+    project_dir: Option<PathBuf>,
+    opts: &AdapterOptions,
+) -> Result<Envelope> {
+    validate_scope(tool, scope, project_dir.as_deref())?;
+    let envelope = run_adapter_with(
+        tool,
+        AdapterCommand::Status {
+            scope,
+            project_dir: project_dir.clone(),
+            name: Some(tool.default_name().to_string()),
+        },
+        opts,
+    )
+    .await?;
+    store.upsert_tool_state(
+        tool,
+        scope,
+        project_dir.as_ref().and_then(|p| p.to_str()),
+        envelope.status,
+        envelope.current_fingerprint.as_deref(),
+        None,
+    )?;
+    Ok(envelope)
+}
+
+pub async fn doctor_tool(tool: ToolKind, opts: &AdapterOptions) -> Result<Envelope> {
+    run_adapter_with(tool, AdapterCommand::Doctor, opts).await
+}
+
+/// The adapter read the agent cleanly and found no deployment of its own there.
+fn nothing_deployed(status: &Envelope) -> bool {
+    status.ok && status.status == ToolStatus::NotInstalled && !status.recovery_required
+}
+
+/// Mark the user-scope deployment record inactive when the agent has none left.
+pub(crate) async fn forget_removed_deployment(
+    store: &Store,
+    tool: ToolKind,
+    opts: &AdapterOptions,
+) -> Result<()> {
+    let status = tool_status(store, tool, Scope::User, None, opts).await?;
+    if !nothing_deployed(&status) {
+        return Ok(());
+    }
+    let _lock = HomeLock::acquire(store.paths())?;
+    if let Some(mut existing) = store.find_activation(tool, Scope::User, None)? {
+        if existing.status == ToolStatus::Active {
+            existing.status = ToolStatus::Inactive;
+            existing.updated_at = now_rfc3339();
+            store.upsert_activation(&existing)?;
+        }
+    }
+    Ok(())
+}
+
+pub(crate) fn require_preview(
+    store: &Store,
+    operation_id: &str,
+    expected: OperationKind,
+) -> Result<Operation> {
+    // Four different reasons, four different messages: "already used" is the one a person
+    // meets after a failed confirm, and it must not read like nothing was ever planned.
+    let operation = store
+        .get_operation(operation_id)?
+        .ok_or_else(|| Error::user_cancel("plan not found"))?;
+    if operation.kind != expected {
+        return Err(Error::user_cancel("plan is for a different action"));
+    }
+    if !matches!(
+        operation.status,
+        OperationStatus::Preview | OperationStatus::Ready
+    ) {
+        return Err(Error::user_cancel("plan already used"));
+    }
+    if !operation.preview {
+        return Err(Error::user_cancel("plan is not a preview"));
+    }
+    Ok(operation)
+}
+
+pub(crate) fn store_preview(
+    store: &Store,
+    tool: ToolKind,
+    kind: OperationKind,
+    prompt_id: Option<&str>,
+    scope: Scope,
+    project_dir: Option<&PathBuf>,
+    request: serde_json::Value,
+    envelope: &Envelope,
+) -> Result<Operation> {
+    let now = now_rfc3339();
+    let operation = Operation {
+        id: uuid::Uuid::new_v4().to_string(),
+        tool,
+        kind,
+        status: if envelope.ok {
+            OperationStatus::Preview
+        } else {
+            OperationStatus::Failed
+        },
+        preview: true,
+        prompt_id: prompt_id.map(str::to_string),
+        scope: Some(scope),
+        project_dir: project_dir.map(|path| path.to_string_lossy().into_owned()),
+        request_json: request.to_string(),
+        envelope_json: Some(serde_json::to_string(envelope)?),
+        error: envelope.error.clone(),
+        parent_id: None,
+        created_at: now.clone(),
+        updated_at: now,
+    };
+    store.insert_operation(&operation)?;
+    Ok(operation)
+}
+
+fn persist_execute(
+    store: &Store,
+    parent: &Operation,
+    kind: OperationKind,
+    envelope: &Envelope,
+    request: serde_json::Value,
+) -> Result<String> {
+    let now = now_rfc3339();
+    let operation = Operation {
+        id: uuid::Uuid::new_v4().to_string(),
+        tool: parent.tool,
+        kind,
+        status: if envelope.ok {
+            OperationStatus::Succeeded
+        } else {
+            OperationStatus::Failed
+        },
+        preview: false,
+        prompt_id: parent.prompt_id.clone(),
+        scope: parent.scope,
+        project_dir: parent.project_dir.clone(),
+        request_json: request.to_string(),
+        envelope_json: Some(serde_json::to_string(envelope)?),
+        error: envelope.error.clone(),
+        parent_id: Some(parent.id.clone()),
+        created_at: now.clone(),
+        updated_at: now,
+    };
+    store.insert_operation(&operation)?;
+    Ok(operation.id)
+}
+
+fn record_activation(
+    store: &Store,
+    prompt: &PromptDetail,
+    scope: Scope,
+    project_dir: Option<&PathBuf>,
+    operation_id: &str,
+    envelope: &Envelope,
+) -> Result<()> {
+    let now = now_rfc3339();
+    let project = project_dir.map(|path| path.to_string_lossy().into_owned());
+    let activation = Activation {
+        id: sha256_hex(format!(
+            "{}:{}:{}",
+            prompt.tool.as_str(),
+            scope.as_str(),
+            project.clone().unwrap_or_default()
+        )),
+        prompt_id: Some(prompt.id.clone()),
+        tool: prompt.tool,
+        scope,
+        project_dir: project.clone(),
+        status: if envelope.ok {
+            ToolStatus::Active
+        } else {
+            envelope.status
+        },
+        fingerprint: envelope
+            .target_fingerprint
+            .clone()
+            .or(envelope.current_fingerprint.clone())
+            .or(Some(prompt.sha256.clone())),
+        operation_id: Some(operation_id.to_string()),
+        created_at: now.clone(),
+        updated_at: now,
+    };
+    store.upsert_activation(&activation)?;
+    store.upsert_tool_state(
+        prompt.tool,
+        scope,
+        project.as_deref(),
+        activation.status,
+        activation.fingerprint.as_deref(),
+        Some(operation_id),
+    )?;
+    Ok(())
+}
+
+fn cli_name(prompt: &PromptDetail) -> String {
+    prompt.tool.default_name().to_string()
+}
+
+include!("research_verified_ops.rs");
+include!("research_confirm_generated.rs");
+
+include!("disk_sensor.rs");
+include!("receipt.rs");
+include!("journal.rs");
+include!("final_confirm.rs");
+
+include!("evolution.rs");
+include!("evolution_generated.rs");
+
+include!("witness.rs");

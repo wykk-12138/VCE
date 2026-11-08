@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+*.zip
+Research_Artifact/native/target/
+Research_Artifact/recomputed/
+Research_Artifact/validation/
+Research_Artifact/.research-tmp/

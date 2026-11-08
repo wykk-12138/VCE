@@ -1,0 +1,25 @@
+aiokafka==0.14.0
+async-timeout==5.0.1
+boto3==1.43.7
+botocore==1.43.111
+cityhash==0.4.10
+cloudpickle==3.1.2
+confluent-kafka==2.14.0
+cython==3.2.4
+geographiclib==2.1
+geopy==2.5.0
+jmespath==1.1.0
+kazoo==2.11.0
+msgspec==0.21.1
+packaging==26.3
+prometheus-client==0.25.0
+psutil==7.2.2
+python-dateutil==2.9.0.post0
+s3transfer==0.17.1
+setuptools==82.0.1
+six==1.17.0
+styx @ file:///opt/keysmith/source/styx-e1c76b2378ab89e9c5c80f116a637d7220444a48/styx-package
+typing-extensions==4.16.0
+urllib3==2.8.0
+uvloop==0.22.1
+zstandard==0.25.0

@@ -1,0 +1,98 @@
+2026-10-12 17:26:35,085.085 WARNING:	Worker id received from coordinator: 1
+2026-10-12 17:26:35,086.086 WARNING:	Worker snapshotting process online
+2026-10-12 17:26:35,086.086 WARNING:	Worker heartbeat process online
+2026-10-12 17:26:35,087.087 WARNING:	Starting Worker TCP Service
+2026-10-12 17:26:35,088.088 WARNING:	Starting Protocol TCP Service
+2026-10-12 17:26:36,198.198 WARNING:	Retrieving Snapshot from S3
+2026-10-12 17:26:36,256.256 WARNING:	State attached to operators
+2026-10-12 17:26:36,256.256 WARNING:	Starting Function Execution Protocol
+2026-10-12 17:26:36,256.256 WARNING:	Aria protocol started with operator partitions: [('native_deployment', 0)]
+2026-10-12 17:26:36,256.256 WARNING:	STARTED function scheduler
+2026-10-12 17:26:36,256.256 WARNING:	1 CREATED Kafka consumer for topic partitions: [TopicPartition(topic='native_deployment', partition=0)]
+2026-10-12 17:26:36,257.257 WARNING:	[SN_PROC] Received snapshot: 0
+Topic native_deployment not found in cluster metadata
+Topic native_deployment not found in cluster metadata
+Topic native_deployment not found in cluster metadata
+2026-10-12 17:26:36,571.571 WARNING:	1 STARTED Kafka consumer from offsets (-1): {('native_deployment', 0): -1}
+2026-10-12 17:26:36,571.571 WARNING:	Ingress started
+2026-10-12 17:26:36,573.573 WARNING:	Egress started
+2026-10-12 17:26:39,234.234 WARNING:	ARIA | Snapshot marker received @epoch: 1
+2026-10-12 17:26:39,235.235 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 1
+2026-10-12 17:26:40,593.593 WARNING:	ARIA | Snapshot marker received @epoch: 10
+2026-10-12 17:26:40,594.594 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 10
+2026-10-12 17:26:42,583.583 WARNING:	ARIA | Snapshot marker received @epoch: 23
+2026-10-12 17:26:42,584.584 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 23
+2026-10-12 17:26:44,572.572 WARNING:	ARIA | Snapshot marker received @epoch: 36
+2026-10-12 17:26:44,573.573 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 36
+2026-10-12 17:26:46,556.556 WARNING:	ARIA | Snapshot marker received @epoch: 49
+2026-10-12 17:26:46,556.556 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 49
+2026-10-12 17:26:48,550.550 WARNING:	ARIA | Snapshot marker received @epoch: 62
+2026-10-12 17:26:48,550.550 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 62
+2026-10-12 17:26:50,557.557 WARNING:	ARIA | Snapshot marker received @epoch: 74
+2026-10-12 17:26:50,558.558 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 74
+2026-10-12 17:26:51,004.004 WARNING:	MIGRATION | PHASE A START at 1791797211004
+2026-10-12 17:26:51,004.004 WARNING:	Sending: ('native_deployment', 0) for repartitioning
+WARNING:root:MIGRATION of native_deployment:0 | hashing_time: 0.000s
+2026-10-12 17:26:51,317.317 WARNING:	Background repartitioning completed
+2026-10-12 17:26:51,317.317 WARNING:	MIGRATION | PHASE A REHASHING DONE | took: 0.31377865000013117
+2026-10-12 17:26:51,318.318 WARNING:	MIGRATION | PHASE A COMPLETE — waiting for coordinator to stop protocol
+2026-10-12 17:26:51,318.318 WARNING:	MIGRATION | PHASE B START at 1791797211318
+2026-10-12 17:26:53,067.067 WARNING:	kafka ingress coroutine suts down...
+2026-10-12 17:26:53,067.067 WARNING:	Protocol coroutines stopped
+2026-10-12 17:26:53,068.068 WARNING:	Aria protocol stopped at: {('native_deployment', 0): 30}
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | ARIA STOPPED
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | PHASE B Protocol Stopped | @Epoch 75 | took: 1.749661350000224
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | Catch-up rehashed 30 keys for ('native_deployment', 0)
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | PHASE B Catch-up rehash | took: 4.222699999445467e-05
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | PHASE B Hash metadata sent | took: 2.0260004021110944e-06
+2026-10-12 17:26:53,068.068 WARNING:	MIGRATION | PHASE B WAITING FOR MigrationDone
+2026-10-12 17:26:53,115.115 WARNING:	[SN_PROC] Received snapshot: -1
+2026-10-12 17:26:53,114.114 WARNING:	MIGRATION | PHASE B Runtime rebuilt | took: 0.02426659799994013
+2026-10-12 17:26:53,114.114 WARNING:	Aria protocol started with operator partitions: [('native_deployment', 0)]
+2026-10-12 17:26:53,114.114 WARNING:	Worker: 1 | PHASE B took: 1796.1397ms
+2026-10-12 17:26:53,115.115 WARNING:	STARTED function scheduler
+2026-10-12 17:26:53,115.115 WARNING:	MIGRATION | Continuous migration sender started
+2026-10-12 17:26:53,115.115 WARNING:	1 CREATED Kafka consumer for topic partitions: [TopicPartition(topic='native_deployment', partition=0)]
+2026-10-12 17:26:53,116.116 WARNING:	MIGRATION_FINISHED at epoch: 75 at time: 1791797213116
+2026-10-12 17:26:53,118.118 WARNING:	1 STARTED Kafka consumer from offsets (-1): {('native_deployment', 0): 31}
+2026-10-12 17:26:53,118.118 WARNING:	Ingress started
+2026-10-12 17:26:53,118.118 WARNING:	Getting messages sent before recovery: {('native_deployment', 0): 30}
+2026-10-12 17:26:53,120.120 WARNING:	Reading from output from: {('native_deployment', 0): 30} + 1 to {TopicPartition(topic='native_deployment--OUT', partition=0): 31}
+2026-10-12 17:26:53,121.121 WARNING:	Got messages sent before recovery
+2026-10-12 17:26:53,121.121 WARNING:	Egress started
+2026-10-12 17:26:55,166.166 WARNING:	ARIA | Snapshot marker received @epoch: 115
+2026-10-12 17:26:55,166.166 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 115
+2026-10-12 17:26:56,856.856 WARNING:	MIGRATION | PHASE A START at 1791797216856
+2026-10-12 17:26:56,856.856 WARNING:	Sending: ('native_deployment', 0) for repartitioning
+WARNING:root:MIGRATION of native_deployment:0 | hashing_time: 0.000s
+2026-10-12 17:26:56,857.857 WARNING:	Background repartitioning completed
+2026-10-12 17:26:56,857.857 WARNING:	MIGRATION | PHASE A REHASHING DONE | took: 0.0011788839997279865
+2026-10-12 17:26:56,857.857 WARNING:	MIGRATION | PHASE A COMPLETE — waiting for coordinator to stop protocol
+2026-10-12 17:26:56,857.857 WARNING:	MIGRATION | PHASE B START at 1791797216857
+2026-10-12 17:26:58,910.910 WARNING:	kafka ingress coroutine suts down...
+2026-10-12 17:26:58,910.910 WARNING:	Protocol coroutines stopped
+2026-10-12 17:26:58,911.911 WARNING:	Aria protocol stopped at: {('native_deployment', 0): 102, ('native_deployment', 1): 43}
+2026-10-12 17:26:58,911.911 WARNING:	MIGRATION | ARIA STOPPED
+2026-10-12 17:26:58,911.911 WARNING:	MIGRATION | PHASE B Protocol Stopped | @Epoch 147 | took: 2.0534973570001966
+2026-10-12 17:26:58,911.911 WARNING:	MIGRATION | Catch-up rehashed 30 keys for ('native_deployment', 0)
+2026-10-12 17:26:58,911.911 WARNING:	MIGRATION | PHASE B Catch-up rehash | took: 4.841700001634308e-05
+2026-10-12 17:26:58,912.912 WARNING:	MIGRATION | PHASE B Hash metadata sent | took: 0.0007999129998097487
+2026-10-12 17:26:58,912.912 WARNING:	MIGRATION | PHASE B WAITING FOR MigrationDone
+2026-10-12 17:26:58,938.938 WARNING:	MIGRATION | PHASE B Runtime rebuilt | took: 0.025272155000038765
+2026-10-12 17:26:58,938.938 WARNING:	Aria protocol started with operator partitions: [('native_deployment', 0)]
+2026-10-12 17:26:58,938.938 WARNING:	Worker: 1 | PHASE B took: 2080.5752ms
+2026-10-12 17:26:58,938.938 WARNING:	[SN_PROC] Received snapshot: -1
+2026-10-12 17:26:58,938.938 WARNING:	STARTED function scheduler
+2026-10-12 17:26:58,938.938 WARNING:	MIGRATION | Continuous migration sender started
+2026-10-12 17:26:58,938.938 WARNING:	1 CREATED Kafka consumer for topic partitions: [TopicPartition(topic='native_deployment', partition=0)]
+2026-10-12 17:26:58,940.940 WARNING:	MIGRATION_FINISHED at epoch: 147 at time: 1791797218940
+2026-10-12 17:26:58,941.941 WARNING:	1 STARTED Kafka consumer from offsets (-1): {('native_deployment', 0): 102}
+2026-10-12 17:26:58,941.941 WARNING:	Ingress started
+2026-10-12 17:26:58,941.941 WARNING:	Getting messages sent before recovery: {('native_deployment', 0): 102}
+2026-10-12 17:26:58,943.943 WARNING:	Reading from output from: {('native_deployment', 0): 102} + 1 to {TopicPartition(topic='native_deployment--OUT', partition=0): 103}
+2026-10-12 17:26:58,943.943 WARNING:	Got messages sent before recovery
+2026-10-12 17:26:58,944.944 WARNING:	Egress started
+2026-10-12 17:27:00,960.960 WARNING:	ARIA | Snapshot marker received @epoch: 186
+2026-10-12 17:27:00,960.960 WARNING:	ASYNC_SN | Starting Snapshot at epoch: 186
+/opt/keysmith/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 10 leaked semaphore objects to clean up at shutdown: {'/mp-u8hp5b3c', '/mp-b39xnl5h', '/mp-ffmq3agl', '/mp-w_6mvyz3', '/mp-x3ir986h', '/mp-p5a243f9', '/mp-mlkr2w1g', '/mp-hl6e4vlq', '/mp-symkt89q', '/mp-t8la70uo'}
+  warnings.warn(

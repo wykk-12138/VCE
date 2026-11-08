@@ -1,0 +1,34 @@
+[
+  {
+    "name": "f05_recovery_effects",
+    "purpose": "Paired recovery and complete-episode effects with 95% crossed intervals; historical main experiment.",
+    "width_inches": 7.12,
+    "height_inches": 2.85,
+    "text_bounds_pass": true,
+    "sha256_pdf": "06a24596e49d6a220315a3fddd1bc64f9780d3a4652355bfec02642873d049a0"
+  },
+  {
+    "name": "f06_paths_and_work",
+    "purpose": "Four matched execution paths plus exclusive mean recovery components; all unfavorable paths retained.",
+    "width_inches": 7.12,
+    "height_inches": 4.55,
+    "text_bounds_pass": true,
+    "sha256_pdf": "3fd628951973bf4a4353f1e06f01e79cc0871380eeb6c616ba00691da7523820"
+  },
+  {
+    "name": "f07_scale_layout",
+    "purpose": "Independent release-scale study; 6 measured sizes, 2 layouts, 3 methods, all 1296 scored records.",
+    "width_inches": 7.12,
+    "height_inches": 4.55,
+    "text_bounds_pass": true,
+    "sha256_pdf": "40810bf0f690625636705717fea3e14e5936c17fdc39a20c3b63c24cdf3529c0"
+  },
+  {
+    "name": "f08_amortization",
+    "purpose": "Modeled workload thresholds from unchanged measured v17 arithmetic means; not new mixed-workload measurements.",
+    "width_inches": 7.12,
+    "height_inches": 2.85,
+    "text_bounds_pass": true,
+    "sha256_pdf": "3273c03e5e867b087f27a8c3adaaf25678adf3f69f5f50f53890d0edd4e3a6a0"
+  }
+]

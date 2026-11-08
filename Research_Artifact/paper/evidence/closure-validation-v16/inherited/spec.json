@@ -1,0 +1,18 @@
+{
+  "methods": [
+    "ReceiptCoordinatorV15",
+    "JournalWitnessV15"
+  ],
+  "binary_sha256": "7c7e0490eb6e63132e4dc86a3eafda28976c0da8511dd7023a23f8b2b20740f2",
+  "scope": "Claude project dependency refinement; other tools retain full snapshots",
+  "custom": [
+    "unrelated_inside",
+    "bulk_unrelated",
+    "root_residue_file",
+    "root_residue_directory",
+    "receiptcoordinator_residue",
+    "remove_memory",
+    "change_settings",
+    "project_backup"
+  ]
+}

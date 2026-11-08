@@ -1,0 +1,62 @@
+{
+  "new_confirmation_cases": 576,
+  "new_actual_process_exits": 288,
+  "unique_completions": 576,
+  "false_successes": 0,
+  "duplicate_records": 0,
+  "migration_checks": 144,
+  "migration_added_endpoint_calls": 0,
+  "engine_count": 5,
+  "engines": [
+    "DBOS",
+    "Netherite",
+    "Histrio",
+    "Styx",
+    "Halfmoon"
+  ],
+  "scope": "five independently published system implementations; artifact revisions and failure boundaries in REPRODUCE.md",
+  "unchanged_native_binary_sha256": "7b19cfed7e5b7e4420502a87c235d8e388ecb8f86c879a225a119b26e59ff2a9",
+  "previous_published_validation": {
+    "verified_rows": 2484,
+    "verified_hard_exits": 1260,
+    "checks": "completeness, frozen source, genuine exits, oracle identities, preservation"
+  },
+  "composition": [
+    {
+      "engine": "Styx",
+      "endpoint": "NativeJournal",
+      "cases": 144,
+      "unique_completions": 144,
+      "hard_exits": 72,
+      "native_activations": 144,
+      "duplicate_records": 0
+    },
+    {
+      "engine": "Styx",
+      "endpoint": "ReceiptCoordinator",
+      "cases": 144,
+      "unique_completions": 144,
+      "hard_exits": 72,
+      "native_activations": 144,
+      "duplicate_records": 0
+    },
+    {
+      "engine": "Halfmoon",
+      "endpoint": "NativeJournal",
+      "cases": 144,
+      "unique_completions": 144,
+      "hard_exits": 72,
+      "native_activations": 144,
+      "duplicate_records": 0
+    },
+    {
+      "engine": "Halfmoon",
+      "endpoint": "ReceiptCoordinator",
+      "cases": 144,
+      "unique_completions": 144,
+      "hard_exits": 72,
+      "native_activations": 144,
+      "duplicate_records": 0
+    }
+  ]
+}

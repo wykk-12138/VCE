@@ -1,0 +1,183 @@
+{
+  "validation": {
+    "full_cases": 108,
+    "full_passed": 108,
+    "ablation_cases": 6,
+    "ablation_false_success": 6,
+    "exceptions": 0,
+    "seconds": 196.5977212996222
+  },
+  "regression": {
+    "cases": 318,
+    "passed": 318,
+    "exceptions": 0,
+    "seconds": 372.0543634002097,
+    "suites": {
+      "v13_safety": {
+        "cases": 228,
+        "passed": 228
+      },
+      "v5_oracle": {
+        "cases": 78,
+        "passed": 78
+      },
+      "v13_orphans": {
+        "cases": 12,
+        "passed": 12
+      }
+    }
+  },
+  "same_plan_orphans": {
+    "cases": 12,
+    "passed": 12,
+    "delayed_native_entries": 0
+  },
+  "dependency_mutations": {
+    "cases": 10,
+    "passed": 10,
+    "exceptions": 0
+  },
+  "main_performance": {
+    "observations": 780,
+    "scored": 720,
+    "passed": 780
+  },
+  "scale_performance": {
+    "observations": 112,
+    "passed": 112
+  },
+  "call_signatures": {
+    "ReceiptCoordinatorV13/normal": {
+      "cases": 36,
+      "commands": {
+        "version,activate": 36
+      },
+      "hits": 0
+    },
+    "ReceiptCoordinatorV13/recovery": {
+      "cases": 72,
+      "commands": {
+        "version,status": 72
+      },
+      "hits": 0
+    },
+    "ReceiptCoordinatorV13/fallback": {
+      "cases": 36,
+      "commands": {
+        "version,status": 36
+      },
+      "hits": 0
+    },
+    "ReceiptCoordinatorV13/completed_retry": {
+      "cases": 36,
+      "commands": {
+        "version,status": 36
+      },
+      "hits": 0
+    },
+    "JournalGuardedScoped/normal": {
+      "cases": 36,
+      "commands": {
+        "version,activate": 36
+      },
+      "hits": 0
+    },
+    "JournalGuardedScoped/recovery": {
+      "cases": 72,
+      "commands": {
+        "version,status": 72
+      },
+      "hits": 0
+    },
+    "JournalGuardedScoped/fallback": {
+      "cases": 36,
+      "commands": {
+        "version,status": 36
+      },
+      "hits": 0
+    },
+    "JournalGuardedScoped/completed_retry": {
+      "cases": 36,
+      "commands": {
+        "version,status": 36
+      },
+      "hits": 0
+    },
+    "ReceiptCoordinatorV14/normal": {
+      "cases": 36,
+      "commands": {
+        "version,activate": 36
+      },
+      "hits": 0
+    },
+    "ReceiptCoordinatorV14/recovery": {
+      "cases": 72,
+      "commands": {
+        "(none)": 72
+      },
+      "hits": 72
+    },
+    "ReceiptCoordinatorV14/fallback": {
+      "cases": 36,
+      "commands": {
+        "version,status": 36
+      },
+      "hits": 0
+    },
+    "ReceiptCoordinatorV14/completed_retry": {
+      "cases": 36,
+      "commands": {
+        "(none)": 36
+      },
+      "hits": 36
+    },
+    "JournalWitnessScoped/normal": {
+      "cases": 36,
+      "commands": {
+        "version,activate": 36
+      },
+      "hits": 0
+    },
+    "JournalWitnessScoped/recovery": {
+      "cases": 72,
+      "commands": {
+        "(none)": 72
+      },
+      "hits": 72
+    },
+    "JournalWitnessScoped/fallback": {
+      "cases": 36,
+      "commands": {
+        "version,status": 36
+      },
+      "hits": 0
+    },
+    "JournalWitnessScoped/completed_retry": {
+      "cases": 36,
+      "commands": {
+        "(none)": 36
+      },
+      "hits": 36
+    }
+  },
+  "cost_sensitivity": {
+    "claude": {
+      "fresh_extra_mean_ms": 28.898966666666695,
+      "interrupted_episode_difference_mean_ms": -218.2100499999999,
+      "break_even_interruption_fraction": 0.11694824841478549,
+      "meaning": "Conditional sample-mean mixture; not an observed production failure rate. Hit and fallback rates affect this threshold."
+    },
+    "codex": {
+      "fresh_extra_mean_ms": 24.806658333333417,
+      "interrupted_episode_difference_mean_ms": -848.3837083333333,
+      "break_even_interruption_fraction": 0.028409221265267525,
+      "meaning": "Conditional sample-mean mixture; not an observed production failure rate. Hit and fallback rates affect this threshold."
+    },
+    "grok": {
+      "fresh_extra_mean_ms": 25.10073333333338,
+      "interrupted_episode_difference_mean_ms": -225.7415666666667,
+      "break_even_interruption_fraction": 0.10006579166804551,
+      "meaning": "Conditional sample-mean mixture; not an observed production failure rate. Hit and fallback rates affect this threshold."
+    }
+  }
+}

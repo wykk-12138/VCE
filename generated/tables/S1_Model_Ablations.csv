@@ -1,0 +1,6 @@
+guard_removed,states,transitions,recorded_violation,counterexample
+no_generation,305,453,superseded ownership,preview(0) -> claim(0) -> intent(0) -> native-complete(0) -> seal(0) -> preview(1) -> claim(1) -> publish-evidence(0)
+no_approval_binding,91,134,overwrote edit after approval,preview(0) -> claim(0) -> external-edit -> intent(0) -> native-complete(0)
+no_absence_watch,206,302,unclean publication,preview(0) -> claim(0) -> intent(0) -> native-complete(0) -> seal(0) -> new-recovery-residue -> publish-evidence(0)
+no_attempt_fence,5,5,stale attempt enters,authorize(0) -> authorize(1) -> enter(0)
+no_lease,9,9,superseded writer completes,authorize(0) -> enter(0) -> authorize(1) -> finish(0)

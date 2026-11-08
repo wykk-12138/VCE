@@ -1,0 +1,29 @@
+{
+  "primary_sha256": "4fdc8795f6a07a0ae786fcc9d2335af58b00a9e01717b2fcb1db61aaa1c72a49",
+  "facts_sha256": "d7ba2bac6578b28b8c78247f0e6ef8c65648144dd3ac5a8ace1b6a34c4d10d3f",
+  "new_scale": {
+    "b1": {
+      "raw.jsonl": "346557c24d99274dd0cc0adb6f50c74e24841957bb2d4e7e22b6ada3a88943ed",
+      "spec.json": "2feb686700cb84ffbf2c9a355e4a76168825f7d9a80d2eccf8c0b5ee99ce5828",
+      "summary.json": "4746a88738fc29086aaedf28f9fb5acc9e4629f99544e4563f57922eacfe2a8c"
+    },
+    "b2": {
+      "raw.jsonl": "2f5d64f69091b50c1704f64f51a6f4ddfb237b990f9a6803f2c081eb1f094ae8",
+      "spec.json": "8c16e41f74812bd0bbb857ebb48accf160c56201c1c35fa880d9e414a4cac1aa",
+      "summary.json": "cb7aca4a8b86786c8fd843bc9b1a4cfd936dcf0421d53f00c4fec9aaab2a6e99"
+    },
+    "b3": {
+      "raw.jsonl": "8d223cd28501350a77ed7c7fc0b8eb8625d4e6995c208ccd56481a596012ab29",
+      "spec.json": "8dd1cc01553dbfffde0b6e27005ddd0a33bce5a32bd3b8f71165f683ebb5338c",
+      "summary.json": "8d04fc91e9df11ddb309da7f28b9fe172fe604caf9277a14b98ad8b09ce4be20"
+    }
+  },
+  "no_direction_based_exclusions": true,
+  "primary_VCE_estimates_preserved": true,
+  "new_estimates": "J-1/J-Q, J-E/J-Q from frozen paired records; scale estimates from separate release study.",
+  "seeds": {
+    "primary": 18951,
+    "scale": 18952
+  },
+  "bootstrap_samples": 4000
+}

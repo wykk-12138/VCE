@@ -1,0 +1,11 @@
+I1012 09:19:55.534457 Main     thread.cpp:126] Register main thread: tid=1
+E1012 09:19:55.534534 Main     docker.cpp:59] Cannot find docker's cgroup in /proc/self/cgroup
+I1012 09:19:55.534608 Launcher thread.cpp:62] Start thread: Launcher/EL (tid=7)
+I1012 09:19:55.534695 Launcher thread.cpp:87] Does not find cpuset setting for IO threads (can be set by FAAS_IO_THREAD_CPUSET)
+I1012 09:19:55.534720 Launcher thread.cpp:105] Does not find nice setting for IO threads (can be set by FAAS_IO_THREAD_NICE)
+I1012 09:19:55.534723 Launcher launcher.cpp:96] Launcher: Event loop starts
+I1012 09:19:55.534732 Launcher engine_connection.cpp:118] EngineConnection: Connected to engine, start writing handshake message
+I1012 09:19:55.534875 Launcher buffer_pool.h:26] BufferPool[Launcher]: Allocate new buffer, current buffer count is 1
+I1012 09:19:55.534916 Launcher func_config.cpp:140] Load configuration for function deploy[1]
+I1012 09:19:55.534939 Launcher func_config.cpp:140] Load configuration for function native[2]
+I1012 09:19:55.534943 Launcher engine_connection.cpp:84] EngineConnection: Handshake done

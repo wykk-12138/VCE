@@ -1,0 +1,9 @@
+engine,endpoint,scenario,n,unique_completions,false_successes,duplicate_records,preserved,hard_exits,native_activations
+Halfmoon,NativeJournal,after_external,36,36,0,0,36,36,36
+Halfmoon,NativeJournal,after_native,36,36,0,0,36,36,36
+Halfmoon,NativeJournal,completed_retry,36,36,0,0,36,0,36
+Halfmoon,NativeJournal,normal,36,36,0,0,36,0,36
+Halfmoon,ReceiptCoordinator,after_external,36,36,0,0,36,36,36
+Halfmoon,ReceiptCoordinator,after_native,36,36,0,0,36,36,36
+Halfmoon,ReceiptCoordinator,completed_retry,36,36,0,0,36,0,36
+Halfmoon,ReceiptCoordinator,normal,36,36,0,0,36,0,36

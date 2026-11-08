@@ -1,0 +1,5 @@
+{
+  "verified_rows": 2484,
+  "verified_hard_exits": 1260,
+  "checks": "completeness, frozen source, genuine exits, oracle identities, preservation"
+}

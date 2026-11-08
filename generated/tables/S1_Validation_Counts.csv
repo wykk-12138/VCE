@@ -1,0 +1,6 @@
+suite,cases,raw_pass_true,role
+Complete-method safety,398,398,Complete safeguards
+Guard-removal cases,2,0,Expected counterexamples
+Dependency mutations,162,162,Complete safeguards
+Gate termination,54,54,Complete safeguards
+DBOS composition,120,120,Complete safeguards

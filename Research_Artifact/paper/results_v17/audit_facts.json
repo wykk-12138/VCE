@@ -1,0 +1,244 @@
+{
+  "branches": {
+    "cases": 162,
+    "passed": 162,
+    "hits": 26,
+    "native_rejections": 104,
+    "false_evidence_acceptance": 0,
+    "false_completion": 0,
+    "excluded_hits": 20
+  },
+  "lifecycle": {
+    "cases": 54,
+    "passed": 54,
+    "safe_refusals": 18,
+    "completed_retries": 36,
+    "same_pid_cases": 54,
+    "held_before_kill": 54,
+    "released_after_kill": 54,
+    "unexpected_gate_children": 0,
+    "system_console_children": 54
+  },
+  "domain": [
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 1,
+      "normal_ms": 31.822599999999966,
+      "hit_ms": -239.04255,
+      "miss_ms": 40.829341666666664,
+      "repeat_ms": -266.63962499999997,
+      "p_star": 0.11748502898951736,
+      "repeat_star": 0.11934685251676291
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0.75,
+      "normal_ms": 31.822599999999966,
+      "hit_ms": -239.04255,
+      "miss_ms": 40.829341666666664,
+      "repeat_ms": -266.63962499999997,
+      "p_star": 0.15840242487230055,
+      "repeat_star": 0.11934685251676291
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0.5,
+      "normal_ms": 31.822599999999966,
+      "hit_ms": -239.04255,
+      "miss_ms": 40.829341666666664,
+      "repeat_ms": -266.63962499999997,
+      "p_star": 0.24305196233753404,
+      "repeat_star": 0.11934685251676291
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0.25,
+      "normal_ms": 31.822599999999966,
+      "hit_ms": -239.04255,
+      "miss_ms": 40.829341666666664,
+      "repeat_ms": -266.63962499999997,
+      "p_star": 0.5220137347537577,
+      "repeat_star": 0.11934685251676291
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0,
+      "normal_ms": 31.822599999999966,
+      "hit_ms": -239.04255,
+      "miss_ms": 40.829341666666664,
+      "repeat_ms": -266.63962499999997,
+      "p_star": null,
+      "repeat_star": 0.11934685251676291
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 1,
+      "normal_ms": 26.2738916666666,
+      "hit_ms": -245.8420083333334,
+      "miss_ms": 35.9083333333333,
+      "repeat_ms": -269.89708333333334,
+      "p_star": 0.09655404798715032,
+      "repeat_star": 0.09734781622007128
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0.75,
+      "normal_ms": 26.2738916666666,
+      "hit_ms": -245.8420083333334,
+      "miss_ms": 35.9083333333333,
+      "repeat_ms": -269.89708333333334,
+      "p_star": 0.13027623580129755,
+      "repeat_star": 0.09734781622007128
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0.5,
+      "normal_ms": 26.2738916666666,
+      "hit_ms": -245.8420083333334,
+      "miss_ms": 35.9083333333333,
+      "repeat_ms": -269.89708333333334,
+      "p_star": 0.20019617258679334,
+      "repeat_star": 0.09734781622007128
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0.25,
+      "normal_ms": 26.2738916666666,
+      "hit_ms": -245.8420083333334,
+      "miss_ms": 35.9083333333333,
+      "repeat_ms": -269.89708333333334,
+      "p_star": 0.4321140330291986,
+      "repeat_star": 0.09734781622007128
+    },
+    {
+      "ordinary_files": 0,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0,
+      "normal_ms": 26.2738916666666,
+      "hit_ms": -245.8420083333334,
+      "miss_ms": 35.9083333333333,
+      "repeat_ms": -269.89708333333334,
+      "p_star": null,
+      "repeat_star": 0.09734781622007128
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 1,
+      "normal_ms": 1690.44915,
+      "hit_ms": 1701.1561416666664,
+      "miss_ms": 1669.4616333333333,
+      "repeat_ms": 16.688391666666632,
+      "p_star": null,
+      "repeat_star": null
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0.75,
+      "normal_ms": 1690.44915,
+      "hit_ms": 1701.1561416666664,
+      "miss_ms": 1669.4616333333333,
+      "repeat_ms": 16.688391666666632,
+      "p_star": null,
+      "repeat_star": null
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0.5,
+      "normal_ms": 1690.44915,
+      "hit_ms": 1701.1561416666664,
+      "miss_ms": 1669.4616333333333,
+      "repeat_ms": 16.688391666666632,
+      "p_star": null,
+      "repeat_star": null
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0.25,
+      "normal_ms": 1690.44915,
+      "hit_ms": 1701.1561416666664,
+      "miss_ms": 1669.4616333333333,
+      "repeat_ms": 16.688391666666632,
+      "p_star": null,
+      "repeat_star": null
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV14",
+      "hit_rate": 0,
+      "normal_ms": 1690.44915,
+      "hit_ms": 1701.1561416666664,
+      "miss_ms": 1669.4616333333333,
+      "repeat_ms": 16.688391666666632,
+      "p_star": null,
+      "repeat_star": null
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 1,
+      "normal_ms": 20.494608333333417,
+      "hit_ms": -247.4302,
+      "miss_ms": 20.285583333333307,
+      "repeat_ms": -269.59928333333335,
+      "p_star": 0.07649388073028104,
+      "repeat_star": 0.07601877898167045
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0.75,
+      "normal_ms": 20.494608333333417,
+      "hit_ms": -247.4302,
+      "miss_ms": 20.285583333333307,
+      "repeat_ms": -269.59928333333335,
+      "p_star": 0.10196532445205636,
+      "repeat_star": 0.07601877898167045
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0.5,
+      "normal_ms": 20.494608333333417,
+      "hit_ms": -247.4302,
+      "miss_ms": 20.285583333333307,
+      "repeat_ms": -269.59928333333335,
+      "p_star": 0.15286849912636963,
+      "repeat_star": 0.07601877898167045
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0.25,
+      "normal_ms": 20.494608333333417,
+      "hit_ms": -247.4302,
+      "miss_ms": 20.285583333333307,
+      "repeat_ms": -269.59928333333335,
+      "p_star": 0.30526106283745497,
+      "repeat_star": 0.07601877898167045
+    },
+    {
+      "ordinary_files": 2048,
+      "method": "ReceiptCoordinatorV15",
+      "hit_rate": 0,
+      "normal_ms": 20.494608333333417,
+      "hit_ms": -247.4302,
+      "miss_ms": 20.285583333333307,
+      "repeat_ms": -269.59928333333335,
+      "p_star": null,
+      "repeat_star": 0.07601877898167045
+    }
+  ]
+}

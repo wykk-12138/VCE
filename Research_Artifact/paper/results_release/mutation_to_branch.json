@@ -1,0 +1,1788 @@
+[
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "intact",
+    "audit_rows": [
+      "positive unchanged-state control"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "body_missing",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "body_directory",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "body_bytes",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "body_identity",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "body_timestamp",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "body_readonly",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "reference_missing",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "reference_directory",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "reference_utf8",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "reference_empty",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "outside_edit",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "journal_object",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "journal_array",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "journal_malformed",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "journal_directory",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "root_residue_file",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "root_residue_directory",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "managed_residue",
+    "audit_rows": [
+      "C4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "ordinary_file",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "ordinary_nested",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "project_settings",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "project_backup",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "near_residue_no_dot",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "near_residue_suffix",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "near_residue_marker_case",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "lock_dead",
+    "audit_rows": [
+      "C5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "claude",
+    "scenario": "lock_live",
+    "audit_rows": [
+      "C5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "intact",
+    "audit_rows": [
+      "positive unchanged-state control"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "body_missing",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "body_directory",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "body_bytes",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "body_identity",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "body_timestamp",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "body_readonly",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "reference_missing",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "reference_directory",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "reference_utf8",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "reference_empty",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "outside_edit",
+    "audit_rows": [
+      "X6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "manifest_missing",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "manifest_invalid",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "manifest_directory",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "residue_directory",
+    "audit_rows": [
+      "X3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "residue_file",
+    "audit_rows": [
+      "X3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "legacy_directory",
+    "audit_rows": [
+      "X5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "legacy_regular",
+    "audit_rows": [
+      "X5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "backup_changed",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "backup_missing",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "owned_hook_changed",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "owned_hook_missing",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "owned_hook_directory",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "codex",
+    "scenario": "reference_wrong",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "intact",
+    "audit_rows": [
+      "positive unchanged-state control"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "body_missing",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "body_directory",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "body_bytes",
+    "audit_rows": [
+      "G1",
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "body_identity",
+    "audit_rows": [
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "body_timestamp",
+    "audit_rows": [
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "body_readonly",
+    "audit_rows": [
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "reference_missing",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "reference_directory",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "reference_utf8",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "reference_empty",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "outside_edit",
+    "audit_rows": [
+      "G7"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "manifest_missing",
+    "audit_rows": [
+      "G3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "manifest_invalid",
+    "audit_rows": [
+      "G3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "manifest_directory",
+    "audit_rows": [
+      "G3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "residue_directory",
+    "audit_rows": [
+      "G2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "residue_file",
+    "audit_rows": [
+      "G2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "backup_changed",
+    "audit_rows": [
+      "G6"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "backup_missing",
+    "audit_rows": [
+      "G6"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "owned_hook_changed",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "owned_hook_missing",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "owned_hook_directory",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "owned_hook_both",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "owned_hook_restored",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "extra_rule",
+    "audit_rows": [
+      "G7"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "agents_md",
+    "audit_rows": [
+      "G7"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "hooks_directory_type",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "ReceiptCoordinatorV15",
+    "tool": "grok",
+    "scenario": "reference_wrong",
+    "audit_rows": [
+      "G1",
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "intact",
+    "audit_rows": [
+      "positive unchanged-state control"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "body_missing",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "body_directory",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "body_bytes",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "body_identity",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "body_timestamp",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "body_readonly",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "reference_missing",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "reference_directory",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "reference_utf8",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "reference_empty",
+    "audit_rows": [
+      "C1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "outside_edit",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "journal_object",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "journal_array",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "journal_malformed",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "journal_directory",
+    "audit_rows": [
+      "C2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "root_residue_file",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "root_residue_directory",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "managed_residue",
+    "audit_rows": [
+      "C4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "ordinary_file",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "ordinary_nested",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "project_settings",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "project_backup",
+    "audit_rows": [
+      "C6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "near_residue_no_dot",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "near_residue_suffix",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "near_residue_marker_case",
+    "audit_rows": [
+      "C3"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "lock_dead",
+    "audit_rows": [
+      "C5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "claude",
+    "scenario": "lock_live",
+    "audit_rows": [
+      "C5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "intact",
+    "audit_rows": [
+      "positive unchanged-state control"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "body_missing",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "body_directory",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "body_bytes",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "body_identity",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "body_timestamp",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "body_readonly",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "reference_missing",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "reference_directory",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "reference_utf8",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "reference_empty",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "outside_edit",
+    "audit_rows": [
+      "X6"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "manifest_missing",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "manifest_invalid",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "manifest_directory",
+    "audit_rows": [
+      "X2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "residue_directory",
+    "audit_rows": [
+      "X3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "residue_file",
+    "audit_rows": [
+      "X3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "legacy_directory",
+    "audit_rows": [
+      "X5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "legacy_regular",
+    "audit_rows": [
+      "X5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "backup_changed",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "backup_missing",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "owned_hook_changed",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "owned_hook_missing",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "owned_hook_directory",
+    "audit_rows": [
+      "X4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "codex",
+    "scenario": "reference_wrong",
+    "audit_rows": [
+      "X1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "intact",
+    "audit_rows": [
+      "positive unchanged-state control"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "body_missing",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "body_directory",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "body_bytes",
+    "audit_rows": [
+      "G1",
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "body_identity",
+    "audit_rows": [
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "body_timestamp",
+    "audit_rows": [
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "body_readonly",
+    "audit_rows": [
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "reference_missing",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "reference_directory",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "reference_utf8",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "reference_empty",
+    "audit_rows": [
+      "G1"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "outside_edit",
+    "audit_rows": [
+      "G7"
+    ],
+    "pass": true,
+    "evidence_hit": true,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "manifest_missing",
+    "audit_rows": [
+      "G3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "manifest_invalid",
+    "audit_rows": [
+      "G3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "manifest_directory",
+    "audit_rows": [
+      "G3"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "residue_directory",
+    "audit_rows": [
+      "G2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "residue_file",
+    "audit_rows": [
+      "G2"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "backup_changed",
+    "audit_rows": [
+      "G6"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "backup_missing",
+    "audit_rows": [
+      "G6"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "owned_hook_changed",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "owned_hook_missing",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "owned_hook_directory",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "owned_hook_both",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "owned_hook_restored",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "extra_rule",
+    "audit_rows": [
+      "G7"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "agents_md",
+    "audit_rows": [
+      "G7"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": true
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "hooks_directory_type",
+    "audit_rows": [
+      "G5"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  },
+  {
+    "method": "JournalWitnessV15",
+    "tool": "grok",
+    "scenario": "reference_wrong",
+    "audit_rows": [
+      "G1",
+      "G4"
+    ],
+    "pass": true,
+    "evidence_hit": false,
+    "native_accepted": false
+  }
+]

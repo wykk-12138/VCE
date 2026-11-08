@@ -1,0 +1,11 @@
+{
+  "cases": 54,
+  "passed": 54,
+  "safe_refusals": 18,
+  "completed_retries": 36,
+  "same_pid_cases": 54,
+  "held_before_kill": 54,
+  "released_after_kill": 54,
+  "unexpected_gate_children": 0,
+  "system_console_children": 54
+}

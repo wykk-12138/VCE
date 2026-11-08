@@ -1,0 +1,9 @@
+method,n,errors,api_success,coherent_success,unique_coherent_success,false_current_success,duplicate_record_cases,resume_activation_calls,external_preserved,historical_results,hard_exits
+ReceiptCoordinator,180,0,180,180,180,0,0,36,180,0,108
+NativeJournal,180,0,180,180,180,0,0,36,180,0,108
+OriginalReplan,180,0,180,180,72,0,108,180,180,0,108
+DBOS,180,0,168,168,132,0,36,108,180,36,108
+Netherite,180,0,168,168,107,0,61,133,180,36,108
+Histrio,180,0,168,168,132,0,36,108,180,36,108
+DBOS+NativeJournal,180,0,180,180,180,0,0,36,180,36,108
+DBOS+ReceiptCoordinator,180,0,180,180,180,0,0,36,180,36,108

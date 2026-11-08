@@ -1,0 +1,9 @@
+engine,endpoint,scenario,n,unique_completions,false_successes,duplicate_records,preserved,worker_exits,native_activations
+Styx,NativeJournal,after_external,3,3,0,0,3,3,3
+Styx,NativeJournal,after_native,3,3,0,0,3,3,3
+Styx,NativeJournal,completed_retry,3,3,0,0,3,0,3
+Styx,NativeJournal,normal,3,3,0,0,3,0,3
+Styx,ReceiptCoordinator,after_external,3,3,0,0,3,3,3
+Styx,ReceiptCoordinator,after_native,3,3,0,0,3,3,3
+Styx,ReceiptCoordinator,completed_retry,3,3,0,0,3,0,3
+Styx,ReceiptCoordinator,normal,3,3,0,0,3,0,3
